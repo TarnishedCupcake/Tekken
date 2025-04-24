@@ -1,25 +1,291 @@
-<!--PART I: Introduction & TOC-->
+<!-- Part 1: Introduction & TOC -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steve Fox Tekken 8 Tournament Guide</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f8f9fa; color: #222; }
+    .container { max-width: 1200px; margin: auto; padding: 2rem; }
+    h1, h2 { color: #003366; }
+    h2 { margin-top: 3rem; border-bottom: 2px solid #ddd; padding-bottom: 0.3rem; }
+    .section { margin-bottom: 3rem; }
+    .toc { background: #e3f2fd; padding: 1rem; border-left: 4px solid #2196f3; margin-bottom: 2rem; }
+    .toc a { display: block; color: #0d47a1; margin: 0.5rem 0; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; }
+    th { background: #e0e0e0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Steve Fox Tekken 8 Tournament Guide</h1>
 
-<!--PART II: Punishment Guide-->
+    <div class="toc">
+      <h2>Table of Contents</h2>
+      <a href="#punishment-guide">Punishment Guide</a>
+      <a href="#key-moves">Key Moves</a>
+      <a href="#stances">Stance System</a>
+      <a href="#combos">Combos</a>
+      <a href="#curriculum">8-Week FoxStack Curriculum</a>
+      <a href="#mental-stack">Mental Stack</a>
+      <a href="#matchups">Matchups</a>
+      <a href="#flowcharts">Flowcharts</a>
+      <a href="#okizeme">Okizeme & Breaks</a>
+      <a href="#anti-steve">Anti-Steve Tech</a>
+      <a href="#controller-tips">Controller Tips</a>
+      <a href="#notebook">Coach's Notebook</a>
+      <a href="#mission">Mission</a>
+    </div>
 
-<!--PART III: Key Moves-->
+    <div id="intro" class="section">
+      <h2>Introduction</h2>
+      <p>This guide is built for competitive players striving to master Steve Fox in Tekken 8. From neutral control to Heat routing, matchup prep, and tournament psychology, every section is tuned for elite performance.</p>
+    </div>
+<!-- Part 2: Punishment Guide -->
+<div id="punishment-guide" class="section">
+  <h2>Punishment Guide (By Frame)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Move</th>
+        <th>Command</th>
+        <th>Startup</th>
+        <th>On Block</th>
+        <th>On Hit</th>
+        <th>CH</th>
+        <th>Role</th>
+        <th>Punishes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>1</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>i10 Jab Punish</td><td>Jabs, 1,2 strings, generic -10 moves</td></tr>
+      <tr><td>2,1</td><td>2,1</td><td>12f</td><td>-1</td><td>+6</td><td>+8</td><td>i12 String Punish</td><td>Unsafe mids like Hwoarang's D/F+3</td></tr>
+      <tr><td>D/F+2</td><td>D/F+2</td><td>13f</td><td>-6</td><td>+7</td><td>+9</td><td>i13 Poke</td><td>Useful for interrupting pressure</td></tr>
+      <tr><td>F,F+2</td><td>F,F+2</td><td>14f</td><td>-9</td><td>+6</td><td>Wall Bounce</td><td>i14 Whiff Punish</td><td>Whiffed mids and unsafe strings</td></tr>
+      <tr><td>B+1</td><td>B+1</td><td>14f</td><td>-10</td><td>-1</td><td>Launcher</td><td>CH Launcher</td><td>Slow highs, failed lows, delay traps</td></tr>
+      <tr><td>WS 1,2</td><td>While Standing 1,2</td><td>11f</td><td>-6</td><td>+6</td><td>+8</td><td>Crouch Punish</td><td>Generic lows (e.g. Law's slide)</td></tr>
+      <tr><td>FLK D/F+2</td><td>FLK D/F+2</td><td>16f</td><td>-12</td><td>+3</td><td>+9</td><td>CH Mid</td><td>Staggered lows, panic mash</td></tr>
+      <tr><td>D/B+2</td><td>D/B+2</td><td>17f</td><td>-13</td><td>KND</td><td>KND</td><td>Low Punisher</td><td>Unsafe lows like Xiaoyu's sweep</td></tr>
+      <tr><td>F+2,1+2</td><td>F+2,1+2</td><td>18f</td><td>-12</td><td>Launch</td><td>Launch</td><td>i18 Launcher</td><td>Unsafe launchable moves (-15 or worse)</td></tr>
+    </tbody>
+  </table>
+</div>
+<!-- Part 3: Key Moves -->
+<div id="key-moves" class="section">
+  <h2>Key Moves & Frame Data</h2>
+  <table>
+    <thead>
+      <tr><th>Move</th><th>Command</th><th>Startup</th><th>On Block</th><th>On Hit</th><th>CH</th><th>Role</th><th>Punishes</th><th>Punishable?</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Quick Jab</td><td>1</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>Poke</td><td>i10 punish, pressure check</td><td>No</td></tr>
+      <tr><td>D/F1</td><td>D/F1</td><td>13f</td><td>-1</td><td>+5</td><td>+8</td><td>Mid poke</td><td>Interrupts strings</td><td>No</td></tr>
+      <tr><td>B+1</td><td>B+1</td><td>14f</td><td>-10</td><td>-1</td><td>Launcher</td><td>CH Launcher</td><td>Yes</td></tr>
+      <tr><td>F,F+2</td><td>F,F+2</td><td>14f</td><td>-9</td><td>+6</td><td>Wall Bounce</td><td>Whiff punisher</td><td>No</td></tr>
+      <tr><td>FLK 1</td><td>Flicker 1</td><td>11f</td><td>-3</td><td>+6</td><td>+8</td><td>Stance pressure</td><td>String pressure</td><td>No</td></tr>
+      <tr><td>FLK D/F+2</td><td>FLK D/F+2</td><td>16f</td><td>-12</td><td>+3</td><td>+9</td><td>CH trap</td><td>Punishes slow lows</td><td>Yes</td></tr>
+      <tr><td>Peekaboo 1+2</td><td>PAB 1+2</td><td>15f</td><td>+2</td><td>+9</td><td>Stagger</td><td>Plus on block</td><td>No</td></tr>
+      <tr><td>FLK 1+2</td><td>FLK 1+2</td><td>17f</td><td>-10</td><td>+7</td><td>Wall splat</td><td>Wall carry</td><td>Yes</td></tr>
+      <tr><td>D/B+1</td><td>D/B+1</td><td>20f</td><td>-13</td><td>KND</td><td>KND</td><td>Low poke</td><td>Whiff lows</td><td>Yes</td></tr>
+      <tr><td>Peekaboo F+2</td><td>PAB F+2</td><td>14f</td><td>-9</td><td>+5</td><td>Knockdown</td><td>Mid launcher</td><td>No</td></tr>
+    </tbody>
+  </table>
+</div>
+<!-- Part 4: Stance System -->
+<div id="stances" class="section">
+  <h2>Stance System & Transitions</h2>
+  <p>Steve’s stance system defines his pressure, movement, and mixups. Here’s a breakdown of each:</p>
+  <table>
+    <thead>
+      <tr><th>Stance</th><th>Input</th><th>Properties</th><th>Transitions</th><th>Strengths</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Flicker (FLK)</td>
+        <td>Auto after many attacks (e.g., B+1, D/F+2,1)</td>
+        <td>Mid-range pressure, jab traps</td>
+        <td>→ FLK 1/2/1+2, → Duck, → Albatross</td>
+        <td>Safe pokes, CH pressure, jab confirms</td>
+      </tr>
+      <tr>
+        <td>Peekaboo (PAB)</td>
+        <td>Back+1+2</td>
+        <td>Plus on block strings, baiting stance</td>
+        <td>→ PAB 1+2, PAB F+2, → Duck</td>
+        <td>Stagger + mixup, defensive pressure, wall threat</td>
+      </tr>
+      <tr>
+        <td>Duck</td>
+        <td>D, N (neutral crouch)</td>
+        <td>Launcher access, evasion tool</td>
+        <td>→ WS 1,2 / WS 2 / F+2,1+2</td>
+        <td>Whiff punishing, anti-high, surprise lows</td>
+      </tr>
+      <tr>
+        <td>Sway</td>
+        <td>B (after certain attacks or PAB)</td>
+        <td>Backdash cancel, auto-evade</td>
+        <td>→ Sway B+1, → Flicker, → Cancel</td>
+        <td>Evade + whiff trap setups</td>
+      </tr>
+      <tr>
+        <td>Albatross</td>
+        <td>F (while in FLK)</td>
+        <td>Movement reset, stance mix</td>
+        <td>→ Albatross 1/2/1+2, → FLK</td>
+        <td>Mobile stance switch, Heat re-engage</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Mastering transitions between stances and recognizing cancel options is key to Steve’s pressure and bait game. Use FLK to initiate and PAB or Duck to finish.</p>
+</div>
+<!-- Part 5: Combos -->
+<div id="combos" class="section">
+  <h2>Combos</h2>
+  <p>These combos are categorized by execution level and scenario type. Practice each set to ensure consistency in match play.</p>
+  <ul>
+    <li><strong>Easy:</strong> B+1 → D/F+2,1 → FLK 1 → F+2,1+2 (54 dmg)</li>
+    <li><strong>Optimized:</strong> B+1 → Dash D/F+2,1 → FLK 1 → D/F+1 → Sonic Fang (62 dmg)</li>
+    <li><strong>Wall Carry:</strong> B+1 → Dash D/F+2,1 → FLK 1 → D/F+1, Sonic Fang → Wall Pressure (65 dmg)</li>
+    <li><strong>Heat Combo:</strong> B+1 → Heat Dash → F+2,1+2 → FLK Cancel → B+1 → Sonic Fang (70+ dmg)</li>
+    <li><strong>Floor Break Combo:</strong> D/B+2 → F+2,1+2 → Down 1 → FLK 1+2 (breaks floor, 64 dmg)</li>
+    <li><strong>Wall Combo:</strong> S! → FLK 1+2 → F+2,1+2 (Wall Splat Ender, 78 dmg)</li>
+    <li><strong>Reset Combo:</strong> B+1 → D/F+2,1 → Delay FLK 1 → Duck Cancel → Throw or Low</li>
+    <li><strong>Execution Heavy:</strong> Sway Cancel → Instant FLK 1+2 → F+2,1+2 → Wall Carry (high difficulty, 75+ dmg)</li>
+  </ul>
+  <p>Always route based on stage position, Heat status, and mental stack overload setups.</p>
+</div>
+<!-- Part 6: 8-Week FoxStack Curriculum -->
+<div id="curriculum" class="section">
+  <h2>8-Week FoxStack Training Curriculum</h2>
+  <p>This structured training program guides you from fundamentals to full competition readiness.</p>
+  <ol>
+    <li><strong>Week 1:</strong> Movement: backdash canceling, sidestep drills, dash block reps</li>
+    <li><strong>Week 2:</strong> Jab discipline, FLK transition control, hit-confirm training (1 → D/F+1)</li>
+    <li><strong>Week 3:</strong> CH setup flow (B+1, delay FLK 1), pressure layering, poke traps</li>
+    <li><strong>Week 4:</strong> Heat activation optimization: Heat Dash → Cancel routes</li>
+    <li><strong>Week 5:</strong> Wall carry practice, corner trap lab, throw reset timing</li>
+    <li><strong>Week 6:</strong> Matchup recording + review, labbing anti-meta strings</li>
+    <li><strong>Week 7:</strong> Tournament pacing simulation, mental stack overload flowcharts</li>
+    <li><strong>Week 8:</strong> Complete match review template, stress test scenarios, decision tree drills</li>
+  </ol>
+  <p>Each week builds mechanical reps, situational recognition, and layered mixup confidence.</p>
+</div>
+<!-- Part 7: Mental Stack & Pressure Engineering -->
+<div id="mental-stack" class="section">
+  <h2>Mental Stack Engineering</h2>
+  <p>Steve excels at overloading mental stack through speed, delay, and CH traps. Use these principles to force defensive collapse:</p>
+  <ul>
+    <li><strong>Jab Check Stack:</strong> 1 → Delay → D/F+1 → FLK 1 → Mid / Low Layer</li>
+    <li><strong>FLK Pressure Stack:</strong> FLK 1 → FLK 1+2 → Delay FLK 1 → Duck Cancel → B+1 CH fish</li>
+    <li><strong>Heat Trigger Stack:</strong> Heat Dash → F+2,1+2 → FLK Cancel → Bait jab → Launcher</li>
+    <li><strong>Backdash Layering:</strong> Backdash after -3 to bait CH → B+1 or FLK 1+2</li>
+  </ul>
+  <p>Rotate stack layers based on opponent reactions. Always track their response to each mental load and flip the layer on their adaptation.</p>
+</div>
+<!-- Part 7: Mental Stack & Pressure Engineering -->
+<div id="mental-stack" class="section">
+  <h2>Mental Stack & Pressure Engineering</h2>
+  <p>Steve thrives on overwhelming the opponent’s mental stack. Layer your offense with safe checks, CH threats, and Heat pressure to force errors.</p>
+  <ul>
+    <li><strong>Layer 1 – Jab Check:</strong> Use 1, D/F+1 or FLK 1 to open the round or reset neutral. Frame trap with B+1.</li>
+    <li><strong>Layer 2 – Flicker Cancel Trap:</strong> FLK 1 → Cancel → Delay D/F+1 or throw. If they mash → B+1 for CH.</li>
+    <li><strong>Layer 3 – Heat Overload:</strong> Activate Heat → F+2,1+2 → Sway → FLK 1 or CH trap. Stack mid/low/throw to overload reactions.</li>
+    <li><strong>Layer 4 – Defensive Crack:</strong> Use Sway cancel → Backdash → FLK 1 → Jab bait → CH punish</li>
+  </ul>
+  <p>Master these flow paths to manage tempo and trigger defensive panic in high-stakes play.</p>
+</div>
+<!-- Part 8: Matchups -->
+<div id="matchups" class="section">
+  <h2>Matchups</h2>
+  <ul>
+    <li><strong>Jin:</strong> Step left 2,4. Parry or fuzzy 1,2,4. Punish F+2. Respect parry timing.</li>
+    <li><strong>Kazuya:</strong> Avoid electric by stepping left, sway cancel baits. Don’t mash vs D/F+1 pressure.</li>
+    <li><strong>Leroy:</strong> Delay jab strings to break sabaki rhythm. Punish D/F+1+2. Duck hermit lows.</li>
+    <li><strong>Paul:</strong> Bait Death Fist. Step right QCF+2. Don’t overpoke after QCF+1.</li>
+    <li><strong>Law:</strong> Step left DSS 4. Interrupt Dragon Hammer pressure. Low parry slide.</li>
+    <li><strong>Reina:</strong> Sidestep left heavy. Use B+1 to challenge stance cancels. Watch for unblockables.</li>
+    <li><strong>Feng:</strong> Use FLK pressure to beat sabakis. Punish 1+2. Sway Duck vs shoulder follow-ups.</li>
+    <li><strong>Zafina:</strong> Stay midrange. Use Sonic Fang to reset. Backdash low string traps.</li>
+    <li><strong>Claudio:</strong> Respect hopkick range. Force whiffs. Use D/F+1 jabs after F+2+3 charge.</li>
+    <li><strong>Raven:</strong> Stay grounded. Step and punish teleport entries. Use jab pressure post B+2 strings.</li>
+  </ul>
+</div>
+<!-- Part 9: Flowcharts -->
+<div id="flowcharts" class="section">
+  <h2>Flowcharts</h2>
+  <p>Use these structured patterns to organize Steve’s pressure, Heat activation, and panic bait setups.</p>
+  <ul>
+    <li><strong>CH Trap Flow:</strong> B+1 → Delay → FLK 1 → D/F+1 → FLK 1 → B+1 (on mash)</li>
+    <li><strong>Heat Activation Tree:</strong> Heat Dash → F+2,1+2 → Sway → FLK → D/F+1 or CH B+1</li>
+    <li><strong>Wall Carry Route:</strong> D/F+2,1 → FLK 1 → D/F+1 → Sonic Fang → Wall Combo</li>
+    <li><strong>Panic Bait Flow:</strong> FLK 1 → Delay → Duck Cancel → Throw → Mid (bait) → CH B+1</li>
+    <li><strong>Round Closer:</strong> D/F+1 → FLK 1 → Heat Activation → Flicker Jab → Mid/Low Mix</li>
+  </ul>
+</div>
+<!-- Part 10: Okizeme & Breaks -->
+<div id="okizeme" class="section">
+  <h2>Okizeme & Wall/Floor Tech</h2>
+  <ul>
+    <li><strong>Wakeup Trap 1:</strong> B+1 knockdown → Delay FLK 1 → D/F+1/throw mix</li>
+    <li><strong>Wakeup Trap 2:</strong> D/B+1 → Heat Dash → Backdash → FLK 1 → Mid or Low</li>
+    <li><strong>Floor Break Route:</strong> D/B+2 → F+2,1+2 → Down jab → FLK 1+2 (Floor Break)</li>
+    <li><strong>Wall Splat Setup:</strong> Dash B+1 → D/F+2,1 → FLK 1+2 (Wall Splat)</li>
+    <li><strong>Wall Ender:</strong> F+2,1+2 → FLK Cancel → PAB 1+2 (max corner pressure)</li>
+    <li><strong>Ground Control:</strong> D+1 or D/B+1 post wall combo to force crouch on wakeup</li>
+  </ul>
+  <p>Use these sequences to extend pressure after knockdowns and capitalize on wall/floor stage features.</p>
+</div>
+<!-- Part 11: Anti-Steve Tech -->
+<div id="anti-steve" class="section">
+  <h2>Anti-Steve Tech</h2>
+  <ul>
+    <li><strong>Backdash > Low:</strong> Steve’s FLK cancels can whiff vs backdashers. Backdash → low poke interrupts FLK cancel bait.</li>
+    <li><strong>Sabakis & Parries:</strong> Characters like Leroy or Jun can sabaki FLK 1 and D/F+1 strings. Use heat cancel to bait.</li>
+    <li><strong>Interrupting PAB:</strong> Use fast mids (i13–14) to beat Peekaboo stance entry. Duck → mid or step → punish.</li>
+    <li><strong>Sidestepping:</strong> Step left often avoids B+1 and Sonic Fang if improperly spaced.</li>
+    <li><strong>Throw Reactions:</strong> Steve has average throw game. Breaking throw attempts is a common counter in reset sequences.</li>
+    <li><strong>Heat Trap Defense:</strong> After Heat Dash, delay tech or fuzzy guard to avoid FLK 1 → CH → launcher layers.</li>
+  </ul>
+  <p>Understanding how opponents beat Steve will help you layer in safe cancels, bait timing, and stance transitions better.</p>
+</div>
+<!-- Part 12: Controller Tips -->
+<div id="controller-tips" class="section">
+  <h2>Controller Tips (Pad vs Stick)</h2>
+  <h3>Pad Players</h3>
+  <ul>
+    <li><strong>Recommended Mapping:</strong> R1 = 1+2, R2 = Heat Burst, L1 = 3+4 (easy stance access)</li>
+    <li><strong>Movement Tip:</strong> Use directional buttons for clean sway and sidesteps. Avoid accidental diagonals.</li>
+    <li><strong>FLK Cancel Optimization:</strong> Assign FLK stance to shortcut button if supported (e.g., via macro).</li>
+  </ul>
 
-<!--PART VI: Stance System-->
+  <h3>Stick Players</h3>
+  <ul>
+    <li><strong>Mapping:</strong> Standard 4-button layout is optimal. Use 5th button (top row) for 1+2 macro.</li>
+    <li><strong>Heat Execution:</strong> Practice Heat Dash cancel with joystick sweep → FLK cancel for timing precision.</li>
+    <li><strong>Weave Practice:</strong> Stick movement aids in canceling PAB → Duck → Sway more consistently than pad.</li>
+  </ul>
+  <p>Choose based on what allows better heat cancels, FLK cancel pressure, and execution comfort in long sets.</p>
+</div>
+<!-- Part 13: Coach's Notebook & Mission -->
+<div id="notebook" class="section">
+  <h2>Coach's Notebook</h2>
+  <ul>
+    <li>📝 Use printed checklists before tournaments</li>
+    <li>🧠 Circle weak points after each match using the Match Review Template</li>
+    <li>🕒 Timer yourself in Heat mode combo drills: aim for sub 2 seconds into activation</li>
+    <li>📓 Track opponent panic habits in handwritten notes between sets</li>
+  </ul>
+</div>
 
-<!--PART V: Combos-->
+<div id="mission" class="section">
+  <h2>Mission</h2>
+  <p>This guide was built to elevate Steve Fox players from casual to tournament-ready. Whether you’re preparing for EVO, a local bracket, or high-rank online matches, the structure and systems here are built for sustainable improvement and pressure-layered dominance.</p>
+</div>
 
-<!--PART VI: FoxStack Curriculum-->
-
-<!--PART VII: Mental Stack & Pressure-->
-
-<!--PART VIII: Matchups-->
-
-<!--PART IX: Flowcharts-->
-
-<!--PART X: Okizeme & Wall/Floor Tech-->
-
-<!--PART XI: Anti-Steve Tech-->
-
-<!--PART XII: Controller Tips-->
-
-<!--PART XIII: Coach's Notebook & Mission-->
+</div> <!-- close container -->
+</body>
+</html>
