@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raven Tekken 8 Guide</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; display: flex; }
+    .sidebar {
+      position: fixed; left: 0; width: 250px; height: 100vh;
+      overflow-y: auto; background: #f0f4f8; border-right: 1px solid #ccc; padding: 1em;
+    }
+    .sidebar h3 { margin-top: 0; }
+    .sidebar a {
+      display: block; margin: 0.3em 0; text-decoration: none;
+      color: #333; cursor: pointer; padding: 4px 8px; border-radius: 4px; font-weight: bold;
+    }
+    .sidebar a.active-link {
+      font-weight: bold; background-color: #ff8787; color: white; border: 2px solid #fa5252;
+    }
+    .content { flex: 1; padding: 2em; margin-left: 260px; }
+    .section-anchor {
+      display: none; margin-top: 2em; padding-top: 2em; border-top: 1px solid #ddd;
+    }
+    .section-anchor.active { display: block; }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section-anchor');
+      const links = document.querySelectorAll('.sidebar a');
+      sections.forEach(section => section.classList.remove('active'));
+      links.forEach(link => link.classList.remove('active-link'));
+      const target = document.getElementById(id);
+      if (target) target.classList.add('active');
+      const activeLink = document.querySelector(`.sidebar a[onclick*="${id}"]`);
+      if (activeLink) activeLink.classList.add('active-link');
+    }
+    window.onload = function() {
+      showSection('intro');
+    }
+  </script>
+</head>
+<body>
+<div class="sidebar">
+  <h3>Table of Contents</h3>
+  <!-- Part 1: Introduction -->
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <!-- Part 2: Punishment Guide (i10–i17 Priority) -->
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <!-- Part 3: Key Moves (Core, Defensive, Approach) -->
+  <a onclick="showSection('key-moves')">3. Key Moves</a>
+  <!-- Part 4: Stance & Clone System (Season 2 Detailed) -->
+  <a onclick="showSection('stances')">4. Stance & Clone System</a>
+  <!-- Part 5: Combos (Heat, CH, Wall, Floor, TOD) -->
+  <a onclick="showSection('combos')">5. Combos</a>
+  <!-- Part 6: Gameplan & Setups (Neutral, Traps, Okizeme) -->
+  <a onclick="showSection('gameplan')">6. Gameplan & Setups</a>
+  <!-- Part 7: RavenStack Curriculum (8-Week Tournament Build) -->
+  <a onclick="showSection('curriculum')">7. RavenStack Curriculum</a>
+  <!-- Part 8: Mental Stack Strategy (Flow, Bait, Panic Map) -->
+  <a onclick="showSection('mental')">8. Mental Stack Strategy</a>
+  <!-- Part 9: Matchups (Weak Side, Counters, Notes) -->
+  <a onclick="showSection('matchups')">9. Matchups</a>
+  <!-- Part 10: Anti-Raven Tech (Counterplay + Reversal Baits) -->
+  <a onclick="showSection('anti-raven')">10. Anti-Raven Tech</a>
+  <!-- Part 11: Controller Advice (Pad vs Stick Input Support) -->
+  <a onclick="showSection('controller')">11. Controller Advice</a>
+  <!-- Part 12: Notebook & Patch Notes (Changelog Tracker) -->
+  <a onclick="showSection('notebook')">12. Notebook & Patch Notes</a>
+  <!-- Part 13+: Coaching Modules (Heat Maps, Playbook Flips, Reset Trees) -->
+  <a onclick="showSection('modules')">13+. Coaching Modules</a>
+</div>
+<div class="content">
+  <section id="intro" class="section-anchor active">
+    <h1>1. Introduction</h1>
+    <p>Welcome to the complete Raven guide for Tekken 8 — structured for competitive players, tournament prep, and advanced lab sessions.
+  </p>
+  <p>
+    Raven is a stance-heavy, teleport-mix archetype with exceptional movement, clone cancel options, and bait tools. This guide breaks down everything you need to:
+  </p>
+  <ul>
+    <li>🧠 Build your gameplan around advanced clone feints, traps, and fakeouts</li>
+    <li>⏱ Master i10–i17 punishment and safe pressure tools</li>
+    <li>⚔️ Set up heat-based TODs, delay traps, and clone reset trees</li>
+    <li>🧩 Lab matchup-specific counters, including Anti-Raven tactics</li>
+  </ul>
+  <p>
+    Whether you play on pad or stick, offline or ranked, this guide will walk you through Raven’s Season 2 toolkit — from beginner stability to bracket mastery.
+  </p>
+  </section>
+</div>
+</body>
+</html>
+
+<!-- Part 2: Punishment Guide (i10–i17 Priority) -->
+<section id="punishment" class="section-anchor">
+  <h1>2. Punishment Guide</h1>
+  <p>These are Raven’s optimized punishment options from i10 to i17. Use these to respond to unsafe moves with precision.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Move</th>
+        <th>Input</th>
+        <th>Startup</th>
+        <th>On Block</th>
+        <th>On Hit</th>
+        <th>CH</th>
+        <th>Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Jab</td><td>1</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>i10 check</td></tr>
+      <tr><td>1,2</td><td>1,2</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>Standard i10 punish</td></tr>
+      <tr><td>Backhand Slice</td><td>2,3</td><td>11f</td><td>-2</td><td>+4</td><td>+8</td><td>i11 mid CH tool</td></tr>
+      <tr><td>F+2</td><td>F+2</td><td>12f</td><td>-3</td><td>+6</td><td>+9</td><td>Safe i12 mid</td></tr>
+      <tr><td>1,4</td><td>1,4</td><td>13f</td><td>-5</td><td>KND</td><td>KND</td><td>i13 knockdown</td></tr>
+      <tr><td>B+1,2</td><td>B+1,2</td><td>14f</td><td>-10</td><td>+5</td><td>+7</td><td>Safe mid punish string</td></tr>
+      <tr><td>U/B+3</td><td>U/B+3</td><td>15f</td><td>-11</td><td>+2</td><td>KND</td><td>i15 ranged punish</td></tr>
+      <tr><td>D/F+1</td><td>D/F+1</td><td>13f</td><td>-1</td><td>+5</td><td>+8</td><td>Safe poke punish</td></tr>
+      <tr><td>D/F+2</td><td>D/F+2</td><td>16f</td><td>-12</td><td>Launch</td><td>Launch</td><td>Launcher on whiff</td></tr>
+      <tr><td>3,1</td><td>3,1</td><td>17f</td><td>-9</td><td>+6</td><td>+9</td><td>Safe i17 buffer</td></tr>
+    </tbody>
+  </table>
+</section>
+</div>
+</body>
+</html>
+
+<!-- Part 3: Key Moves (Core, Defensive, Approach) -->
+<section id="punishment" class="section-anchor">
+  <h1>2. Punishment Guide</h1>
+  <p>These are Raven’s optimized punishment options from i10 to i17. Use these to respond to unsafe moves with precision.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Move</th>
+        <th>Input</th>
+        <th>Startup</th>
+        <th>On Block</th>
+        <th>On Hit</th>
+        <th>CH</th>
+        <th>Use</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Jab</td><td>1</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>i10 check</td></tr>
+      <tr><td>1,2</td><td>1,2</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>Standard i10 punish</td></tr>
+      <tr><td>Backhand Slice</td><td>2,3</td><td>11f</td><td>-2</td><td>+4</td><td>+8</td><td>i11 mid CH tool</td></tr>
+      <tr><td>F+2</td><td>F+2</td><td>12f</td><td>-3</td><td>+6</td><td>+9</td><td>Safe i12 mid</td></tr>
+      <tr><td>1,4</td><td>1,4</td><td>13f</td><td>-5</td><td>KND</td><td>KND</td><td>i13 knockdown</td></tr>
+      <tr><td>B+1,2</td><td>B+1,2</td><td>14f</td><td>-10</td><td>+5</td><td>+7</td><td>Safe mid punish string</td></tr>
+      <tr><td>U/B+3</td><td>U/B+3</td><td>15f</td><td>-11</td><td>+2</td><td>KND</td><td>i15 ranged punish</td></tr>
+      <tr><td>D/F+1</td><td>D/F+1</td><td>13f</td><td>-1</td><td>+5</td><td>+8</td><td>Safe poke punish</td></tr>
+      <tr><td>D/F+2</td><td>D/F+2</td><td>16f</td><td>-12</td><td>Launch</td><td>Launch</td><td>Launcher on whiff</td></tr>
+      <tr><td>3,1</td><td>3,1</td><td>17f</td><td>-9</td><td>+6</td><td>+9</td><td>Safe i17 buffer</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="key-moves" class="section-anchor">
+  <h1>3. Key Moves</h1>
+  <p>These are Raven’s most essential tools across approach, poke, pressure, defense, and keep-out. Each is labeled with frame data and strategic purpose.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Move</th>
+        <th>Input</th>
+        <th>Startup</th>
+        <th>On Block</th>
+        <th>On Hit</th>
+        <th>CH</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Jab</td><td>1</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>i10 check / poke</td></tr>
+      <tr><td>1,2</td><td>1,2</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>Jail string</td></tr>
+      <tr><td>2,3</td><td>2,3</td><td>11f</td><td>-2</td><td>+4</td><td>+8</td><td>CH knockdown tool</td></tr>
+      <tr><td>D/F+1</td><td>D/F+1</td><td>13f</td><td>-1</td><td>+5</td><td>+8</td><td>Main mid poke</td></tr>
+      <tr><td>B+1,2</td><td>B+1,2</td><td>14f</td><td>-10</td><td>+5</td><td>+7</td><td>Mid counter trap</td></tr>
+      <tr><td>U/B+3</td><td>U/B+3</td><td>15f</td><td>-11</td><td>+2</td><td>KND</td><td>Keep-out kick</td></tr>
+      <tr><td>F+3</td><td>F+3</td><td>17f</td><td>-6</td><td>+1</td><td>KND</td><td>Homing 🌀</td></tr>
+      <tr><td>D/B+2</td><td>D/B+2</td><td>20f</td><td>-12</td><td>+3</td><td>KND</td><td>Low poke + floor break 💥</td></tr>
+      <tr><td>B+2</td><td>B+2</td><td>16f</td><td>-7</td><td>+6</td><td>+9</td><td>Panic mid option</td></tr>
+      <tr><td>F,F+3</td><td>F,F+3</td><td>18f</td><td>-9</td><td>KND</td><td>KND</td><td>Approach tool + wall carry</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Part 4: Stance & Clone System (Season 2 Detailed) -->
+<section id="stances" class="section-anchor">
+  <h1>4. Stance & Clone System</h1>
+  <p>Raven's stances form the core of his mixup, movement, and teleport game. This includes clone stance summons, teleport transitions, and fakeouts from special entries.</p>
+
+  <h2>Stance List & Input</h2>
+  <ul>
+    <li><strong>Shadow Stance (SSH):</strong> Entered via B+3+4 or D/B+4</li>
+    <li><strong>Teleport:</strong> Entered via clone-based follow-ups (e.g., 3+4~1 or 3+4~4)</li>
+    <li><strong>Clone Feint:</strong> F,F+4~Back to cancel clone with spacing</li>
+    <li><strong>Shadow Portal:</strong> 3+4, P → creates clone portal without advancing</li>
+  </ul>
+
+  <h2>Stance Transitions</h2>
+  <ul>
+    <li><strong>SSH → Teleport:</strong> SSH 1 → 3+4~1</li>
+    <li><strong>Teleport → Ground Clone Trap:</strong> U/B~1+2</li>
+    <li><strong>Clone Cancel:</strong> 3+4~Back → neutral reset</li>
+    <li><strong>Clone to Mid Mix:</strong> 3+4~2 or ~1</li>
+  </ul>
+
+  <h2>Stance-Based Moves</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Move</th>
+        <th>Input</th>
+        <th>Startup</th>
+        <th>On Block</th>
+        <th>On Hit</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>SSH 1</td><td>From Shadow Stance</td><td>13f</td><td>-3</td><td>+5</td><td>Safe poke mid</td></tr>
+      <tr><td>SSH 2</td><td>From Shadow Stance</td><td>16f</td><td>-12</td><td>KND</td><td>Combo ender / CH launcher</td></tr>
+      <tr><td>Clone Portal</td><td>3+4~P</td><td>24f</td><td>-5</td><td>+2</td><td>Summons clone behind opponent</td></tr>
+      <tr><td>Teleport Upper</td><td>Teleport~1</td><td>18f</td><td>-6</td><td>+3</td><td>Safe reset mid</td></tr>
+      <tr><td>Teleport Sweep</td><td>Teleport~3</td><td>22f</td><td>-14</td><td>KND</td><td>Low crush + trip</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Part 5: Combos (Heat, CH, Wall, Floor, TOD) -->
+<section id="combos" class="section-anchor">
+  <h1>5. Combos</h1>
+  <p>Raven's combo structure revolves around his teleport, clone setups, and high mobility extensions. Below is a list of essential combos, organized by starter type and execution difficulty.</p>
+
+  <h2>Standard Launchers</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Starter</th>
+        <th>Combo</th>
+        <th>Damage</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>D/F+2</td><td>D/F+2 → SSH 1 → F+3,2 → B+1,2</td><td>58</td><td>Stable launcher route</td></tr>
+      <tr><td>3+4~2</td><td>Clone 2 → Teleport~1 → F+3,2 → F,F+3</td><td>61</td><td>Clone starter</td></tr>
+      <tr><td>U/F+3</td><td>U/F+3 → 3+4~P → B+1,2 → Teleport~1</td><td>60</td><td>Air launcher combo</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Heat Combos</h2>
+  <table>
+    <thead>
+      <tr><th>Starter</th><th>Combo</th><th>Damage</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>F+1+2 (Heat)</td><td>F+1+2 → Heat Dash → 2,3 → Teleport~3 → B+1,2</td><td>72</td><td>Basic heat extension</td></tr>
+      <tr><td>D/F+2</td><td>D/F+2 → SSH 1 → F+3,2 → Heat Dash → Clone~1 → F,F+3</td><td>75</td><td>Launcher into Heat route</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Wall Combos</h2>
+  <table>
+    <thead>
+      <tr><th>Wall Hit</th><th>Follow-Up</th><th>Damage</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Wall Splat</td><td>3,1,4</td><td>27</td><td>Stable and consistent</td></tr>
+      <tr><td>Wall Splat</td><td>Clone~P → B+1,2</td><td>32</td><td>Teleport style ender</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Floor Break Combos</h2>
+  <table>
+    <thead>
+      <tr><th>Starter</th><th>Combo</th><th>Damage</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>D/B+2</td><td>D/B+2 → Clone~2 → B+1,2 → Teleport Sweep</td><td>59</td><td>Floor break into sweep</td></tr>
+      <tr><td>Clone~1 (CH)</td><td>Clone~1 → Heat Dash → 3,1 → B+1,2</td><td>65</td><td>Combo from trap</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Counter Hit Starters</h2>
+  <table>
+    <thead>
+      <tr><th>CH Move</th><th>Combo</th><th>Damage</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>B+2 (CH)</td><td>B+2 → Teleport~1 → Clone~1 → B+1,2</td><td>64</td><td>CH launch from mid</td></tr>
+      <tr><td>2,3 (CH)</td><td>2,3 → Teleport~1 → F+3,2</td><td>57</td><td>Quick CH follow-up</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Part 6: Gameplan & Setups (Neutral, Traps, Okizeme) -->
+<section id="gameplan" class="section-anchor">
+  <h1>6. Gameplan & Setups</h1>
+  <p>Raven excels at spacing, fakeouts, and overwhelming offense through stance transitions and clones. This section breaks down neutral control, round structure, and key setup options.</p>
+
+  <h2>Neutral Tools</h2>
+  <ul>
+    <li><strong>D/F+1:</strong> Primary mid poke, hit confirmable</li>
+    <li><strong>2,3:</strong> Safe CH tool to test defense</li>
+    <li><strong>F+3 (Homing):</strong> Sidewalk control</li>
+    <li><strong>U/B+3:</strong> Defensive high crush and punish</li>
+  </ul>
+
+  <h2>Keep-Out & Defensive</h2>
+  <ul>
+    <li><strong>B+2:</strong> Fast mid interrupt that CH launches</li>
+    <li><strong>D/B+2:</strong> Low poke, space reset, floor break</li>
+    <li><strong>F,F+3:</strong> Retreat + whiff punish tool</li>
+  </ul>
+
+  <h2>Poking & “Small Tekken”</h2>
+  <ul>
+    <li><strong>1,2 → Back:</strong> Space reset & check</li>
+    <li><strong>D/F+1 → D/F+1:</strong> Frame trap layer</li>
+    <li><strong>2 → 3+4~Cancel:</strong> Clone feint threat loop</li>
+  </ul>
+
+  <h2>Pressure & Mix-Up Loops</h2>
+  <ul>
+    <li><strong>F+1+2 → Heat Dash → Teleport~1/3:</strong> Safe cancel mix</li>
+    <li><strong>Clone~1 or ~2:</strong> Mid or low follow</li>
+    <li><strong>Teleport~P:</strong> Bait reversal while tracking sidestep</li>
+  </ul>
+
+  <h2>Frame Trap & Trap Trees</h2>
+  <ul>
+    <li><strong>2,3 (CH) → Teleport~1 → SSH 1:</strong> Mid trap path</li>
+    <li><strong>Clone~1 → Delay B+1,2:</strong> Catch fuzzy / mash</li>
+    <li><strong>D/F+1 → B+2 (CH):</strong> Reactive pressure trap</li>
+  </ul>
+
+  <h2>Round Opener & Closer Concepts</h2>
+  <ul>
+    <li><strong>Opener:</strong> U/F+3 (if opponent mashes), or 1,2~Back (safe check)</li>
+    <li><strong>Closer:</strong> Teleport fake → clone reset → low/high split</li>
+  </ul>
+
+  <h2>Okizeme, Reset, Tech Traps</h2>
+  <ul>
+    <li><strong>Grounded Clone~2:</strong> Forces guess vs wakeup</li>
+    <li><strong>Teleport~3 (sweep):</strong> Meaty low reset trap</li>
+    <li><strong>B+2 → clone cancel:</strong> Okizeme trap & bait</li>
+  </ul>
+</section>
+
+<!-- Part 7: RavenStack Curriculum (8-Week Tournament Build) -->
+<section id="curriculum" class="section-anchor">
+  <h1>7. RavenStack Curriculum</h1>
+  <p>This 8-week tournament prep program helps Raven players solidify fundamentals, sharpen execution, and build bracket-ready trap flow. Best paired with the full Raven guide.</p>
+
+  <h2>🗓 Week-by-Week Focus</h2>
+  <ol>
+    <li><strong>Week 1:</strong> Jab confirms (1, 1,2), D/F+1, D/B+2 trap resets</li>
+    <li><strong>Week 2:</strong> i10–i17 punish on reaction training, clone~cancel fakes</li>
+    <li><strong>Week 3:</strong> B+2 CH setup tree + 2,3 CH follow-ups</li>
+    <li><strong>Week 4:</strong> Stance practice – transitions, teleport/clone cancels</li>
+    <li><strong>Week 5:</strong> Heat Dash extensions + Heat TOD optimization</li>
+    <li><strong>Week 6:</strong> Wall combos + carry drills from midscreen</li>
+    <li><strong>Week 7:</strong> Matchup reaction lab + poke recognition</li>
+    <li><strong>Week 8:</strong> Pressure fakeouts, panic baits, and tournament simulation</li>
+  </ol>
+
+  <h2>📌 Daily Drill Template</h2>
+  <ul>
+    <li><strong>15 mins:</strong> Whiff punish test (D/F+2, U/F+3)</li>
+    <li><strong>10 mins:</strong> Clone cancel > B+2 > reaction</li>
+    <li><strong>10 mins:</strong> Heat Dash into stance pressure flow</li>
+    <li><strong>10 mins:</strong> Sidestep punish + movement drills</li>
+    <li><strong>15 mins:</strong> Playback match footage > simulate</li>
+  </ul>
+
+  <h2>✅ Milestone Checklist</h2>
+  <ul>
+    <li>[ ] Consistent i12/i15 punish</li>
+    <li>[ ] Clone cancel > launcher confirmed</li>
+    <li>[ ] Can bait Heat reversal with feint</li>
+    <li>[ ] 60+ damage Heat combo (wallless)</li>
+    <li>[ ] Perform teleport sweep oki trap</li>
+  </ul>
+</section>
+
+<!-- Part 8: Mental Stack Strategy (Flow, Bait, Panic Map) -->
+<section id="mental" class="section-anchor">
+  <h1>8. Mental Stack Strategy</h1>
+  <p>This section explains how Raven loads the opponent’s mental stack using clone fakes, stance transitions, teleports, and panic-inducing sequences. Your goal is to control flow and force wrong guesses by overwhelming their reaction stack.</p>
+
+  <h2>📊 Mental Load Tactics</h2>
+  <ul>
+    <li><strong>Clone Feint → Cancel:</strong> Forces reaction check, layered mid/low trap</li>
+    <li><strong>Teleport~3 (Sweep):</strong> Meaty + high mental drain when looped</li>
+    <li><strong>B+2 → Delay Clone~1:</strong> Forces fuzzy guard, triggers duck/launch options</li>
+  </ul>
+
+  <h2>🔥 Panic Trigger Flowchart</h2>
+  <ul>
+    <li>1,2~Back → D/F+1 → (wait) → Clone~2 → trap check</li>
+    <li>Teleport fake → 3+4~cancel → mid/throw mix</li>
+    <li>Heat Dash → pause → clone summon → CH B+2</li>
+  </ul>
+
+  <h2>🧠 Stack Overload Tools</h2>
+  <ul>
+    <li><strong>Clone~cancel:</strong> Mind game layer, delays break defense</li>
+    <li><strong>Teleport jump-ins:</strong> Beats reversal timing</li>
+    <li><strong>SSH fakeouts:</strong> Looks punishable, creates hesitation</li>
+  </ul>
+
+  <h2>📌 Tips for Stack Control</h2>
+  <ul>
+    <li>Don’t overuse clone → mix early, build hesitation first</li>
+    <li>Use backdash after D/F+1 poke to re-engage stack layers</li>
+    <li>Buffer low/high follow-ups behind teleport fakes</li>
+  </ul>
+</section>
+
+<!-- Part 9: Matchups (Weak Side, Counters, Notes) -->
+<section id="matchups" class="section-anchor">
+  <h1>9. Matchups</h1>
+  <p>This section outlines Raven's matchup strategy vs top-tier and common tournament characters. Includes weak side, punishable strings, and character-specific counterplay.</p>
+
+  <h2>🧭 Sidestep Weak Side</h2>
+  <ul>
+    <li><strong>vs Jin:</strong> Weak side is Raven's left (SS left)</li>
+    <li><strong>vs Reina:</strong> Weak side is SS right</li>
+    <li><strong>vs Law:</strong> Weak side is SS left to avoid DSS mids</li>
+    <li><strong>vs King:</strong> SS right avoids giant swing string mix</li>
+    <li><strong>vs Steve:</strong> SS right avoids Flicker + Duck cancels</li>
+  </ul>
+
+  <h2>🔍 Key Strings to Punish</h2>
+  <ul>
+    <li><strong>Reina:</strong> 1,2,2 (3rd hit delayable, punish with 2,3)</li>
+    <li><strong>King:</strong> D/B+1,2 (second hit high – jab interrupt)</li>
+    <li><strong>Steve:</strong> 2,1B → FLK (step and CH B+2 punish)</li>
+    <li><strong>Jin:</strong> 1,2,4 → duck 4, punish with 1,4</li>
+    <li><strong>Paul:</strong> D+1,2 → launch second hit on block</li>
+  </ul>
+
+  <h2>🌀 Raven-Specific Tools by Matchup</h2>
+  <ul>
+    <li><strong>vs Steve:</strong> Clone~cancel avoids sways, punish Duck~1 with Teleport~1</li>
+    <li><strong>vs Jin:</strong> Delay 1,2 pressure to CH parry attempts</li>
+    <li><strong>vs Reina:</strong> Use Teleport fake to bait reverse stance</li>
+    <li><strong>vs King:</strong> Space with F,F+3 to deny grabs and whiff punish</li>
+  </ul>
+
+  <h2>💡 Anti-Clone Tech Notes</h2>
+  <ul>
+    <li>Faster strings like Law 1,2,3 can stuff clone startup → space out</li>
+    <li>Heat dash clone mixups are best vs characters without i10 launches</li>
+    <li>Fakeouts > clone summoning vs reversal characters (e.g. Asuka, Dragunov)</li>
+  </ul>
+</section>
+
+<!-- Part 10: Anti-Raven Tech (Counterplay + Reversal Baits) -->
+<section id="anti-raven" class="section-anchor">
+  <h1>10. Anti-Raven Tech</h1>
+  <p>This section outlines how opponents counter Raven’s teleport and clone setups. Learn how your tools get challenged, and how to adapt to denial tactics in high-level play.</p>
+
+  <h2>🚫 Clone Denial</h2>
+  <ul>
+    <li><strong>Fast Jabs (i10–i11):</strong> Interrupt clone startup or force block</li>
+    <li><strong>Tracking Mids:</strong> Beat clone feint sidesteps (e.g., Leroy B+1+2)</li>
+    <li><strong>i10 Launchers:</strong> Blow up overuse of Teleport~P or unsafe clone enders</li>
+  </ul>
+
+  <h2>⚔️ Anti-Teleport Reactions</h2>
+  <ul>
+    <li><strong>Delay mids:</strong> Stops Raven from cloning into sweep/low</li>
+    <li><strong>Reversal Tools:</strong> Raven is susceptible to instant reversals if mistimed</li>
+    <li><strong>Step → Punish:</strong> Most teleport follow-ups are linear (step left on reads)</li>
+  </ul>
+
+  <h2>🧠 Common Download Patterns</h2>
+  <ul>
+    <li>1,2~Back → clone → clone → clone = predictable reset</li>
+    <li>Overuse of clone~1 with no cancel = duck and launch</li>
+    <li>Teleport~3 (sweep) becomes blockable if telegraphed</li>
+  </ul>
+
+  <h2>🛠 Recovery & Fix</h2>
+  <ul>
+    <li>Clone~cancel more often once clone gets blocked</li>
+    <li>Teleport fake + walk back = reversal bait</li>
+    <li>Build a fresh mental stack layer (e.g., jab > jab > delay clone → CH setup)</li>
+  </ul>
+</section>
+
+<!-- Part 11: Controller Advice (Pad vs Stick Input Support) -->
+<section id="controller" class="section-anchor">
+  <h1>11. Controller Advice</h1>
+  <p>Raven’s unique inputs benefit from clean directional control and macro optimization. This section outlines controller strategies for both pad and stick players.</p>
+
+  <h2>🎮 Pad vs Stick Overview</h2>
+  <ul>
+    <li><strong>Pad Pros:</strong> Faster sidestep buffers, smoother input for clone cancels</li>
+    <li><strong>Stick Pros:</strong> Cleaner directional teleport entries, smoother backdash cancel</li>
+    <li><strong>Pad Cons:</strong> Diagonal clone cancel may misfire without precise stick movement</li>
+    <li><strong>Stick Cons:</strong> Requires more practice for feint cancel loops and delay mix</li>
+  </ul>
+
+  <h2>🧠 Input Tips</h2>
+  <ul>
+    <li>Use forward+macro to trigger clone+cancel with minimal delay</li>
+    <li>Double-tap forward for clone~P or clone~Teleport transitions</li>
+    <li>Use neutral+down for teleport sweep oki to avoid accidental clone repeat</li>
+  </ul>
+
+  <h2>🎯 Button Map Suggestions</h2>
+  <ul>
+    <li><strong>L1 / LB:</strong> 1+2 (clone setup or reversal bind)</li>
+    <li><strong>R1 / RB:</strong> 3+4 (stance macro – helps with fast transitions)</li>
+    <li><strong>L2 / LT:</strong> 1+3 (throw tech or Teleport bind)</li>
+    <li><strong>R2 / RT:</strong> Backdash cancel buffer (optional)</li>
+  </ul>
+
+  <h2>📌 Practice Flow</h2>
+  <ol>
+    <li>Practice clone~cancel feint on loop (3+4~Back)</li>
+    <li>Test teleport~3 oki after knockdown sweep</li>
+    <li>Heat Dash into clone string on both P1/P2 side</li>
+  </ol>
+</section>
+
+<!-- Part 12: Notebook & Patch Notes (Changelog Tracker) -->
+<section id="notebook" class="section-anchor">
+  <h1>12. Notebook & Patch Notes</h1>
+  <p>This section tracks Raven-specific patch changes and offers a dedicated space for player coaching notes, strategy logs, and matchup observations.</p>
+
+  <h2>🛠 Patch Change Log: Season 1 → Season 2</h2>
+  <ul>
+    <li><strong>D/F+2:</strong> Startup increased from 15f → 16f, launch window adjusted</li>
+    <li><strong>Clone~1:</strong> Recovery increased by +3f on whiff</li>
+    <li><strong>SSH 2:</strong> Now grants floor break on CH</li>
+    <li><strong>Teleport~P:</strong> Can now cancel into clone during Heat state</li>
+    <li><strong>U/B+3:</strong> Slightly reduced pushback on block</li>
+  </ul>
+
+  <h2>📓 Player Strategy Notes</h2>
+  <ul>
+    <li>Clone~cancel mix works better when delayed behind 2,3</li>
+    <li>Reina’s parry punishes clone sweep consistently — bait reversal with fake jump</li>
+    <li>Heat Dash → Teleport~1 into clone loop = trap vs low sidestep characters (e.g., Jack)</li>
+  </ul>
+
+  <h2>📈 Coaching Log</h2>
+  <ul>
+    <li>Track matchup issues (e.g. “vs Leroy B+1+2 kills feints”)</li>
+    <li>Write reaction notes on clone punishes</li>
+    <li>Tag wins/losses by round ender (e.g. clone trap / teleport sweep)</li>
+  </ul>
+</section>
+
+<!-- Part 13+: Coaching Modules (Heat Maps, Playbook Flips, Reset Trees) -->
+<section id="modules" class="section-anchor">
+  <h1>13+. Coaching Modules</h1>
+  <p>These are elite-level competitive coaching tools for Raven, ideal for tournament prep, Evo-tier play, and bracket simulations.</p>
+
+  <h2>🔥 Heat Map by Round State</h2>
+  <ul>
+    <li><strong>Round Start:</strong> Use clone feint → 2,3 to test mash</li>
+    <li><strong>Mid Round (40%–60% HP):</strong> Heat Dash → delay teleport mix</li>
+    <li><strong>Round End:</strong> Cancel clone loop, switch to sweep or low parry bait</li>
+  </ul>
+
+  <h2>🧠 Frame Trap Overlay Map</h2>
+  <ul>
+    <li><strong>1,2 → D/F+1 → B+2:</strong> Catch fuzzy guard and swing</li>
+    <li><strong>2,3 → clone cancel → Teleport~1:</strong> Frame-tight reset path</li>
+  </ul>
+
+  <h2>🕸 Reset Tree & Feint Routing</h2>
+  <ul>
+    <li>Teleport~P → empty → grab/low</li>
+    <li>Clone cancel → CH bait → sweep</li>
+    <li>Heat Dash → walk back → clone fake → hopkick</li>
+  </ul>
+
+  <h2>🎯 Opponent Habit Tracker</h2>
+  <ul>
+    <li>Track sidestep direction after clone fake</li>
+    <li>Monitor jab mash timing after teleport pressure</li>
+    <li>Notate players who parry clone setups early</li>
+  </ul>
+
+  <h2>⚖️ Momentum Flow Theory</h2>
+  <ul>
+    <li>Use clone cancels to stall fast rounds</li>
+    <li>Use SSH pressure loop to speed up tempo</li>
+    <li>Switch to grab/low when opponent freezes</li>
+  </ul>
+
+  <h2>📘 Playbook Flip Coaching</h2>
+  <ul>
+    <li>Have 3 clone routes (mid, cancel, sweep) memorized per match</li>
+    <li>Always rotate opener strategy after loss</li>
+    <li>Practice pressure-to-bait flip every 2 rounds</li>
+  </ul>
+</section>
