@@ -31,6 +31,7 @@
       cursor: pointer;
       padding: 4px 8px;
       border-radius: 4px;
+      font-weight: bold;
     }
     .sidebar a.active-link {
       font-weight: bold;
@@ -62,8 +63,29 @@
 
       const links = document.querySelectorAll('.sidebar a');
       links.forEach(link => link.classList.remove('active-link'));
-      const currentLink = Array.from(links).find(link => link.textContent.includes(id.replace('-', ' ')) || link.onclick.toString().includes(id));
-      if (currentLink) currentLink.classList.add('active-link');
+      const linkMap = {
+        'intro': 0,
+        'punishment-guide': 1,
+        'key-moves': 2,
+        'stances': 3,
+        'combos': 4,
+        'gameplan': 5,
+        'curriculum': 6,
+        'mental-stack': 7,
+        'matchups': 8,
+        'anti-steve': 9,
+        'controller-tips': 10,
+        'notebook': 11,
+        'expansion-modules': 12
+      };
+      const activeIndex = linkMap[id];
+      if (typeof activeIndex === 'number') {
+        links[activeIndex].classList.add('active-link');
+      }
+    }
+
+    window.onload = function() {
+      showSection('intro');
     }
   </script>
 </head>
@@ -92,6 +114,7 @@
 </div>
 </body>
 </html>
+
 <!-- Part 2: Punishment Guide (Season 2 Verified) -->
 <section id="punishment-guide" class="section-anchor">
   <h2>2. Punishment Guide</h2>
