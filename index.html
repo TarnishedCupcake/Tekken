@@ -29,6 +29,14 @@
       text-decoration: none;
       color: #333;
       cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    .sidebar a.active-link {
+      font-weight: bold;
+      background-color: #a5d8ff;
+      color: white;
+      border: 2px solid #74c0fc;
     }
     .content {
       flex: 1;
@@ -51,6 +59,11 @@
       sections.forEach(section => section.classList.remove('active'));
       const target = document.getElementById(id);
       if (target) target.classList.add('active');
+
+      const links = document.querySelectorAll('.sidebar a');
+      links.forEach(link => link.classList.remove('active-link'));
+      const currentLink = Array.from(links).find(link => link.textContent.includes(id.replace('-', ' ')) || link.onclick.toString().includes(id));
+      if (currentLink) currentLink.classList.add('active-link');
     }
   </script>
 </head>
@@ -79,7 +92,6 @@
 </div>
 </body>
 </html>
-
 <!-- Part 2: Punishment Guide (Season 2 Verified) -->
 <section id="punishment-guide" class="section-anchor">
   <h2>2. Punishment Guide</h2>
