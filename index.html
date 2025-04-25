@@ -53,35 +53,33 @@
     .section-anchor.active {
       display: block;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f5f5f5;
+    }
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('.section-anchor');
+      const links = document.querySelectorAll('.sidebar a');
+
       sections.forEach(section => section.classList.remove('active'));
+      links.forEach(link => link.classList.remove('active-link'));
+
       const target = document.getElementById(id);
       if (target) target.classList.add('active');
 
-      const links = document.querySelectorAll('.sidebar a');
-      links.forEach(link => link.classList.remove('active-link'));
-      const linkMap = {
-        'intro': 0,
-        'punishment-guide': 1,
-        'key-moves': 2,
-        'stances': 3,
-        'combos': 4,
-        'gameplan': 5,
-        'curriculum': 6,
-        'mental-stack': 7,
-        'matchups': 8,
-        'anti-steve': 9,
-        'controller-tips': 10,
-        'notebook': 11,
-        'expansion-modules': 12
-      };
-      const activeIndex = linkMap[id];
-      if (typeof activeIndex === 'number') {
-        links[activeIndex].classList.add('active-link');
-      }
+      const activeLink = document.querySelector(`.sidebar a[onclick*="${id}"]`);
+      if (activeLink) activeLink.classList.add('active-link');
     }
 
     window.onload = function() {
@@ -111,41 +109,39 @@
     <h1>1. Introduction</h1>
     <p>This guide is designed to help you master Steve Fox in Tekken 8 at the tournament level. Whether you're learning the character or sharpening your tournament game, this resource covers everything from fundamentals to elite setups.</p>
   </section>
-</div>
-</body>
-</html>
 
 <!-- Part 2: Punishment Guide (Season 2 Verified) -->
 <section id="punishment-guide" class="section-anchor">
-  <h2>2. Punishment Guide</h2>
-  <p>This list contains Steve’s most accurate punishment tools within i10 to i17 startup range. All data verified for Tekken 8 Season 2. Heat-compatible tools are tagged. Stance or CH setup tools are excluded.</p>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Move</th>
-        <th>Input</th>
-        <th>Startup</th>
-        <th>On Block</th>
-        <th>On Hit</th>
-        <th>CH</th>
-        <th>Use</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Jab</td><td>1</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>i10 check</td></tr>
-      <tr><td>1,2</td><td>1,2</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>i10 follow-up</td></tr>
-      <tr><td>2,1</td><td>2,1</td><td>12f</td><td>-1</td><td>+6</td><td>+8</td><td>Safe mid punish</td></tr>
-      <tr><td>D/F+1</td><td>D/F+1</td><td>13f</td><td>-1</td><td>+5</td><td>+8</td><td>Core poke</td></tr>
-      <tr><td>B+1</td><td>B+1</td><td>13f</td><td>-10</td><td>-1</td><td>KND</td><td>i13 CH threat</td></tr>
-      <tr><td>WS 1,2</td><td>While Standing 1,2</td><td>11f</td><td>-6</td><td>+6</td><td>+8</td><td>Crouch punish</td></tr>
-      <tr><td>F,F+2</td><td>F,F+2</td><td>14f</td><td>-9</td><td>+6</td><td>KND</td><td>Homing, whiff punish</td></tr>
-      <tr><td>1+2</td><td>1+2</td><td>15f</td><td>-9</td><td>+6</td><td>KND</td><td>Wall splat tool</td></tr>
-      <tr><td>F+1+2</td><td>F+1+2</td><td>16f</td><td>-9</td><td>+4</td><td>+8</td><td>Heat starter 🔥</td></tr>
-      <tr><td>FLK 2</td><td>FLK 2</td><td>17f</td><td>-4</td><td>+3</td><td>+6</td><td>Homing pressure 🌀</td></tr>
-    </tbody>
-  </table>
-</section>
+    <h2>2. Punishment Guide</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Move</th>
+          <th>Input</th>
+          <th>Startup</th>
+          <th>On Block</th>
+          <th>On Hit</th>
+          <th>CH</th>
+          <th>Use</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Jab</td><td>1</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>i10 check</td></tr>
+        <tr><td>1,2</td><td>1,2</td><td>10f</td><td>+1</td><td>+8</td><td>+9</td><td>i10 follow-up</td></tr>
+        <tr><td>2,1</td><td>2,1</td><td>12f</td><td>-1</td><td>+6</td><td>+8</td><td>Safe mid punish</td></tr>
+        <tr><td>D/F+1</td><td>D/F+1</td><td>13f</td><td>-1</td><td>+5</td><td>+8</td><td>Core poke</td></tr>
+        <tr><td>B+1</td><td>B+1</td><td>13f</td><td>-10</td><td>-1</td><td>KND</td><td>i13 CH threat</td></tr>
+        <tr><td>WS 1,2</td><td>While Standing 1,2</td><td>11f</td><td>-6</td><td>+6</td><td>+8</td><td>Crouch punish</td></tr>
+        <tr><td>F,F+2</td><td>F,F+2</td><td>14f</td><td>-9</td><td>+6</td><td>KND</td><td>Homing, whiff punish</td></tr>
+        <tr><td>1+2</td><td>1+2</td><td>15f</td><td>-9</td><td>+6</td><td>KND</td><td>Wall splat tool</td></tr>
+        <tr><td>F+1+2</td><td>F+1+2</td><td>16f</td><td>-9</td><td>+4</td><td>+8</td><td>Heat starter 🔥</td></tr>
+        <tr><td>FLK 2</td><td>FLK 2</td><td>17f</td><td>-4</td><td>+3</td><td>+6</td><td>Homing pressure 🌀</td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+</body>
+</html>
 <!-- Part 3: Key Moves (Non-Stance, Season 2 Verified) -->
 <section id="key-moves" class="section-anchor">
   <h2>3. Key Moves</h2>
