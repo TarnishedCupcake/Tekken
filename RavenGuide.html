@@ -3,94 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 1 (Introduction)</title>
+  <title>Comprehensive Raven Guide - Introduction</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
+      background: #f7fafc;
       display: flex;
-      background: linear-gradient(to bottom right, #f0f4f8, #ffffff);
       min-height: 100vh;
     }
     nav {
+      width: 230px;
+      background: #e0f2ff;
+      padding: 20px;
       position: fixed;
       top: 0;
       left: 0;
-      width: 260px;
-      height: 100%;
-      background: #f9f9f9;
-      padding: 20px;
+      bottom: 0;
       overflow-y: auto;
-      border-right: 1px solid #ddd;
+      border-right: 2px solid #d0e7f9;
     }
     nav h2 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       margin-bottom: 20px;
       font-weight: 800;
+      color: #336699;
     }
     nav a {
       display: block;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 8px;
-      font-weight: 600;
+      margin-bottom: 12px;
+      padding: 8px 12px;
       text-decoration: none;
-      color: #333;
-      background: #fff;
-      transition: all 0.3s ease;
+      color: #336699;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background 0.3s;
     }
     nav a.active {
       background: #a2d2ff;
       color: #fff;
     }
     nav a:hover {
-      background: #d0ebff;
+      background: #bde0fe;
     }
     main {
-      margin-left: 280px;
+      margin-left: 250px;
       padding: 40px;
-      max-width: 1000px;
-      width: 100%;
+      flex: 1;
     }
     section {
       display: none;
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(10px);
       transition: opacity 0.5s ease, transform 0.5s ease;
-      background: #fff;
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      margin-bottom: 60px;
     }
     section.active {
       display: block;
       opacity: 1;
       transform: translateY(0);
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
     h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-    h2 {
       font-size: 2rem;
-      margin-top: 2rem;
+      font-weight: 800;
+      color: #336699;
       margin-bottom: 1rem;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
     }
-    h3 {
-      font-size: 1.4rem;
-      margin-top: 1.5rem;
+    h2, h3 {
+      color: #336699;
     }
     p, ul {
       font-size: 1rem;
       line-height: 1.7;
+      color: #333;
     }
     ul {
-      padding-left: 1.5rem;
+      padding-left: 20px;
     }
     .back-to-top {
       display: inline-block;
@@ -98,10 +90,9 @@
       padding: 10px 20px;
       background: #a2d2ff;
       color: #fff;
-      text-decoration: none;
       border-radius: 8px;
+      text-decoration: none;
       font-weight: 600;
-      transition: background 0.3s;
     }
     .back-to-top:hover {
       background: #82c4ff;
@@ -111,12 +102,8 @@
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -130,7 +117,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')" class="active">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -152,7 +139,8 @@
     <h2>Part 1: Introduction</h2>
 
     <h3>Raven’s Identity and Archetype</h3>
-    <p>Raven in Tekken 8 Season 2 is a technical mid-range mixup specialist, combining clone threats, teleport mobility, and burst offense.
+    <p>Raven in Tekken 8 Season 2 is a technical mid-range mixup specialist,  
+    combining clone threats, teleport mobility, and burst offense.  
     He controls neutral space through safe mids, counter hit tools, and calculated clone summon traps.</p>
 
     <h3>Playstyle Overview</h3>
@@ -167,21 +155,21 @@
     <ul>
       <li>Exceptional spacing tools and safe mid pokes</li>
       <li>Explosive damage off successful clone mindgames</li>
-      <li>One of the most versatile defensive resets in Tekken 8</li>
-      <li>Tempo manipulation mastery via stance, clone, and teleport</li>
+      <li>Versatile defensive resets via teleport and clones</li>
+      <li>Elite tempo disruption ability</li>
     </ul>
 
     <h3>Core Weaknesses</h3>
     <ul>
-      <li>Cannot autopilot — every offense must be layered</li>
-      <li>Back Turn stance vulnerability when misused</li>
-      <li>Clone setups can backfire if predictable</li>
-      <li>Weak punish game if forced into static defense</li>
+      <li>Requires constant variation — cannot autopilot</li>
+      <li>Back Turn stance is vulnerable if misused</li>
+      <li>Clone setups can be baited if obvious</li>
+      <li>Weaker static defense compared to top tiers</li>
     </ul>
 
     <h3>Mindset Recommendation</h3>
-    <p>Think of Raven not as a "combo" character — but as a tempo disruptor.
-    Your job is to constantly reframe the fight’s rhythm and force bad decisions, using movement, clone summons, and teleport manipulation at every opportunity.</p>
+    <p>Think of Raven not just as a character, but as a tempo disruptor.  
+    Win fights by confusing, trapping, and forcing mistakes — not by simply out-damaging.</p>
 
     <a href="#" class="back-to-top" onclick="showSection('intro')">Back to Top</a>
   </section>
@@ -194,21 +182,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 2 (Punishment Guide)</title>
+  <title>Comprehensive Raven Guide - Punishment Guide</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Same cleaned styles as Part 1 — omitted here for brevity] */
+    /* [Same clean simple styles used as Part 1] */
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -222,7 +206,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')" class="active">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -244,35 +228,34 @@
     <h2>Part 2: Punishment Guide</h2>
 
     <h3>Overview</h3>
-    <p>These are Raven’s core tournament-grade punishers for Tekken 8 Season 2.  
-    Only reliable, fast punishers are listed — no stance dependency moves included.</p>
+    <p>These are Raven’s core punishers for Tekken 8 Season 2 — tournament tested and reliable.  
+    Focus on frame perfect execution and simple clean responses to openings.</p>
 
     <h3>Punishment Chart</h3>
 
-    <table style="width:100%; border-collapse: collapse; margin-top: 1rem; font-size: 1rem; background: #fff;">
+    <table style="width:100%; border-collapse: collapse; margin-top: 1rem; font-size: 1rem; background: #ffffff; border-radius: 10px; overflow: hidden;">
       <thead>
-        <tr style="background: #a2d2ff; color: #fff;">
-          <th style="padding: 12px; border-bottom: 2px solid #ddd;">Situation</th>
-          <th style="padding: 12px; border-bottom: 2px solid #ddd;">Move (Input)</th>
-          <th style="padding: 12px; border-bottom: 2px solid #ddd;">Startup (Frames)</th>
-          <th style="padding: 12px; border-bottom: 2px solid #ddd;">On Hit</th>
-          <th style="padding: 12px; border-bottom: 2px solid #ddd;">Notes</th>
+        <tr style="background: #a2d2ff; color: white;">
+          <th style="padding: 12px;">Situation</th>
+          <th style="padding: 12px;">Move (Input)</th>
+          <th style="padding: 12px;">Startup</th>
+          <th style="padding: 12px;">On Hit</th>
+          <th style="padding: 12px;">Notes</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td style="padding: 10px;">i10</td><td>1</td><td>10f</td><td>+1</td><td>Fastest jab check</td></tr>
+        <tr><td style="padding: 10px;">i10</td><td>1</td><td>10f</td><td>+1</td><td>Fast jab check</td></tr>
         <tr><td>i11</td><td>1,2</td><td>11f</td><td>+4</td><td>Safe basic double jab</td></tr>
-        <tr><td>i12</td><td>1,1,2</td><td>12f</td><td>+6 KD</td><td>Safe knockdown string</td></tr>
-        <tr><td>i13</td><td>F+2</td><td>13f</td><td>+3</td><td>Safe mid poke punish</td></tr>
-        <tr><td>i14</td><td>WS 1</td><td>14f</td><td>+5</td><td>Standing punish launcher</td></tr>
-        <tr><td>i15</td><td>F+2,3</td><td>15f</td><td>Launcher</td><td>Main whiff punisher</td></tr>
-        <tr><td>i16</td><td>WS 3,2</td><td>16f</td><td>Launcher</td><td>From crouch launcher</td></tr>
-        <tr><td>i17</td><td>F,F+3</td><td>17f</td><td>Launcher</td><td>Running knee pressure</td></tr>
+        <tr><td>i12</td><td>1,1,2</td><td>12f</td><td>+6 Knockdown</td><td>Stable knockdown</td></tr>
+        <tr><td>i13</td><td>F+2</td><td>13f</td><td>+3</td><td>Safe mid punish</td></tr>
+        <tr><td>i14</td><td>WS 1</td><td>14f</td><td>+5</td><td>Launcher on standing</td></tr>
+        <tr><td>i15</td><td>F+2,3</td><td>15f</td><td>Launcher</td><td>Main i15 launcher</td></tr>
+        <tr><td>i16</td><td>WS 3,2</td><td>16f</td><td>Launcher</td><td>Full crouch launcher</td></tr>
+        <tr><td>i17</td><td>F,F+3</td><td>17f</td><td>Launcher</td><td>Running pressure launcher</td></tr>
       </tbody>
     </table>
 
-    <p style="margin-top: 1.5rem;"><em>First focus on recognizing punish windows.  
-    Then punish safely — THEN layer in stance threats and clone resets after frame wins.</em></p>
+    <p style="margin-top: 1.5rem;"><em>Perfect your punishment first — no heat, clone, teleport will save bad reactions under tournament pressure.</em></p>
 
     <a href="#" class="back-to-top" onclick="showSection('punishment')">Back to Top</a>
   </section>
@@ -285,21 +268,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 3 (Key Moves)</title>
+  <title>Comprehensive Raven Guide - Key Moves</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Same clean styles — omitted for brevity since consistent across parts] */
+    /* [Same clean simple global styles as previous parts] */
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -313,7 +292,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')" class="active">3. Key Moves</a>
@@ -335,35 +314,35 @@
     <h2>Part 3: Key Moves</h2>
 
     <h3>Overview</h3>
-    <p>These 20 true neutral moves form the backbone of Raven’s tournament-level control.  
-    No stance or clone dependency — pure spacing, poking, and punishing tools.</p>
+    <p>These 20 neutral-focused moves define Raven's tournament control, spacing, and mixup power.  
+    No stance transitions, no clone dependency — pure solid Tekken 8 Raven core.</p>
 
-    <h3>Key Moves List</h3>
+    <h3>Core Moves List</h3>
     <ul>
-      <li><strong>1:</strong> i10 jab check (+1)</li>
-      <li><strong>1,1:</strong> Fast safe poke string (+4)</li>
-      <li><strong>D/F+1:</strong> Mid-check neutral control</li>
-      <li><strong>B+2:</strong> Long-range mid poke</li>
+      <li><strong>1:</strong> i10 Jab Check</li>
+      <li><strong>1,1:</strong> Fast safe poke</li>
+      <li><strong>D/F+1:</strong> Safe mid neutral control</li>
+      <li><strong>B+2:</strong> Mid long-range poke</li>
       <li><strong>D/B+2,1:</strong> Low-mid poke mix</li>
-      <li><strong>F+2:</strong> Mid poke punish</li>
-      <li><strong>F+2,3:</strong> Launcher on punish</li>
-      <li><strong>WS 1:</strong> Standing launcher (i14)</li>
-      <li><strong>WS 3,2:</strong> Full launcher from crouch (i16)</li>
-      <li><strong>D/F+2:</strong> Mid unsafe launcher</li>
-      <li><strong>F,F+3:</strong> Running knee launcher (i17)</li>
-      <li><strong>WR 2:</strong> Running pressure mid (+ frames)</li>
+      <li><strong>F+2:</strong> Safe mid punish</li>
+      <li><strong>F+2,3:</strong> Launcher on hit</li>
+      <li><strong>WS 1:</strong> Standing launcher</li>
+      <li><strong>WS 3,2:</strong> Crouch launcher</li>
+      <li><strong>D/F+2:</strong> Unsafe launcher</li>
+      <li><strong>F,F+3:</strong> Running knee approach</li>
+      <li><strong>WR 2:</strong> Running plus frames poke</li>
       <li><strong>F+4:</strong> Launcher-safe mid</li>
-      <li><strong>QCF+1:</strong> Dash jab threat</li>
+      <li><strong>QCF+1:</strong> Dash jab pressure</li>
       <li><strong>QCF+2:</strong> Dash burst launcher</li>
-      <li><strong>U/F+3:</strong> Mid crush anti-pressure</li>
+      <li><strong>U/F+3:</strong> Crush anti-pressure mid</li>
       <li><strong>D/B+3:</strong> Safe low poke (+1)</li>
       <li><strong>U/F+4:</strong> Hopkick launcher</li>
-      <li><strong>SS+3:</strong> Sidestep low option</li>
+      <li><strong>SS+3:</strong> Sidestep low poke</li>
       <li><strong>SS+4:</strong> Sidestep sweep launcher</li>
     </ul>
 
-    <p><em>Master these true core moves before worrying about clone setups, teleports, or fancy stance cancels.  
-    Raven’s neutral wins are built from these fundamentals first.</em></p>
+    <p><em>Mastering these 20 moves is step one toward Raven tournament readiness.  
+    Control neutral ➔ build pressure ➔ punish whiffs = Raven dominance cycle.</em></p>
 
     <a href="#" class="back-to-top" onclick="showSection('keymoves')">Back to Top</a>
   </section>
@@ -376,21 +355,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 4 (Combos)</title>
+  <title>Comprehensive Raven Guide - Combos</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Same professional clean styles — consistent across all parts] */
+    /* [Same clean and simple global style used for all parts] */
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -404,7 +379,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -425,20 +400,20 @@
     <h1>Comprehensive Raven Guide</h1>
     <h2>Part 4: Combos</h2>
 
-    <h3>Normal Hit Combos</h3>
+    <h3>Normal Hit Launch Combos</h3>
     <ul>
       <li><strong>D/F+2 → 4 → BT 3+4 → 4 → WR 2:</strong> 61 Damage</li>
       <li><strong>WS 1 → F+2,1 → 4 → WR 2:</strong> 58 Damage</li>
       <li><strong>F,F+3 → F+2,1 → 4 → WR 2:</strong> 65 Damage</li>
-      <li><strong>F+4 → DASH → 3+4 → BT 3+4 → WR 2:</strong> 62 Damage</li>
+      <li><strong>F+4 → Dash → 3+4 → BT 3+4 → WR 2:</strong> 62 Damage</li>
       <li><strong>WS 3,2 → BT 4 → WR 2:</strong> 57 Damage</li>
-      <li><strong>BT 3+4 → DASH → 4 → WR 2:</strong> 60 Damage</li>
+      <li><strong>BT 3+4 → Dash → 4 → WR 2:</strong> 60 Damage</li>
     </ul>
 
     <h3>Counter Hit Combos</h3>
     <ul>
       <li><strong>CH QCF+1 → WS 1 → F+2,1 → WR 2:</strong> 70 Damage</li>
-      <li><strong>CH SZN 1+2 → DASH → 4 → BT 3+4 → WR 2:</strong> 75+ Damage</li>
+      <li><strong>CH SZN 1+2 → Dash → 4 → BT 3+4 → WR 2:</strong> 75+ Damage</li>
     </ul>
 
     <h3>Wall Carry Combos</h3>
@@ -453,14 +428,14 @@
       <li><strong>Wall Splat → WR 2 → Clone Setup:</strong> 60 Damage</li>
     </ul>
 
-    <h3>Heat Activation Combos</h3>
+    <h3>Heat Combos</h3>
     <ul>
       <li><strong>D/F+2 → Heat Dash → F+2,1 → WR 2:</strong> 80+ Damage</li>
       <li><strong>WS 1 → Heat Dash → WR 2:</strong> 77 Damage</li>
     </ul>
 
-    <p><em>Learn your launch starters ➔ stable enders ➔ wall carry priorities first.  
-    Heat combos amplify rewards after strong neutral launches.</em></p>
+    <p><em>Stable, clean combos are required —  
+    every launch must convert to walls, damage, and mental pressure.</em></p>
 
     <a href="#" class="back-to-top" onclick="showSection('combos')">Back to Top</a>
   </section>
@@ -473,21 +448,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 5 (Stance System)</title>
+  <title>Comprehensive Raven Guide - Stance System</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Same polished clean styles consistent across the guide] */
+    /* [Same clean simple style consistent throughout guide] */
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -501,7 +472,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -523,40 +494,38 @@
     <h2>Part 5: Stance System & Transitions</h2>
 
     <h3>Overview</h3>
-    <p>Raven’s stance system (Backturn, Soulzone, Shadow Sprint)  
-    is designed for non-stop pressure resets, evasion, and burst offense.  
-    Quick transitions are the core of high-level Raven gameplay.</p>
+    <p>Raven's unique stances (Back Turn, Soulzone, Shadow Sprint)  
+    create layered mixups, movement tricks, and mental pressure against opponents.  
+    True mastery comes from understanding when and how to transition smoothly.</p>
 
-    <h3>Back Turn (BT) Stance</h3>
+    <h3>Back Turn (BT) Stance Key Moves</h3>
     <ul>
-      <li><strong>BT 1:</strong> i8 jab (fast check)</li>
-      <li><strong>BT F+3:</strong> Plus-frame mid launcher</li>
-      <li><strong>BT F+4,1:</strong> Mid pressure reset string</li>
+      <li><strong>BT 1:</strong> i8 Jab Check</li>
+      <li><strong>BT F+3:</strong> Plus Frame Mid Launcher</li>
+      <li><strong>BT F+4,1:</strong> Mid Frame Trap String</li>
     </ul>
 
-    <h3>Soulzone (SZN) Stance</h3>
+    <h3>Soulzone (SZN) Stance Key Moves</h3>
     <ul>
-      <li><strong>SZN 1:</strong> Safe mid jab</li>
-      <li><strong>SZN 2:</strong> Mid poke (+3 on hit)</li>
-      <li><strong>SZN 1+2:</strong> Counter hit launcher trap</li>
+      <li><strong>SZN 1:</strong> Safe Mid Jab</li>
+      <li><strong>SZN 2:</strong> Mid Poke +3 on Hit</li>
+      <li><strong>SZN 1+2:</strong> Counter Hit Launcher Trap</li>
     </ul>
 
-    <h3>Shadow Sprint (SHS)</h3>
+    <h3>Shadow Sprint (SHS) Key Moves</h3>
     <ul>
-      <li><strong>SHS 1:</strong> Plus on hit pressure move</li>
-      <li><strong>SHS 2:</strong> Knockdown threat option</li>
-      <li><strong>SHS Cancel:</strong> Empty dash threat mixup</li>
+      <li><strong>SHS 1:</strong> Plus on Hit Pressure</li>
+      <li><strong>SHS 2:</strong> Knockdown Threat</li>
+      <li><strong>SHS Cancel:</strong> Fakeout Mixup Option</li>
     </ul>
 
-    <h3>Transition System Flow</h3>
+    <h3>Stance Transition Flow</h3>
     <ul>
-      <li>Clone ➔ BT stance ➔ mid pressure</li>
-      <li>Teleport ➔ SZN stance ➔ bait interrupts</li>
-      <li>SHS Cancel ➔ reset mixups and movement</li>
+      <li>Clone ➔ BT Pressure ➔ SZN Reboot ➔ Shadow Sprint Feint ➔ Reset Neutral</li>
     </ul>
 
-    <p><em>Elite Raven = living inside transitions.  
-    BT ➔ SZN ➔ SHS ➔ neutral ➔ clone summon ➔ teleport ➔ restart.</em></p>
+    <p><em>At elite level, Raven constantly flows between BT ➔ SZN ➔ SHS without predictable patterns —  
+    creating total mind stack overload for opponents.</em></p>
 
     <a href="#" class="back-to-top" onclick="showSection('stancesystem')">Back to Top</a>
   </section>
@@ -569,21 +538,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 6 (Gameplan)</title>
+  <title>Comprehensive Raven Guide - Gameplan</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Same clean global styles — consistent across guide] */
+    /* [Same clean global style used throughout guide] */
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -597,7 +562,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -616,43 +581,41 @@
 <main>
   <section id="gameplan" class="active">
     <h1>Comprehensive Raven Guide</h1>
-    <h2>Part 6: Gameplan & Pressure Systems</h2>
+    <h2>Part 6: Gameplan</h2>
 
     <h3>Overall Strategy</h3>
-    <p>Raven disrupts rhythm — not with brute force, but with timing distortion.  
-    Constantly rotate neutral pokes, clone setups, teleports, and stance resets to control the match flow.</p>
+    <p>Raven wins by **disrupting timing, movement, and mental flow** — not by raw frame traps.  
+    The goal is to overload the opponent’s reaction stack faster than they can stabilize.</p>
 
-    <h3>Neutral Control Tools</h3>
+    <h3>Neutral Control Core</h3>
     <ul>
-      <li><strong>1 / 1,1:</strong> Jab checks to test reactions</li>
-      <li><strong>D/F+1:</strong> Safe mid poke to build frame wins</li>
-      <li><strong>B+2:</strong> Range control mid poke</li>
-      <li><strong>WR 2:</strong> Running pressure mid (+ frames)</li>
+      <li><strong>1 / 1,1:</strong> Safe fast pokes for checks</li>
+      <li><strong>D/F+1:</strong> Safe mid poke into mind trap</li>
+      <li><strong>B+2:</strong> Long range poke denial</li>
+      <li><strong>WR 2:</strong> Plus frames at distance</li>
     </ul>
 
-    <h3>Pressure Flow Systems</h3>
+    <h3>Approach Systems</h3>
     <ul>
-      <li><strong>Small Tekken Layer:</strong> Poke ➔ Sidestep ➔ Clone Fake ➔ Reset</li>
-      <li><strong>Clone Threat Layer:</strong> Mind trap opponent into preemptive movement or mash</li>
-      <li><strong>Teleport Threat Layer:</strong> Force defense cracks by unexpected resets</li>
+      <li><strong>F,F+3:</strong> Sprint Knee Approach</li>
+      <li><strong>QCF+1:</strong> Dash Pressure Jab</li>
+      <li><strong>Clone Fake Dash:</strong> Mind Overload Setup</li>
     </ul>
 
-    <h3>Approach Moves</h3>
+    <h3>Flow Disruption Layers</h3>
     <ul>
-      <li><strong>F,F+3:</strong> Sprint knee engagement</li>
-      <li><strong>QCF+1:</strong> Sprint jab check pressure</li>
-      <li><strong>Clone Fake Dash:</strong> Approach with mental stack overload</li>
+      <li>Neutral ➔ Poke ➔ Sidestep ➔ Fake Pressure ➔ Clone ➔ Teleport ➔ Reset</li>
     </ul>
 
-    <h3>Key Concepts</h3>
+    <h3>Mindset Priority</h3>
     <ul>
-      <li><strong>Flow Breaks:</strong> Avoid predictable rhythms</li>
-      <li><strong>Feint Movements:</strong> Dash cancels, clone fakeouts</li>
-      <li><strong>Disrupt then Punish:</strong> Opponent must guess wrong 3 times, not just once</li>
+      <li><strong>Disrupt Timing:</strong> Never repeat same flow twice</li>
+      <li><strong>Force Panic:</strong> Create frames they don't expect</li>
+      <li><strong>Reset Rhythm:</strong> Teleport and Clone mind resets constantly</li>
     </ul>
 
-    <p><em>Master neutral ➔ pressure ➔ clone ➔ teleport ➔ sidestep ➔ whiff punish ➔ repeat.  
-    Never allow the opponent to feel "comfortable" at any moment in the match.</em></p>
+    <p><em>Elite Raven players do not let opponents feel “safe” or “stable”  
+    for more than 6 seconds at a time. Rhythm breaks win rounds.</em></p>
 
     <a href="#" class="back-to-top" onclick="showSection('gameplan')">Back to Top</a>
   </section>
@@ -665,21 +628,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 7 (Defense Doctrine)</title>
+  <title>Comprehensive Raven Guide - Defense Doctrine</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Same global clean styles from previous parts — applied here too] */
+    /* [Same clean simple universal guide style] */
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -693,7 +652,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -712,37 +671,35 @@
 <main>
   <section id="defense" class="active">
     <h1>Comprehensive Raven Guide</h1>
-    <h2>Part 7: Defensive Systems - Shadow Defense Doctrine</h2>
+    <h2>Part 7: Defense Doctrine</h2>
 
     <h3>Overview</h3>
-    <p>Raven’s defense is **not** passive.  
-    Movement, clones, and teleport evasion constantly disrupt the opponent’s pressure rhythm rather than just blocking.</p>
+    <p>Raven’s defense is **built on movement disruption and threat resetting**,  
+    not passive blocking. Staying unreadable defensively creates confusion.</p>
 
-    <h3>Core Defensive Tools</h3>
+    <h3>Key Defensive Tools</h3>
     <ul>
-      <li><strong>Backdash Cancel:</strong> Escape tight strings safely</li>
-      <li><strong>Sidestep Right:</strong> Evade linear aggression</li>
-      <li><strong>Clone Summon:</strong> Fake vulnerability and bait counters</li>
-      <li><strong>Teleport Resets:</strong> Break frame traps, reset neutral</li>
-      <li><strong>BT 1+2:</strong> Parry against linear fast pressure</li>
+      <li><strong>Backdash Cancel:</strong> Evade pressure layers</li>
+      <li><strong>Sidestep Right:</strong> Escape linear mid chains</li>
+      <li><strong>Clone Summon:</strong> Mind trap mashers during defense</li>
+      <li><strong>Teleport Reset:</strong> Break frame traps and safe mids</li>
+      <li><strong>BT 1+2:</strong> Parry reversal against strings</li>
     </ul>
 
-    <h3>Defensive Flow Strategy</h3>
+    <h3>Defense Flowchart</h3>
     <ul>
-      <li>Pressure ➔ Backdash ➔ Clone Fake ➔ Punish Approach</li>
-      <li>Opponent Mashing ➔ Sidestep ➔ Counter Launcher</li>
-      <li>Pressure Trap ➔ Teleport ➔ Punish Reset</li>
+      <li>Pressure ➔ Clone Summon ➔ Teleport ➔ Punish ➔ Reset</li>
     </ul>
 
-    <h3>Mindset Keys</h3>
+    <h3>Mindset Priority</h3>
     <ul>
-      <li><strong>Escape Early:</strong> Never get trapped too long</li>
-      <li><strong>Force Whiffs:</strong> Prioritize movement over blocks</li>
-      <li><strong>Reset Mental Stack:</strong> After every reset, rebuild pressure flow immediately</li>
+      <li><strong>Escape Early:</strong> Never get boxed at wall</li>
+      <li><strong>Force Errors:</strong> Make opponent swing at clones</li>
+      <li><strong>Reset Threat:</strong> Always look for mind reset opportunity</li>
     </ul>
 
-    <p><em>Defense is offense for Raven.  
-    Move first ➔ evade ➔ mind trap ➔ crush hesitation — that’s elite defense.</em></p>
+    <p><em>Elite Raven defense does not block for 10 seconds straight —  
+    it shifts positioning, forces mistakes, and punishes impatience rapidly.</em></p>
 
     <a href="#" class="back-to-top" onclick="showSection('defense')">Back to Top</a>
   </section>
@@ -755,21 +712,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 8 (Clone System)</title>
+  <title>Comprehensive Raven Guide - Clone System</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Global polished clean styles consistent throughout guide] */
+    /* [Same clean pastel global style continued consistently] */
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -783,7 +736,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -805,35 +758,34 @@
     <h2>Part 8: Clone System</h2>
 
     <h3>Overview</h3>
-    <p>Clones are **not gimmicks** — they are mental stack overload tools.  
-    Winning clone interactions directly decides many high-level matches.</p>
+    <p>Raven’s clone summons are **mind stack overload weapons** —  
+    designed to break patterns, force reactions, and bait desperation swings.</p>
 
-    <h3>Core Clone Options</h3>
+    <h3>Clone Timing Layers</h3>
     <ul>
-      <li><strong>Instant Explosion:</strong> Punish mashers who swing immediately</li>
-      <li><strong>Quarter Delay Explosion:</strong> Punish steppers and late mashers</li>
-      <li><strong>Half Delay Explosion:</strong> Break defensive players who block too long</li>
-      <li><strong>No Explosion:</strong> Freeze reactions and bait sidestep panic</li>
+      <li><strong>Instant Explosion:</strong> Punish mashers immediately</li>
+      <li><strong>Quarter Delay:</strong> Catch steppers and delayed mashers</li>
+      <li><strong>Half Delay:</strong> Crack defenders who wait too long</li>
+      <li><strong>No Explosion:</strong> Bait sidesteps and fakes</li>
     </ul>
 
-    <h3>Where to Clone</h3>
+    <h3>Clone Usage Scenarios</h3>
     <ul>
       <li>After safe mids like D/F+1, D/B+2,1</li>
-      <li>Post teleport resets mid screen</li>
-      <li>Wall splat to force panic mash on oki</li>
-      <li>Defensive clone callout vs aggressive players</li>
+      <li>Post teleport reset to overload reaction time</li>
+      <li>On wall splat for panic frame traps</li>
+      <li>During defense to fake vulnerability</li>
     </ul>
 
-    <h3>Clone Threat Flow</h3>
+    <h3>Mindset Priority</h3>
     <ul>
-      <li><strong>Mashers:</strong> Instant explosion</li>
-      <li><strong>Steppers:</strong> Quarter delay explosion</li>
-      <li><strong>Turtlers:</strong> Half delay explosion</li>
-      <li><strong>Movers:</strong> No explosion ➔ dash fake ➔ strike/throw mix</li>
+      <li><strong>Vary Timing:</strong> Never always explode the same way</li>
+      <li><strong>Trap Movement:</strong> Bait sidestep and panic options</li>
+      <li><strong>Reset Fear:</strong> Use clones to reset neutral tension instantly</li>
     </ul>
 
-    <p><em>Mind trap your opponents through clones — never let them react comfortably to clone summons.  
-    Constant variation = unbreakable mental dominance.</em></p>
+    <p><em>Elite clone users make every summon a mind trap —  
+    clone neutral = Raven supremacy over aggressive players.</em></p>
 
     <a href="#" class="back-to-top" onclick="showSection('clone')">Back to Top</a>
   </section>
@@ -846,21 +798,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 9 (Teleport Systems)</title>
+  <title>Comprehensive Raven Guide - Teleport Systems</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Same consistent professional styles applied] */
+    /* [Same pastel clean styling across guide] */
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -874,7 +822,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -896,32 +844,33 @@
     <h2>Part 9: Teleport Systems</h2>
 
     <h3>Overview</h3>
-    <p>Raven’s teleports are not just escape tools —  
-    they are battlefield manipulation devices for resetting momentum, dodging pressure, or baiting overextensions.</p>
+    <p>Raven’s teleports are **advanced reset and evasion tools**,  
+    not just defensive gimmicks.  
+    Controlled teleport resets create fear, whiffs, and free punishes.</p>
 
     <h3>Teleport Variants</h3>
     <ul>
-      <li><strong>SZN.B (Back Teleport):</strong> Full retreat, force whiffs</li>
-      <li><strong>SZN.U (Up Teleport):</strong> Crush lows, change planes</li>
-      <li><strong>SZN.D (Down Teleport):</strong> Low crush with crouch reset</li>
+      <li><strong>Back Teleport (SZN.B):</strong> Full retreat ➔ bait whiff ➔ punish</li>
+      <li><strong>Up Teleport (SZN.U):</strong> Crush lows ➔ air punish options</li>
+      <li><strong>Down Teleport (SZN.D):</strong> Low crush ➔ quick crouch resets</li>
     </ul>
 
-    <h3>Common Teleport Flow</h3>
+    <h3>Teleport Flow Layers</h3>
     <ul>
-      <li>Safe poke ➔ Back Teleport ➔ Whiff punish bait</li>
-      <li>Clone summon ➔ Up Teleport ➔ Midair pressure reset</li>
-      <li>Defensive struggle ➔ Down Teleport ➔ Frame trap set</li>
+      <li>Safe poke ➔ Back Teleport ➔ Bait swing ➔ Launch punish</li>
+      <li>Clone summon ➔ Up Teleport ➔ Jump cancel mind trap</li>
+      <li>Frame trap ➔ Down Teleport ➔ Crouch reset strike/throw mix</li>
     </ul>
 
-    <h3>Teleport Mind Trap Strategies</h3>
+    <h3>Mindset Priority</h3>
     <ul>
-      <li><strong>Vs Mashers:</strong> Up teleport ➔ aerial whiff punish</li>
-      <li><strong>Vs Defenders:</strong> Back teleport ➔ safe clone setup</li>
-      <li><strong>Vs Movers:</strong> Delay teleport ➔ force panic</li>
+      <li><strong>Reset Threat:</strong> Always teleport after heavy clone mindgames</li>
+      <li><strong>Crush Greed:</strong> Up teleport breaks greedy low spam</li>
+      <li><strong>Survive Frames:</strong> Escape death frame traps with teleport layers</li>
     </ul>
 
-    <p><em>Smart teleport flow turns losing defense into winning offense.  
-    Teleport resets must be deliberate, clean, and unpredictable to control tempo successfully.</em></p>
+    <p><em>Teleport is not escape —  
+    it is **battlefield dominance** via instant rhythm disruption.</em></p>
 
     <a href="#" class="back-to-top" onclick="showSection('teleport')">Back to Top</a>
   </section>
@@ -934,21 +883,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 10 (Matchups)</title>
+  <title>Comprehensive Raven Guide - Matchups</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Same professional clean styles applied here consistently] */
+    /* [Same clean consistent pastel style across guide] */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+      font-size: 1rem;
+    }
+    th {
+      background: #a2d2ff;
+      color: #ffffff;
+      font-weight: 700;
+    }
+    tr:nth-child(even) {
+      background: #f7faff;
+    }
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -962,7 +929,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -983,35 +950,35 @@
     <h1>Comprehensive Raven Guide</h1>
     <h2>Part 10: Matchups</h2>
 
-    <h3>Sidestep and Punish Overview</h3>
-    <p>Proper sidestep direction and punish knowledge simplifies Raven's hardest matchups.  
-    Focus on escaping pressure first, punishing key strings second.</p>
+    <h3>Sidestep and Punish Strategy</h3>
+    <p>Understanding sidestep direction and fast punishment habits  
+    is the key to mastering Raven’s tougher matchups.</p>
 
-    <table style="width:100%; border-collapse: collapse; margin-top: 1rem; font-size: 1rem; background: #fff;">
+    <table>
       <thead>
-        <tr style="background: #a2d2ff; color: #fff;">
-          <th style="padding: 12px; border-bottom: 2px solid #ddd;">Character</th>
-          <th style="padding: 12px; border-bottom: 2px solid #ddd;">Sidestep</th>
-          <th style="padding: 12px; border-bottom: 2px solid #ddd;">Key Punish</th>
-          <th style="padding: 12px; border-bottom: 2px solid #ddd;">Notes</th>
+        <tr>
+          <th>Character</th>
+          <th>Sidestep</th>
+          <th>Key Punish</th>
+          <th>Notes</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td style="padding: 10px;">Paul</td><td>Left</td><td>F+2,3</td><td>Stay outside Deathfist threat range</td></tr>
-        <tr><td>Jin</td><td>Left</td><td>WS 1</td><td>Interrupt parry setups quickly</td></tr>
-        <tr><td>Kazuya</td><td>Left</td><td>F+2</td><td>Teleport after electric pressure</td></tr>
-        <tr><td>Dragunov</td><td>Right</td><td>WS 3,2</td><td>Low crush against WR pressure</td></tr>
-        <tr><td>Jack-8</td><td>Left</td><td>F+2</td><td>Space out and clone trap big arms</td></tr>
-        <tr><td>King</td><td>Right</td><td>WS 1</td><td>Sidestep throws and punish tackles</td></tr>
-        <tr><td>Lili</td><td>Right</td><td>1,1</td><td>Sidestep flip kicks and fast lows</td></tr>
-        <tr><td>Law</td><td>Left</td><td>F+2</td><td>Teleport out of DSS strings</td></tr>
-        <tr><td>Claudio</td><td>Left</td><td>WS 3,2</td><td>Disrupt Starburst setups fast</td></tr>
-        <tr><td>Nina</td><td>Left</td><td>1,1</td><td>Sidestep early chain throw openers</td></tr>
+        <tr><td>Paul</td><td>Left</td><td>F+2,3</td><td>Avoid Deathfist range</td></tr>
+        <tr><td>Jin</td><td>Left</td><td>WS 1</td><td>Interrupt parry setups</td></tr>
+        <tr><td>Kazuya</td><td>Left</td><td>F+2</td><td>Teleport post-electrics</td></tr>
+        <tr><td>Dragunov</td><td>Right</td><td>WS 3,2</td><td>Low crush WR pressure</td></tr>
+        <tr><td>Jack-8</td><td>Left</td><td>F+2</td><td>Space and punish big swings</td></tr>
+        <tr><td>King</td><td>Right</td><td>WS 1</td><td>Sidestep grabs, punish tackles</td></tr>
+        <tr><td>Lili</td><td>Right</td><td>1,1</td><td>Sidestep flip kicks</td></tr>
+        <tr><td>Law</td><td>Left</td><td>F+2</td><td>Teleport DSS gaps</td></tr>
+        <tr><td>Claudio</td><td>Left</td><td>WS 3,2</td><td>Disrupt Starburst setups</td></tr>
+        <tr><td>Nina</td><td>Left</td><td>1,1</td><td>Sidestep chain throw openers</td></tr>
       </tbody>
     </table>
 
-    <p style="margin-top:1.5rem;"><em>Master sidestepping and quick punishment habits.  
-    Raven's strongest advantage vs many aggressive characters is teleport and clone resets — use them well.</em></p>
+    <p><em>Sidestep habits ➔ fast whiff punish ➔ clone trap ➔ teleport escape =  
+    how Raven wins hard matchups consistently.</em></p>
 
     <a href="#" class="back-to-top" onclick="showSection('matchups')">Back to Top</a>
   </section>
@@ -1024,21 +991,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 11 (Tournament Systems)</title>
+  <title>Comprehensive Raven Guide - Tournament Systems</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Same global polished styles applied here] */
+    /* [Same clean and pastel consistent global style] */
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1052,7 +1015,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -1073,30 +1036,29 @@
     <h1>Comprehensive Raven Guide</h1>
     <h2>Part 11: Tournament Systems</h2>
 
-    <h3>Heat Management</h3>
+    <h3>Heat Management Layers</h3>
     <ul>
-      <li><strong>Heat Dash:</strong> Prioritize wall carry and clone explosion traps</li>
-      <li><strong>Heat Burst:</strong> Activate early if you fall behind — regain momentum</li>
-      <li><strong>Heat Layering:</strong> Clone fakeouts plus heat cancel create mind traps</li>
+      <li><strong>Heat Dash:</strong> Extend wall carry and frame traps</li>
+      <li><strong>Heat Burst:</strong> Early burst to win momentum swings</li>
+      <li><strong>Clone + Heat:</strong> Mind trap layering for free mixups</li>
     </ul>
 
     <h3>Clock Management</h3>
     <ul>
-      <li><strong>Early Round (60–30 seconds):</strong> Control neutral and chip life bar</li>
-      <li><strong>Mid Round (30–15 seconds):</strong> Lead = stall with clone feints | Losing = teleport pressure</li>
-      <li><strong>End Round (15–0 seconds):</strong> Defensive clone wall if winning | Panic low rush if losing</li>
+      <li><strong>Early Round (60–30s):</strong> Build safe life lead</li>
+      <li><strong>Mid Round (30–15s):</strong> Stall with clone resets if ahead</li>
+      <li><strong>End Round (15–0s):</strong> Emergency teleport/clone defense</li>
     </ul>
 
-    <h3>Final Round Strategy</h3>
+    <h3>Final Round Systems</h3>
     <ul>
-      <li><strong>Download Early:</strong> Record opponent habits by round 2</li>
-      <li><strong>Mix Breaker:</strong> Break opponent auto habits via fake clone threats</li>
-      <li><strong>Chaotic Tempo:</strong> Stay unreadable late game — tempo shifts every 8 seconds</li>
+      <li><strong>Download Early:</strong> Build opponent habit map</li>
+      <li><strong>Tempo Chaos:</strong> Shift playstyle every 8 seconds</li>
+      <li><strong>Clutch Layers:</strong> Teleport ➔ clone ➔ low poke ➔ reset flow</li>
     </ul>
 
-    <p><em>Winning a tournament with Raven is not about combos —  
-    it’s about tempo manipulation, clone mind games, and clean movement escapes.  
-    Mental fatigue wins matches in Top 8.</em></p>
+    <p><em>Raven tournament dominance is NOT about the biggest combos —  
+    it is about tempo, rhythm disruption, and zero fear on resets.</em></p>
 
     <a href="#" class="back-to-top" onclick="showSection('tournamentsystems')">Back to Top</a>
   </section>
@@ -1109,21 +1071,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 12 (Posters)</title>
+  <title>Comprehensive Raven Guide - Posters</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Same clean professional base styles from all parts] */
+    /* [Same clean pastel global styles applied throughout guide] */
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1137,7 +1095,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -1160,28 +1118,29 @@
 
     <h3>Neutral Flow Poster</h3>
     <ul>
-      <li><strong>Poke ➔ Sidestep ➔ Clone Threat ➔ Reset Neutral</strong></li>
+      <li><strong>Poke ➔ Sidestep ➔ Clone Threat ➔ Neutral Reset</strong></li>
     </ul>
 
     <h3>Pressure Flow Poster</h3>
     <ul>
-      <li><strong>Small Tekken ➔ Feint ➔ Clone ➔ Teleport ➔ Pressure Reset</strong></li>
+      <li><strong>Small Tekken ➔ Feint ➔ Clone ➔ Teleport ➔ Pressure Restart</strong></li>
     </ul>
 
     <h3>Clone Threat Poster</h3>
     <ul>
-      <li><strong>Instant Explosion ➔ Quarter Delay ➔ Half Delay ➔ No Explosion</strong></li>
+      <li><strong>Instant ➔ Quarter Delay ➔ Half Delay ➔ No Explosion</strong></li>
     </ul>
 
-    <h3>Teleport Threat Poster</h3>
+    <h3>Teleport Mind Trap Poster</h3>
     <ul>
-      <li><strong>Masher ➔ Up Teleport ➔ Punish</strong></li>
-      <li><strong>Turtler ➔ Back Teleport ➔ Bait Whiff</strong></li>
-      <li><strong>Stepper ➔ Delay Teleport ➔ Smash Panic</strong></li>
+      <li><strong>Mashers:</strong> Up Teleport ➔ Air Punish</li>
+      <li><strong>Turtlers:</strong> Back Teleport ➔ Bait and Punish</li>
+      <li><strong>Sidesteppers:</strong> Delay Teleport ➔ Smash Panic</li>
     </ul>
 
-    <p><em>Use these simple visual models before tournaments to rapidly refresh your Raven playbook mental stack.  
-    Posters = compressed wisdom for fast tournament recall.</em></p>
+    <p><em>Poster models compress Raven’s entire match control  
+    into fast tournament recall flowcharts.  
+    Quick review = faster tournament mental stacking.</em></p>
 
     <a href="#" class="back-to-top" onclick="showSection('visual')">Back to Top</a>
   </section>
@@ -1194,21 +1153,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprehensive Raven Guide - Part 13 (Final Footer)</title>
+  <title>Comprehensive Raven Guide - Final Footer</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* [Global clean polished style — continued consistency] */
+    /* [Same polished pastel simple style] */
   </style>
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('section');
       const links = document.querySelectorAll('nav a');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      links.forEach(link => {
-        link.classList.remove('active');
-      });
+      sections.forEach(s => s.classList.remove('active'));
+      links.forEach(l => l.classList.remove('active'));
       document.getElementById(id).classList.add('active');
       document.querySelector(`nav a[href="#${id}"]`).classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1222,7 +1177,7 @@
 <body>
 
 <nav>
-  <h2>Table of Contents</h2>
+  <h2>Contents</h2>
   <a href="#intro" onclick="showSection('intro')">1. Introduction</a>
   <a href="#punishment" onclick="showSection('punishment')">2. Punishment Guide</a>
   <a href="#keymoves" onclick="showSection('keymoves')">3. Key Moves</a>
@@ -1244,24 +1199,24 @@
     <h2>Part 13: Final Footer</h2>
 
     <h3>Closing Words</h3>
-    <p>Congratulations on completing the Comprehensive Raven Guide for Tekken 8 (Season 2).</p>
+    <p>Congratulations —  
+    you have completed the Comprehensive Raven Guide for Tekken 8 (Season 2).</p>
 
-    <p>This was not just a guide about moves —  
-    it was about building the mind of a tournament killer:  
-    predicting tempo, forcing mistakes, adapting faster than your opponent can react.</p>
+    <p>This guide was built to teach tournament mastery —  
+    **not just moves**, but **tempo management, fear generation, rhythm resets, and elite mindgames.**</p>
 
-    <h3>Key Reminders</h3>
+    <h3>Key Final Reminders</h3>
     <ul>
-      <li><strong>Movement Wins More Than Combos:</strong> Always prioritize space control</li>
-      <li><strong>Adapt or Die:</strong> Play flow must adjust per opponent, per round</li>
-      <li><strong>Disrupt, Reset, Dominate:</strong> Raven players break expectations and stay unreadable</li>
+      <li><strong>Movement > Combos:</strong> Positioning wins matches first</li>
+      <li><strong>Mind Disruption > Pressure:</strong> Constant rhythm breaking over raw aggression</li>
+      <li><strong>Reset Mental Stack:</strong> Clone, teleport, side dash — restart neutral often</li>
     </ul>
 
-    <h3>Endgame Mentality</h3>
-    <p>Raven doesn't just fight the opponent —  
-    Raven fights the opponent’s patience, nerves, and habits until they collapse under pressure.</p>
+    <h3>Champion Mindset</h3>
+    <p>Raven’s greatest weapon is not his moves —  
+    it is his ability to break the opponent’s mental timing faster than they can adapt.</p>
 
-    <p style="margin-top: 2rem;"><strong>— Comprehensive Raven Guide Closed.</strong></p>
+    <p style="margin-top: 2rem;"><strong>— Comprehensive Raven Guide Complete.</strong></p>
 
     <a href="#" class="back-to-top" onclick="showSection('footer')">Back to Top</a>
   </section>
