@@ -5,98 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comprehensive Raven Guide</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f8fafc;
-      color: #1e293b;
-      display: flex;
-    }
-    nav {
-      width: 220px;
-      background: #e0f2fe;
-      padding: 20px;
-      height: 100vh;
-      position: fixed;
-      overflow-y: auto;
-      border-right: 2px solid #cbd5e1;
-    }
-    nav a {
-      display: block;
-      margin-bottom: 10px;
-      color: #0f172a;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #2563eb;
-    }
-    main {
-    margin-left: 240px;
-    padding: 40px;
-    width: calc(100% - 240px); /* Full dynamic width after sidebar */
-    }
-    section {
-      display: none;
-    }
-    section.active {
-      display: block;
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    }
-    .section-banner-minimal {
-      text-align: center;
-      margin-bottom: 20px;
-      padding: 12px;
-      color: #1e3a8a;
-      font-weight: 700;
-      font-size: 1.4rem;
-    }
-    .two-column-minimal {
-      display: flex;
-      margin-bottom: 20px;
-    }
-    .left-column-minimal {
-      flex: 1;
-      font-weight: 700;
-      min-width: 180px;
-      font-size: 1.05rem;
-      color: #1e3a8a;
-    }
-    .right-column-minimal {
-      flex: 2;
-      font-size: 1rem;
-      color: #334155;
-    }
-    .pro-tip-minimal {
-      background: #eff6ff;
-      border-left: 4px solid #3b82f6;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 30px;
-      color: #1e40af;
-      font-size: 1rem;
-    }
-    .back-to-top-wrapper {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .back-to-top-minimal {
-      background: #3b82f6;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-    .back-to-top-minimal:hover {
-      background: #2563eb;
-    }
-  </style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff; /* Pure white background */
+    color: #1e293b;
+    display: flex;
+  }
+  nav {
+    width: 220px;
+    background: #e0f2fe;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+    border-right: 2px solid #cbd5e1;
+  }
+  nav a {
+    display: block;
+    margin-bottom: 10px;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #2563eb;
+  }
+  main {
+    margin-left: 220px; /* Match sidebar width */
+    padding: 20px 30px; /* Light breathing room */
+    width: calc(100% - 220px);
+  }
+  section {
+    display: none;
+  }
+  section.active {
+    display: block;
+  }
+  .section-banner-minimal {
+    text-align: left;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #cbd5e1;
+    color: #1e3a8a;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  .two-column-minimal {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .left-column-minimal {
+    flex: 1;
+    font-weight: 700;
+    min-width: 180px;
+    font-size: 1.05rem;
+    color: #1e3a8a;
+  }
+  .right-column-minimal {
+    flex: 2;
+    font-size: 1rem;
+    color: #334155;
+  }
+  .pro-tip-minimal {
+    background: #fef2f2;
+    border-left: 4px solid #dc2626;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 30px;
+    color: #991b1b;
+    font-size: 1rem;
+  }
+  .back-to-top-wrapper {
+    text-align: left;
+    margin-top: 30px;
+  }
+  .back-to-top-minimal {
+    background: #dc2626;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  .back-to-top-minimal:hover {
+    background: #b91c1c;
+  }
+</style>
   <script>
     function showSection(sectionId) {
       const sections = document.querySelectorAll('section');
