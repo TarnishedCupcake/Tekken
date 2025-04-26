@@ -1,0 +1,2161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 1 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth; /* Global smooth scroll */
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px; /* Margin top for smooth anchor visibility */
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    p, ul {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      // Smooth scroll to the newly activated section
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('intro');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')" class="active">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="intro" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 1: Introduction</h2>
+
+    <h3>Raven’s Identity and Archetype</h3>
+    <p>Raven in Tekken 8 Season 2 is a technical mid-range mixup specialist, combining clone threats, teleport mobility, and burst offense. He controls neutral space through safe mids, counter hit tools, and calculated clone summon traps.</p>
+
+    <h3>Playstyle Overview</h3>
+    <ul>
+      <li><strong>Mid-Range Dominance:</strong> Uses long pokes and clone fakes to frustrate neutral attempts.</li>
+      <li><strong>Pressure Layers:</strong> Fakes pressure into real traps using Shadow Sprint and Soulzone cancel flows.</li>
+      <li><strong>Defensive Trickery:</strong> Leverages teleportations, clone blocks, and evasive stance transitions to avoid traditional punishment.</li>
+      <li><strong>High Risk / High Reward:</strong> Success depends on creative setups, careful movement, and matchup-specific adjustment.</li>
+    </ul>
+
+    <h3>Core Strengths</h3>
+    <ul>
+      <li>Exceptional spacing control at mid-range (F+2,3, clone summon threat).</li>
+      <li>Explosive punishment off clone setups and Sprint counter hits.</li>
+      <li>One of the most versatile pressure resets post-Heat activation.</li>
+      <li>Flexible defensive escape options that few characters can match.</li>
+    </ul>
+
+    <h3>Core Weaknesses</h3>
+    <ul>
+      <li>Cannot "braindead" mash out of pressure — timing and setups must be precise.</li>
+      <li>Back Turn stance is vulnerable without perfect spacing and timing.</li>
+      <li>Clone setups can backfire if used predictably.</li>
+      <li>Relies on clean hit-confirms and movement to maintain advantage.</li>
+    </ul>
+
+    <h3>Player Mindset Recommendation</h3>
+    <p>Playing Raven requires patience, creative offense layering, and absolute discipline in movement and clone management. The best Raven players think three moves ahead — always presenting multiple "threats" without overcommitting unless it is calculated. Success comes from controlling tempo, forcing panic, and breaking rhythm at key moments.</p>
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 2 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    table {
+      width: 100%;
+      margin-top: 1rem;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #e0f0ff;
+    }
+    p {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('punishment');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')" class="active">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="punishment" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 2: Punishment Guide</h2>
+
+    <h3>Overview</h3>
+    <p>This section lists Raven’s correct tournament punishers — practical, reliable, no risky stance transitions needed.</p>
+
+    <h3>Punishment Table</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Situation</th>
+          <th>Move (Input)</th>
+          <th>Startup</th>
+          <th>On Hit</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>i10</td><td>1</td><td>i10</td><td>+1</td><td>Fastest jab punish</td></tr>
+        <tr><td>i11</td><td>1,2</td><td>i11</td><td>+4</td><td>Safe jab string</td></tr>
+        <tr><td>i12</td><td>1,1,2</td><td>i12</td><td>+6</td><td>Knockdown ender</td></tr>
+        <tr><td>i13</td><td>F+2</td><td>i13</td><td>+3</td><td>Mid poke punish</td></tr>
+        <tr><td>i14</td><td>WS 1</td><td>i14</td><td>+5</td><td>Safe stand punish</td></tr>
+        <tr><td>i15</td><td>F+2,3</td><td>i15</td><td>Launcher</td><td>Power punish</td></tr>
+        <tr><td>i16</td><td>WS 3,2</td><td>i16</td><td>Launcher</td><td>Crouch launcher</td></tr>
+        <tr><td>i17</td><td>F,F+3</td><td>i17</td><td>Launcher</td><td>Running knee launcher</td></tr>
+      </tbody>
+    </table>
+
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 3 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    p, ul {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('keymoves');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')" class="active">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="keymoves" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 3: Key Moves</h2>
+
+    <h3>Overview</h3>
+    <p>These are Raven's 20 core neutral moves. Only neutral tools are listed here — stance transitions and clones are handled separately.</p>
+
+    <h3>Top Key Moves</h3>
+    <ul>
+      <li><strong>1:</strong> Fast jab check</li>
+      <li><strong>1,1:</strong> Jab poke string (safe)</li>
+      <li><strong>D/F+1:</strong> Mid poke (safe, good range)</li>
+      <li><strong>B+2:</strong> Mid keep-out poke</li>
+      <li><strong>D/B+2,1:</strong> Safe low-mid poke</li>
+      <li><strong>F+2:</strong> Mid punish starter (13f)</li>
+      <li><strong>F+2,3:</strong> Launcher punish (15f)</li>
+      <li><strong>WS 1:</strong> Crouch mid punisher (14f)</li>
+      <li><strong>WS 3,2:</strong> Crouch launcher (16f)</li>
+      <li><strong>D/F+2:</strong> Mid launcher (unsafe)</li>
+      <li><strong>F,F+3:</strong> Advancing knee (launcher)</li>
+      <li><strong>WR 2:</strong> Running knockdown mid</li>
+      <li><strong>F+4:</strong> Mid launcher starter</li>
+      <li><strong>QCF+1:</strong> Sprint mid poke</li>
+      <li><strong>QCF+2:</strong> Sprint launcher starter</li>
+      <li><strong>U/F+3:</strong> Mid crush launcher</li>
+      <li><strong>D/B+3:</strong> Low poke with advantage</li>
+      <li><strong>U/F+4:</strong> Quick hopkick</li>
+      <li><strong>SS+3:</strong> Sidestep low poke</li>
+      <li><strong>SS+4:</strong> Sidestep sweep launcher</li>
+    </ul>
+
+    <p><em>Mastering these neutral options first is critical before layering clone, teleport, or stance traps.</em></p>
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 4 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.8rem;
+    }
+    p {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('combos');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')" class="active">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="combos" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 4: Combos</h2>
+
+    <h3>Normal Hit Combos</h3>
+    <ul>
+      <li><strong>D/F+2 → 4 → BT 3+4 → 4 → WR 2</strong> (61 Damage)</li>
+      <li><strong>WS 1 → F+2,1 → 4 → WR 2</strong> (58 Damage)</li>
+      <li><strong>F,F+3 → F+2,1 → 4 → WR 2</strong> (65 Damage)</li>
+      <li><strong>F+4 → DASH → 3+4 → BT 3+4 → WR 2</strong> (62 Damage)</li>
+      <li><strong>WS 3,2 → BT 4 → WR 2</strong> (57 Damage)</li>
+      <li><strong>BT 3+4 → DASH → 4 → WR 2</strong> (60 Damage)</li>
+    </ul>
+
+    <h3>Counter Hit Combos</h3>
+    <ul>
+      <li><strong>CH QCF+1 → WS 1 → F+2,1 → WR 2</strong> (70 Damage)</li>
+      <li><strong>CH SZN 1+2 → DASH → 4 → BT 3+4 → Clone Ender</strong> (75+ Damage)</li>
+    </ul>
+
+    <h3>Wall Carry Combos</h3>
+    <ul>
+      <li><strong>D/F+2 → 4 → F+2,1 → WR 2</strong> (65 Damage)</li>
+      <li><strong>WS 1 → F+2,1 → WR 2</strong> (63 Damage)</li>
+    </ul>
+
+    <h3>Wall Combos</h3>
+    <ul>
+      <li><strong>Wall Splat → F+2,1 → Clone Cancel</strong> (58+ Damage)</li>
+      <li><strong>Wall Splat → WR 2 → Clone Setup</strong> (60 Damage)</li>
+    </ul>
+
+    <h3>Heat Activation Combos</h3>
+    <ul>
+      <li><strong>D/F+2 → Heat Dash → F+2,1 → WR 2</strong> (80+ Damage)</li>
+      <li><strong>WS 1 → Heat Dash → WR 2</strong> (77 Damage)</li>
+    </ul>
+    
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 5 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    table {
+      width: 100%;
+      margin-top: 1rem;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #e0f0ff;
+    }
+    p, ul {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('stancesystem');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')" class="active">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="stancesystem" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 5: Stance System & Transitions</h2>
+
+    <h3>Overview</h3>
+    <p>Raven operates three major stances: Back Turn (BT), Soulzone (SZN), and Shadow Sprint (SHS). Mastery of transitions and setups is critical for elite Raven play.</p>
+
+    <h3>Back Turn (BT)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Move</th>
+          <th>Input</th>
+          <th>Startup</th>
+          <th>On Hit</th>
+          <th>On Block</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>BT 1</td><td>BT 1</td><td>i8</td><td>+1</td><td>-2</td></tr>
+        <tr><td>BT F+3</td><td>BT F+3</td><td>i13</td><td>+6</td><td>-5</td></tr>
+        <tr><td>BT F+4,1</td><td>BT F+4,1</td><td>i16</td><td>+5</td><td>-9</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Soulzone (SZN)</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Move</th>
+          <th>Input</th>
+          <th>Startup</th>
+          <th>On Hit</th>
+          <th>On Block</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>SZN 1</td><td>SZN 1</td><td>i10</td><td>+1</td><td>-2</td></tr>
+        <tr><td>SZN 2</td><td>SZN 2</td><td>i14</td><td>+3</td><td>-7</td></tr>
+        <tr><td>SZN 1+2</td><td>SZN 1+2</td><td>i17</td><td>+6</td><td>-9</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Shadow Sprint (SHS)</h3>
+    <ul>
+      <li><strong>SHS 1:</strong> Mid sprint punch (+3 on hit)</li>
+      <li><strong>SHS 2:</strong> Mid knockdown elbow</li>
+      <li><strong>SHS Cancel:</strong> Dash cancel fake pressure</li>
+    </ul>
+
+    <p><em>Efficient stance switching separates top Raven players from the rest. Maximize threat density by linking stance transitions into your pressure layers.</em></p>
+
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 6 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    p, ul {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('gameplan');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')" class="active">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="gameplan" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 6: Gameplan and Pressure Systems</h2>
+
+    <h3>Overall Strategy</h3>
+    <p>Raven’s gameplan is about controlling neutral, pressuring with stance transitions and clone setups, then scrambling opponents with teleports. His approach rewards creative risk-taking layered over solid movement fundamentals.</p>
+
+    <h3>Neutral Control Tools</h3>
+    <ul>
+      <li><strong>1 / 1,1:</strong> Quick jab check, safe pressure starter</li>
+      <li><strong>D/F+1:</strong> Mid poke to reset offense</li>
+      <li><strong>B+2:</strong> Mid-range control and keep-out</li>
+      <li><strong>WR 2:</strong> Running approach knockdown</li>
+    </ul>
+
+    <h3>Frame Trap Layers</h3>
+    <ul>
+      <li><strong>3,3 ➔ D/B+2,1:</strong> Mix low trap</li>
+      <li><strong>D/B+2,1 ➔ BT F+3:</strong> Reset into Backturn offense</li>
+      <li><strong>F+2,3 ➔ Clone summon:</strong> Pressure continuation or bait</li>
+    </ul>
+
+    <h3>Approach Systems</h3>
+    <ul>
+      <li><strong>F,F+3:</strong> Knee launcher approach</li>
+      <li><strong>QCF+1:</strong> Shadow Sprint poke starter</li>
+      <li><strong>Clone Setup + Dash:</strong> Force reaction checks</li>
+    </ul>
+
+    <h3>Advanced Layers</h3>
+    <ul>
+      <li>Stance cancels ➔ Trap defensive timing</li>
+      <li>Teleport cancels ➔ Reposition and fake pressure</li>
+      <li>Clone mindgames ➔ Lock the opponent into reaction loops</li>
+    </ul>
+
+    <p><em>Neutral ➔ Pressure ➔ Reset ➔ Break Defense ➔ Loop.  
+Master this pattern to succeed with Raven.</em></p>
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 7 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+    }
+    p {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('defense');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')" class="active">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="defense" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 7: Defensive Systems - Shadow Defense Doctrine</h2>
+
+    <h3>Overview</h3>
+    <p>Raven’s defensive strength is based on active movement, clone threats, and repositioning — not passive blocking. Mastery of sidesteps, teleports, and clone baits makes Raven difficult to pin down.</p>
+
+    <h3>Core Defense Techniques</h3>
+    <ul>
+      <li><strong>Backdash Cancel:</strong> Reset pressure gaps quickly</li>
+      <li><strong>Sidestep Right:</strong> Evade linear mid pokes</li>
+      <li><strong>Clone Summon:</strong> Force opponents to second guess their pressure</li>
+      <li><strong>SZN.B Teleport:</strong> Full reset spacing tool</li>
+      <li><strong>BT 1+2 Parry:</strong> Catch jab pressure for momentum swing</li>
+    </ul>
+
+    <h3>Shadow Defense Flow</h3>
+    <ul>
+      <li>Opponent pressures ➔ Sidestep or backdash ➔ Clone summon or teleport</li>
+      <li>Opponent chases ➔ Clone explosion counter</li>
+      <li>Opponent freezes ➔ Escape with teleport or clone vanish</li>
+    </ul>
+
+    <h3>Defense Goals</h3>
+    <ul>
+      <li>Reset neutral safely whenever possible</li>
+      <li>Turn defense into offensive scramble opportunities</li>
+      <li>Always force the opponent to guess whether you will block, escape, or trap them</li>
+    </ul>
+
+    <p><em>Shadow defense is about controlling their mind, not just blocking attacks.</em></p>
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 8 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+    }
+    p {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('clone');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')" class="active">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="clone" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 8: Clone System</h2>
+
+    <h3>Overview</h3>
+    <p>Clone threats are the centerpiece of Raven's pressure and mindgames. Whether detonated instantly or delayed strategically, clones force the opponent to second-guess their next move.</p>
+
+    <h3>Core Clone Strategies</h3>
+    <ul>
+      <li><strong>Instant Detonation:</strong> Beat aggressive mashers</li>
+      <li><strong>Quarter-Beat Delay:</strong> Catch sidesteps or fuzzy defense</li>
+      <li><strong>Half-Beat Delay:</strong> Beat turtlers and slow responses</li>
+      <li><strong>No Detonation:</strong> Threat without commitment; freeze the opponent</li>
+    </ul>
+
+    <h3>Common Clone Setups</h3>
+    <ul>
+      <li>After safe pokes like D/B+2,1</li>
+      <li>After F+2,3 pressure resets</li>
+      <li>Post-teleport fakeouts</li>
+      <li>During Heat activation scrambles</li>
+    </ul>
+
+    <h3>Clone Threat Cycle</h3>
+    <ul>
+      <li>Mashers ➔ Instant explosion</li>
+      <li>Steppers ➔ Quarter-beat delay</li>
+      <li>Turtlers ➔ Half-beat delay</li>
+      <li>Reactors ➔ No detonation, bait followups</li>
+    </ul>
+
+    <p><em>Control your opponent's rhythm by manipulating their reaction timing through clone variations. Mastery of clone timing is critical to dominate at higher levels.</em></p>
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 9 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+    }
+    p {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('teleport');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')" class="active">9. Teleport Systems</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="teleport" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 9: Teleport Systems</h2>
+
+    <h3>Overview</h3>
+    <p>Teleportation is one of Raven’s most powerful spacing and mindgame tools. Controlled properly, it gives him neutral resets, offensive scrambles, and defensive escapes no other character can match.</p>
+
+    <h3>Teleport Options</h3>
+    <ul>
+      <li><strong>SZN.B (Back Teleport):</strong> Full distance reset</li>
+      <li><strong>SZN.U (Up Teleport):</strong> Jump reposition escape</li>
+      <li><strong>SZN.D (Down Teleport):</strong> Low crush evasion reset</li>
+    </ul>
+
+    <h3>Basic Teleport Flow</h3>
+    <ul>
+      <li>Opponent aggressive ➔ SZN.B or SZN.U teleport</li>
+      <li>Opponent freezes ➔ Fake teleport or clone setup</li>
+      <li>Opponent chases ➔ Punish whiff with clone or mid launchers</li>
+    </ul>
+
+    <h3>Advanced Mindgames</h3>
+    <ul>
+      <li>Teleport ➔ Clone Summon ➔ Repressure instantly</li>
+      <li>Teleport ➔ Heat activation ➔ Ambush offense</li>
+      <li>Teleport fake ➔ Force whiff ➔ Launcher</li>
+    </ul>
+
+    <p><em>Teleport is not escape — it's active threat repositioning. Train opponents to respect your ability to vanish and counterattack from any distance.</em></p>
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 10 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    table {
+      width: 100%;
+      margin-top: 1rem;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #e0f0ff;
+    }
+    p {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('matchups');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport</a>
+  <a onclick="showSection('matchups')" class="active">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="matchups" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 10: Matchups</h2>
+
+    <h3>Sidestep Directions and Punishes</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Character</th>
+          <th>Sidestep</th>
+          <th>Key Punish</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Paul</td><td>Left</td><td>F+2,3</td><td>Avoid Deathfist range</td></tr>
+        <tr><td>Jin</td><td>Left</td><td>WS 1</td><td>Watch parries</td></tr>
+        <tr><td>Kazuya</td><td>Left</td><td>F+2</td><td>Teleport after laser pressure</td></tr>
+        <tr><td>Dragunov</td><td>Right</td><td>WS 3,2</td><td>Low crush after WR pressure</td></tr>
+        <tr><td>Jack-8</td><td>Left</td><td>F+2</td><td>Clone through zoning tools</td></tr>
+        <tr><td>King</td><td>Right</td><td>WS 1</td><td>Step grabs, punish running tackles</td></tr>
+        <tr><td>Lili</td><td>Right</td><td>1,1</td><td>Sidestep flips and lows</td></tr>
+        <tr><td>Law</td><td>Left</td><td>F+2</td><td>Teleport against DSS transitions</td></tr>
+        <tr><td>Claudio</td><td>Left</td><td>WS 3,2</td><td>Interrupt Starburst setups</td></tr>
+        <tr><td>Nina</td><td>Left</td><td>1,1</td><td>Sidestep chain throws early</td></tr>
+      </tbody>
+    </table>
+
+    <p><em>Always adjust spacing and clone timing based on the opponent’s options. Neutral control wins Raven matchups before damage does.</em></p>
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 11 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+    }
+    p {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('tournamentsystems');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport Systems</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')" class="active">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="tournamentsystems" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 11: Tournament Systems</h2>
+
+    <h3>Heat Management Rules</h3>
+    <ul>
+      <li><strong>First Priority:</strong> Use Heat Dash after launcher for guaranteed offense</li>
+      <li><strong>Second Priority:</strong> Bait defensive Heat Burst from opponents</li>
+      <li><strong>Third Priority:</strong> Save Heat for armored reversals if life deficit exists</li>
+    </ul>
+
+    <h3>Clock Management</h3>
+    <ul>
+      <li><strong>Above 30 seconds:</strong> Space safely, build clone threat</li>
+      <li><strong>20 seconds:</strong> If ahead ➔ teleport and stall; if behind ➔ pressure clone mixups</li>
+      <li><strong>10 seconds:</strong> Risk urgent scramble resets with clone feints</li>
+    </ul>
+
+    <h3>Final Round Flowchart</h3>
+    <p>If winning ➔ Clone defense ➔ Teleport baits ➔ Time management.  
+    If losing ➔ Heat activation ➔ Full commit offense ➔ Double clone setups if possible.</p>
+
+    <h3>Golden Rule</h3>
+    <p><strong>Never repeat the same offense or teleport pattern twice during final rounds.</strong>  
+    Break habits, force thinking errors.</p>
+
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 12 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #444;
+    }
+    ul {
+      margin-top: 0.5rem;
+      margin-left: 1.5rem;
+    }
+    p {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('visual');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport Systems</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')" class="active">12. Posters</a>
+  <a onclick="showSection('footer')">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="visual" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 12: Visual Posters</h2>
+
+    <h3>Neutral Flow Poster</h3>
+    <ul>
+      <li>Poke ➔ Sidestep ➔ Clone Summon ➔ Reset</li>
+    </ul>
+
+    <h3>Pressure Flow Poster</h3>
+    <ul>
+      <li>1 ➔ 1,1 ➔ D/F+1 ➔ D/B+2,1 ➔ Teleport Reset</li>
+    </ul>
+
+    <h3>Clone Threat Flow Poster</h3>
+    <ul>
+      <li>Instant Clone ➔ Quarter Beat ➔ Half Beat ➔ No Explosion ➔ Reset</li>
+    </ul>
+
+    <h3>Teleport Mind Trap Poster</h3>
+    <ul>
+      <li>Mashers ➔ Up Teleport ➔ Whiff Punish</li>
+      <li>Turtlers ➔ Back Teleport ➔ Zone Reset</li>
+      <li>Steppers ➔ Fake Teleport ➔ Catch Sidesteps</li>
+    </ul>
+
+    <p><em>Use these flowcharts as rapid mental refreshers during tournaments to sharpen your momentum loops.</em></p>
+  </section>
+</main>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comprehensive Raven Guide - Part 13 (Onclick + Smooth Scroll)</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fdfdfd;
+      display: flex;
+      flex-direction: row;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 260px;
+      height: 100%;
+      background-color: #f5f5f5;
+      padding: 20px 10px;
+      overflow-y: auto;
+      border-right: 1px solid #ccc;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    nav a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #555;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    nav a.active {
+      background-color: #add8e6;
+      color: white;
+    }
+    nav a:hover {
+      background-color: #cce6f7;
+      color: black;
+    }
+    main {
+      margin-left: 260px;
+      padding: 40px 30px;
+      flex: 1;
+    }
+    section {
+      display: none;
+      scroll-margin-top: 20px;
+    }
+    section.active {
+      display: block;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+    }
+    p {
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      const links = document.querySelectorAll('nav a');
+
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      links.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      document.getElementById(id).classList.add('active');
+      document.querySelector(`nav a[onclick="showSection('${id}')"]`).classList.add('active');
+
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    window.onload = function() {
+      showSection('footer');
+    };
+  </script>
+</head>
+
+<body>
+
+<nav>
+  <a onclick="showSection('intro')">1. Introduction</a>
+  <a onclick="showSection('punishment')">2. Punishment Guide</a>
+  <a onclick="showSection('keymoves')">3. Key Moves</a>
+  <a onclick="showSection('combos')">4. Combos</a>
+  <a onclick="showSection('stancesystem')">5. Stance System</a>
+  <a onclick="showSection('gameplan')">6. Gameplan</a>
+  <a onclick="showSection('defense')">7. Defense Doctrine</a>
+  <a onclick="showSection('clone')">8. Clone System</a>
+  <a onclick="showSection('teleport')">9. Teleport Systems</a>
+  <a onclick="showSection('matchups')">10. Matchups</a>
+  <a onclick="showSection('tournamentsystems')">11. Tournament Systems</a>
+  <a onclick="showSection('visual')">12. Posters</a>
+  <a onclick="showSection('footer')" class="active">13. Final Footer</a>
+</nav>
+
+<main>
+  <section id="footer" class="active">
+    <h1>Comprehensive Raven Guide</h1>
+    <h2>Part 13: Final Footer</h2>
+
+    <p>Thank you for studying the Comprehensive Raven Guide for Tekken 8 (Season 2).</p>
+
+    <p>This guide was built to sharpen your Raven fundamentals, elite setups, and tournament survival skills.</p>
+
+    <p>Stay unpredictable, master clone manipulation, teleport at the right moments, and force your opponent’s mind into a corner they cannot escape.</p>
+
+    <p>— Raven Mainframe Complete.</p>
+
+  </section>
+</main>
+
+</body>
+</html>
