@@ -13,14 +13,16 @@
       display: flex;
     }
     nav {
-      width: 220px;
+      width: 220px; /* Sidebar width */
       background: #e0f2fe;
       padding: 20px;
       height: 100vh;
       position: fixed;
+      left: 0;
+      top: 0;
       overflow-y: auto;
       border-right: 2px solid #cbd5e1;
-    }
+   }
     nav a {
       display: block;
       margin-bottom: 10px;
@@ -33,9 +35,10 @@
       color: #2563eb;
     }
     main {
-      margin-left: 220px;
-      padding: 20px 30px;
-      width: calc(100% - 220px);
+      margin-left: 220px; /* Same as nav width */
+      padding: 20px 30px; /* Some breathing room */
+      width: calc(100% - 220px); /* Full dynamic width after sidebar */
+      box-sizing: border-box; /* So padding doesn’t overflow */
     }
     section {
       display: none;
