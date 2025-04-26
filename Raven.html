@@ -99,44 +99,41 @@
     }
   </style>
   <script>
-  function showSection(sectionId) {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
-    document.getElementById(sectionId).classList.add('active');
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
 
-    const links = document.querySelectorAll('nav a');
-    links.forEach(link => {
-      link.style.color = '#0f172a'; // Reset all links to normal (navy color)
-    });
-    document.getElementById('link-' + sectionId).style.color = '#dc2626'; // Active link becomes red
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  window.onload = function() {
-    showSection('intro');
-  }
-</script>
+      const links = document.querySelectorAll('nav a');
+      links.forEach(link => {
+        link.style.color = '#0f172a'; // Default dark navy
+      });
+      document.getElementById('link-' + sectionId).style.color = '#dc2626'; // Active red
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    window.onload = function() {
+      showSection('intro');
+    }
+  </script>
 </head>
-<nav>
-  <a href="#" onclick="showSection('intro')" id="link-intro">1. Introduction</a>
-  <a href="#" onclick="showSection('punishment')" id="link-punishment">2. Punishment Guide</a>
-  <a href="#" onclick="showSection('keymoves')" id="link-keymoves">3. Key Moves</a>
-  <a href="#" onclick="showSection('combos')" id="link-combos">4. Combos</a>
-  <a href="#" onclick="showSection('stances')" id="link-stances">5. Stance System & Transitions</a>
-  <a href="#" onclick="showSection('gameplan')" id="link-gameplan">6. Gameplan</a>
-  <a href="#" onclick="showSection('defense')" id="link-defense">7. Defense Doctrine</a>
-  <a href="#" onclick="showSection('clone')" id="link-clone">8. Clone System</a>
-  <a href="#" onclick="showSection('teleport')" id="link-teleport">9. Teleport Systems</a>
-  <a href="#" onclick="showSection('matchups')" id="link-matchups">10. Matchups</a>
-  <a href="#" onclick="showSection('tournament')" id="link-tournament">11. Tournament Systems</a>
-  <a href="#" onclick="showSection('posters')" id="link-posters">12. Posters</a>
-  <a href="#" onclick="showSection('footer')" id="link-footer">13. Final Footer</a>
-</nav>
+
 <body>
   <nav>
-    <a href="#" onclick="showSection('intro')">1. Introduction</a>
-    <!-- Other TOC links for other parts will go here later -->
+    <a href="#" onclick="showSection('intro')" id="link-intro">1. Introduction</a>
+    <a href="#" onclick="showSection('punishment')" id="link-punishment">2. Punishment Guide</a>
+    <a href="#" onclick="showSection('keymoves')" id="link-keymoves">3. Key Moves</a>
+    <a href="#" onclick="showSection('combos')" id="link-combos">4. Combos</a>
+    <a href="#" onclick="showSection('stances')" id="link-stances">5. Stance System & Transitions</a>
+    <a href="#" onclick="showSection('gameplan')" id="link-gameplan">6. Gameplan</a>
+    <a href="#" onclick="showSection('defense')" id="link-defense">7. Defense Doctrine</a>
+    <a href="#" onclick="showSection('clone')" id="link-clone">8. Clone System</a>
+    <a href="#" onclick="showSection('teleport')" id="link-teleport">9. Teleport Systems</a>
+    <a href="#" onclick="showSection('matchups')" id="link-matchups">10. Matchups</a>
+    <a href="#" onclick="showSection('tournament')" id="link-tournament">11. Tournament Systems</a>
+    <a href="#" onclick="showSection('posters')" id="link-posters">12. Posters</a>
+    <a href="#" onclick="showSection('footer')" id="link-footer">13. Final Footer</a>
   </nav>
 
   <main>
@@ -187,12 +184,15 @@
       <div class="two-column-minimal">
         <div class="left-column-minimal"><strong>Mindset Recommendation</strong></div>
         <div class="right-column-minimal">
-          Raven wins by disrupting mental rhythm, not overpowering. Think about stealing initiative and resetting momentum constantly.
+          Raven wins by disrupting mental rhythm, not overpowering.  
+          Think about stealing initiative and resetting momentum constantly.
         </div>
       </div>
 
       <div class="pro-tip-minimal">
-        <strong>Pro Tip:</strong> Raven isn't just punishing moves — he is punishing decisions. Own the mental rhythm.
+        <strong>Pro Tip:</strong>  
+        Raven isn't just punishing moves — he is punishing decisions.  
+        Own the mental rhythm.
       </div>
 
       <div class="back-to-top-wrapper">
