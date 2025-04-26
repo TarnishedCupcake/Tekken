@@ -5,95 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comprehensive Raven Guide</title>
   <style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #ffffff; /* Pure white background */
-    color: #1e293b;
-    display: flex;
-  }
-  nav {
-    width: 220px;
-    background: #e0f2fe;
-    padding: 20px;
-    height: 100vh;
-    position: fixed;
-    overflow-y: auto;
-    border-right: 2px solid #cbd5e1;
-  }
-  nav a {
-    display: block;
-    margin-bottom: 10px;
-    color: #0f172a;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  nav a:hover {
-    color: #2563eb;
-  }
-  main {
-    margin-left: 220px; /* Match sidebar width */
-    padding: 20px 30px; /* Light breathing room */
-    width: calc(100% - 220px);
-  }
-  section {
-    display: none;
-  }
-  section.active {
-    display: block;
-  }
-  .section-banner-minimal {
-    text-align: left;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #cbd5e1;
-    color: #1e3a8a;
-    font-weight: 700;
-    font-size: 1.4rem;
-  }
-  .two-column-minimal {
-    display: flex;
-    margin-bottom: 20px;
-  }
-  .left-column-minimal {
-    flex: 1;
-    font-weight: 700;
-    min-width: 180px;
-    font-size: 1.05rem;
-    color: #1e3a8a;
-  }
-  .right-column-minimal {
-    flex: 2;
-    font-size: 1rem;
-    color: #334155;
-  }
-  .pro-tip-minimal {
-    background: #fef2f2;
-    border-left: 4px solid #dc2626;
-    padding: 12px;
-    border-radius: 8px;
-    margin-top: 30px;
-    color: #991b1b;
-    font-size: 1rem;
-  }
-  .back-to-top-wrapper {
-    text-align: left;
-    margin-top: 30px;
-  }
-  .back-to-top-minimal {
-    background: #dc2626;
-    color: white;
-    padding: 8px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s;
-  }
-  .back-to-top-minimal:hover {
-    background: #b91c1c;
-  }
-</style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffffff;
+      color: #1e293b;
+      display: flex;
+    }
+    nav {
+      width: 220px;
+      background: #e0f2fe;
+      padding: 20px;
+      height: 100vh;
+      position: fixed;
+      overflow-y: auto;
+      border-right: 2px solid #cbd5e1;
+    }
+    nav a {
+      display: block;
+      margin-bottom: 10px;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #2563eb;
+    }
+    main {
+      margin-left: 220px;
+      padding: 20px 30px;
+      width: calc(100% - 220px);
+    }
+    section {
+      display: none;
+      margin: 0;
+      padding: 0;
+    }
+    section.active {
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+    .section-banner-minimal {
+      text-align: left;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #cbd5e1;
+      color: #1e3a8a;
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+    .two-column-minimal {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    .left-column-minimal {
+      flex: 1;
+      font-weight: 700;
+      min-width: 180px;
+      font-size: 1.05rem;
+      color: #1e3a8a;
+    }
+    .right-column-minimal {
+      flex: 2;
+      font-size: 1rem;
+      color: #334155;
+    }
+    .pro-tip-minimal {
+      background: #fef2f2;
+      border-left: 4px solid #dc2626;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 30px;
+      color: #991b1b;
+      font-size: 1rem;
+    }
+    .back-to-top-wrapper {
+      text-align: left;
+      margin-top: 30px;
+    }
+    .back-to-top-minimal {
+      background: #dc2626;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .back-to-top-minimal:hover {
+      background: #b91c1c;
+    }
+  </style>
+
   <script>
     function showSection(sectionId) {
       const sections = document.querySelectorAll('section');
@@ -104,9 +109,9 @@
 
       const links = document.querySelectorAll('nav a');
       links.forEach(link => {
-        link.style.color = '#0f172a'; // Default dark navy
+        link.style.color = '#0f172a'; // Reset link color
       });
-      document.getElementById('link-' + sectionId).style.color = '#dc2626'; // Active red
+      document.getElementById('link-' + sectionId).style.color = '#dc2626'; // Red for active
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     window.onload = function() {
@@ -114,7 +119,6 @@
     }
   </script>
 </head>
-
 <body>
   <nav>
     <a href="#" onclick="showSection('intro')" id="link-intro">1. Introduction</a>
@@ -131,73 +135,69 @@
     <a href="#" onclick="showSection('posters')" id="link-posters">12. Posters</a>
     <a href="#" onclick="showSection('footer')" id="link-footer">13. Final Footer</a>
   </nav>
-
   <main>
     <section id="intro" class="content-section active">
-      <div class="section-banner-minimal">
-        <h2>1. Introduction</h2>
-      </div>
+  <div class="section-banner-minimal">
+    <h2>1. Introduction</h2>
+  </div>
 
-      <h1>Comprehensive Raven Guide</h1>
+  <h1>Comprehensive Raven Guide</h1>
 
-      <div class="two-column-minimal">
-        <div class="left-column-minimal"><strong>Character Archetype</strong></div>
-        <div class="right-column-minimal">
-          Technical mid-range mixup specialist. Excels at tempo control, clone mindgames, and positional resets.
-        </div>
-      </div>
+  <div class="two-column-minimal">
+    <div class="left-column-minimal"><strong>Character Archetype</strong></div>
+    <div class="right-column-minimal">
+      Technical mid-range mixup specialist. Excels at tempo control, clone mindgames, and positional resets.
+    </div>
+  </div>
 
-      <div class="two-column-minimal">
-        <div class="left-column-minimal"><strong>Main Strengths</strong></div>
-        <div class="right-column-minimal">
-          <ul>
-            <li>Strong neutral spacing with safe mids</li>
-            <li>Explosive clone mindgame traps</li>
-            <li>Powerful teleport defensive resets</li>
-            <li>Elite mental disruption ability</li>
-          </ul>
-        </div>
-      </div>
+  <div class="two-column-minimal">
+    <div class="left-column-minimal"><strong>Main Strengths</strong></div>
+    <div class="right-column-minimal">
+      <ul>
+        <li>Strong neutral spacing with safe mids</li>
+        <li>Explosive clone mindgame traps</li>
+        <li>Powerful teleport defensive resets</li>
+        <li>Elite mental disruption ability</li>
+      </ul>
+    </div>
+  </div>
 
-      <div class="two-column-minimal">
-        <div class="left-column-minimal"><strong>Main Weaknesses</strong></div>
-        <div class="right-column-minimal">
-          <ul>
-            <li>Predictable clone setups if overused</li>
-            <li>Back Turn stance punishable if mistimed</li>
-            <li>Requires frequent rhythm variation to succeed</li>
-          </ul>
-        </div>
-      </div>
+  <div class="two-column-minimal">
+    <div class="left-column-minimal"><strong>Main Weaknesses</strong></div>
+    <div class="right-column-minimal">
+      <ul>
+        <li>Predictable clone setups if overused</li>
+        <li>Back Turn stance punishable if mistimed</li>
+        <li>Requires frequent rhythm variation to succeed</li>
+      </ul>
+    </div>
+  </div>
 
-      <div class="two-column-minimal">
-        <div class="left-column-minimal"><strong>Win Conditions</strong></div>
-        <div class="right-column-minimal">
-          Control neutral, pressure mental stack with clone setups, and reset neutral tempo through teleport threats.
-        </div>
-      </div>
+  <div class="two-column-minimal">
+    <div class="left-column-minimal"><strong>Win Conditions</strong></div>
+    <div class="right-column-minimal">
+      Control neutral, pressure mental stack with clone setups, and reset neutral tempo through teleport threats.
+    </div>
+  </div>
 
-      <div class="two-column-minimal">
-        <div class="left-column-minimal"><strong>Mindset Recommendation</strong></div>
-        <div class="right-column-minimal">
-          Raven wins by disrupting mental rhythm, not overpowering.  
-          Think about stealing initiative and resetting momentum constantly.
-        </div>
-      </div>
+  <div class="two-column-minimal">
+    <div class="left-column-minimal"><strong>Mindset Recommendation</strong></div>
+    <div class="right-column-minimal">
+      Raven wins by disrupting mental rhythm, not overpowering.  
+      Think about stealing initiative and resetting momentum constantly.
+    </div>
+  </div>
 
-      <div class="pro-tip-minimal">
-        <strong>Pro Tip:</strong>  
-        Raven isn't just punishing moves — he is punishing decisions.  
-        Own the mental rhythm.
-      </div>
+  <div class="pro-tip-minimal">
+    <strong>Pro Tip:</strong>  
+    Raven isn't just punishing moves — he is punishing decisions.  
+    Own the mental rhythm.
+  </div>
 
-      <div class="back-to-top-wrapper">
-        <a href="#" onclick="showSection('intro')" class="back-to-top-minimal">Back to Top</a>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+  <div class="back-to-top-wrapper">
+    <a href="#" onclick="showSection('intro')" class="back-to-top-minimal">Back to Top</a>
+  </div>
+</section>
 <section id="punishment" class="content-section">
   <div class="section-banner-minimal">
     <h2>2. Punishment Guide</h2>
@@ -254,8 +254,9 @@
   </div>
 
   <div class="pro-tip-minimal">
-    <strong>Pro Tip:</strong> Tournament Raven players favor <strong>guaranteed punish</strong> into reset —  
-    even if it’s less damage. Stability is fear.
+    <strong>Pro Tip:</strong>  
+    Tournament Raven players favor <strong>guaranteed punish</strong> into reset —  
+    even if it's less damage. Stability is fear.
   </div>
 
   <div class="back-to-top-wrapper">
@@ -271,107 +272,148 @@
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>1</strong></div>
-    <div class="right-column-minimal">Fast jab check (essential for neutral control)</div>
+    <div class="right-column-minimal">
+      Fast jab check (essential for neutral control)
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>1,1</strong></div>
-    <div class="right-column-minimal">Safe 2-hit poke to establish rhythm</div>
+    <div class="right-column-minimal">
+      Safe 2-hit poke to establish rhythm
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>D/F+1</strong></div>
-    <div class="right-column-minimal">Safe mid poke (+2 on hit), Raven's pressure backbone</div>
+    <div class="right-column-minimal">
+      Safe mid poke (+2 on hit), Raven’s pressure backbone
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>B+2</strong></div>
-    <div class="right-column-minimal">Long-range poke, stops forward movement</div>
+    <div class="right-column-minimal">
+      Long-range poke, stops forward movement
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>D/B+2,1</strong></div>
-    <div class="right-column-minimal">Low-mid string for poke and mental stack loading</div>
+    <div class="right-column-minimal">
+      Low-mid string for poke and mental stack loading
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>F+2</strong></div>
-    <div class="right-column-minimal">Quick mid punish (+3 on hit), stops reckless gaps</div>
+    <div class="right-column-minimal">
+      Quick mid punish (+3 on hit), stops reckless gaps
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>F+2,3</strong></div>
-    <div class="right-column-minimal">Stable launcher extension off punish window</div>
+    <div class="right-column-minimal">
+      Stable launcher extension off punish window
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>WS 1</strong></div>
-    <div class="right-column-minimal">Standing launcher out of crouch defense</div>
+    <div class="right-column-minimal">
+      Standing launcher out of crouch defense
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>WS 3,2</strong></div>
-    <div class="right-column-minimal">Crouching launcher setup tool</div>
+    <div class="right-column-minimal">
+      Crouching launcher setup tool
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>D/F+2</strong></div>
-    <div class="right-column-minimal">Unsafe launcher (big reward on whiff punish)</div>
+    <div class="right-column-minimal">
+      Unsafe launcher (big reward on whiff punish)
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>F,F+3</strong></div>
-    <div class="right-column-minimal">Running knee for mid-range offense closing</div>
+    <div class="right-column-minimal">
+      Running knee for mid-range offense closing
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>WR 2</strong></div>
-    <div class="right-column-minimal">Running plus frame jab (+5), safe pressure starter</div>
+    <div class="right-column-minimal">
+      Running plus frame jab (+5), safe pressure starter
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>F+4</strong></div>
-    <div class="right-column-minimal">Safe, long-range poke to annoy turtle players</div>
+    <div class="right-column-minimal">
+      Safe, long-range poke to annoy turtle players
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>QCF+1</strong></div>
-    <div class="right-column-minimal">Dash jab pressure tool at mid-range</div>
+    <div class="right-column-minimal">
+      Dash jab pressure tool at mid-range
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>QCF+2</strong></div>
-    <div class="right-column-minimal">Fast burst launcher out of dash</div>
+    <div class="right-column-minimal">
+      Fast burst launcher out of dash
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>U/F+3</strong></div>
-    <div class="right-column-minimal">Mid crush launcher vs mashers</div>
+    <div class="right-column-minimal">
+      Mid crush launcher vs mashers
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>D/B+3</strong></div>
-    <div class="right-column-minimal">Safe low poke (+1), used to cycle pressure</div>
+    <div class="right-column-minimal">
+      Safe low poke (+1), used to cycle pressure
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>U/F+4</strong></div>
-    <div class="right-column-minimal">Hopkick launcher (high-risk option)</div>
+    <div class="right-column-minimal">
+      Hopkick launcher (high-risk option)
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>SS+3</strong></div>
-    <div class="right-column-minimal">Sidestep low poke (for evasive offense)</div>
+    <div class="right-column-minimal">
+      Sidestep low poke (for evasive offense)
+    </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>SS+4</strong></div>
-    <div class="right-column-minimal">Sidestep low launcher threat</div>
+    <div class="right-column-minimal">
+      Sidestep low launcher threat
+    </div>
   </div>
 
   <div class="pro-tip-minimal">
-    <strong>Pro Tip:</strong> Master these 20 moves FIRST —  
-    Raven's clone setups, stances, and teleport traps are built on winning neutral with these basic tools.
+    <strong>Pro Tip:</strong>  
+    Master these 20 moves FIRST —  
+    Raven’s clone setups, stances, and teleport traps are built on winning neutral with these basic tools.
   </div>
 
   <div class="back-to-top-wrapper">
@@ -388,7 +430,7 @@
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Standard Launcher (F+2,3)</strong></div>
     <div class="right-column-minimal">
-      F+2,3 → d/f+1 → 1,1 → WR2 → ender  
+      F+2,3 → D/F+1 → 1,1 → WR2 → Ender  
       <br>Damage: ~63
     </div>
   </div>
@@ -396,7 +438,7 @@
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>While Standing Launcher (WS3,2)</strong></div>
     <div class="right-column-minimal">
-      WS3,2 → d/f+1 → 1,1 → WR2 → ender  
+      WS3,2 → D/F+1 → 1,1 → WR2 → Ender  
       <br>Damage: ~61
     </div>
   </div>
@@ -404,7 +446,7 @@
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Running Launcher (F,F+3)</strong></div>
     <div class="right-column-minimal">
-      F,F+3 → d/f+1 → 1,1 → WR2 → ender  
+      F,F+3 → D/F+1 → 1,1 → WR2 → Ender  
       <br>Damage: ~60
     </div>
   </div>
@@ -412,7 +454,7 @@
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>CH QCF+1 (Counter Hit)</strong></div>
     <div class="right-column-minimal">
-      CH QCF+1 → d/f+1 → 1,1 → WR2 → ender  
+      CH QCF+1 → D/F+1 → 1,1 → WR2 → Ender  
       <br>Damage: ~58
     </div>
   </div>
@@ -420,7 +462,7 @@
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>CH D/F+2 (Counter Hit)</strong></div>
     <div class="right-column-minimal">
-      CH D/F+2 → d/f+1 → 1,1 → WR2 → ender  
+      CH D/F+2 → D/F+1 → 1,1 → WR2 → Ender  
       <br>Damage: ~59
     </div>
   </div>
@@ -428,7 +470,7 @@
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Wall Carry Route</strong></div>
     <div class="right-column-minimal">
-      F+2,3 → dash → d/f+1 → 1,1 → dash → WR2 → wall splat  
+      F+2,3 → Dash → D/F+1 → 1,1 → Dash → WR2 → Wall Splat  
       <br>For optimal wall pressure setups
     </div>
   </div>
@@ -436,22 +478,22 @@
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Wall Ender (Post Wall Splat)</strong></div>
     <div class="right-column-minimal">
-      1 → 1 → D/F+2 → clone threat for pressure
+      1 → 1 → D/F+2 → Clone Threat for pressure
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Heat Combo</strong></div>
     <div class="right-column-minimal">
-      Heat Dash (F+2,3) → d/f+1 → 1,1 → WR2 → clone setup → wall combo  
+      Heat Dash (F+2,3) → D/F+1 → 1,1 → WR2 → Clone Setup → Wall Combo  
       <br>Boosted carry and corner pressure
     </div>
   </div>
 
   <div class="pro-tip-minimal">
     <strong>Pro Tip:</strong>  
-    **Never overextend combos near walls** —  
-    secure splat ➔ reset pressure with clone or teleport if damage is lower.
+    Never overextend combos near walls —  
+    Secure splat ➔ Reset pressure with clone or teleport if damage is lower.
   </div>
 
   <div class="back-to-top-wrapper">
@@ -473,46 +515,47 @@
       - BT 1+2 (Reversal)  
       - BT 3+4 (Launcher)  
       - BT D/F+3 (Mid poke)  
-      <br>**Purpose:** Frame trap setups and back-facing resets.
+      <br><strong>Purpose:</strong> Frame trap setups and back-facing resets.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Soulzone (SZN)</strong></div>
     <div class="right-column-minimal">
-      Entered with 3+4 manually or off clone summons.  
+      Entered manually with 3+4 or off clone summons.  
       <br><strong>Core moves:</strong>  
       - SZN 1+2 (Unblockable explosion)  
       - SZN D (Down teleport crush)  
       - SZN U (Up teleport crush)  
-      <br>**Purpose:** Layer teleport or clone threat in neutral.
+      <br><strong>Purpose:</strong> Layer teleport or clone threat pressure in neutral.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Shadow Sprint (SHS)</strong></div>
     <div class="right-column-minimal">
-      QCF input based sprint stance.  
+      QCF input-based sprint stance.  
       <br><strong>Core moves:</strong>  
       - SHS 1 (Mid dash punch)  
       - SHS 2 (Mid launcher)  
       - SHS 3 (Low sweep)  
-      <br>**Purpose:** Aggressive approach options from neutral control.
+      <br><strong>Purpose:</strong> Aggressive approach and burst mixup threats.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Transition Philosophy</strong></div>
     <div class="right-column-minimal">
-      Raven’s stance transitions are about **resetting rhythm** —  
-      use Back Turn for close pressure, Soulzone for clone layering, Shadow Sprint to force aggressive counters.
+      Raven’s stance transitions are about resetting rhythm —  
+      Use Back Turn for tight pressure, Soulzone for layered threats,  
+      Shadow Sprint for quick offensive bursts.
     </div>
   </div>
 
   <div class="pro-tip-minimal">
     <strong>Pro Tip:</strong>  
-    Always disguise stance entries behind safe pokes, clone setups, or teleports —  
-    **never raw stance switch unless baiting a reaction**.
+    Never raw stance switch unless hidden inside pokes, clone setups, or teleport —  
+    **Stance transitions should always disguise your real intentions**.
   </div>
 
   <div class="back-to-top-wrapper">
@@ -530,52 +573,51 @@
     <div class="left-column-minimal"><strong>Neutral Tools</strong></div>
     <div class="right-column-minimal">
       Control space with <strong>1</strong>, <strong>D/F+1</strong>, <strong>F+2</strong>.  
-      Safely prod opponents and set up clone threat.
+      Safely poke and build clone setups.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Approach Options</strong></div>
     <div class="right-column-minimal">
-      Use <strong>WR2</strong> (+ frames), <strong>F,F+3</strong> (mid launcher) to close distance safely and with initiative.
+      Use <strong>WR2</strong> (+ frames) and <strong>F,F+3</strong> (launcher) to advance under pressure.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Small Tekken/Pokes</strong></div>
+    <div class="left-column-minimal"><strong>Small Tekken / Pokes</strong></div>
     <div class="right-column-minimal">
-      Abuse <strong>1</strong>, <strong>1,1</strong>, <strong>D/B+2,1</strong> —  
-      light poking layers to break turtling opponents slowly without committing.
+      Harass with <strong>1</strong>, <strong>1,1</strong>, and <strong>D/B+2,1</strong> to slowly crack defenses.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Pressure + Clone Layers</strong></div>
     <div class="right-column-minimal">
-      Post + frames (after WR2 or clone threat), pressure safely ➔ stance entry ➔ teleport escape if blocked.
+      Post + frames: apply clone summons to force freeze, then teleport reset or offense continuation.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Reset Loops</strong></div>
     <div class="right-column-minimal">
-      Sidestep ➔ Clone Threat ➔ Teleport ➔ Reset spacing.  
-      **Force opponents to chase and overextend**.
+      Sidestep ➔ Clone Threat ➔ Teleport ➔ Force opponent to chase.  
+      **Raven dominates by never staying committed long.**
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Heat Strategy</strong></div>
     <div class="right-column-minimal">
-      Heat Dash from <strong>F+2,3</strong> to extend offense.  
-      Clone summon post-Heat creates panic decisions at walls.
+      Heat Dash off F+2,3 ➔ WR2 ➔ clone layer ➔ teleport if needed.  
+      **Maximize corner carry and clone mixup potential.**
     </div>
   </div>
 
   <div class="pro-tip-minimal">
     <strong>Pro Tip:</strong>  
-    The real Raven gameplan isn't "win neutral" —  
-    it's **reset neutral** over and over until the opponent collapses mentally.
+    True Raven mastery is about constantly **resetting mental momentum** —  
+    the opponent should feel like every successful guess "changes nothing."
   </div>
 
   <div class="back-to-top-wrapper">
@@ -593,54 +635,55 @@
     <div class="left-column-minimal"><strong>Spacing Priority</strong></div>
     <div class="right-column-minimal">
       Stay at mid-range (~2 character lengths) —  
-      Raven’s best clone threat and teleport reset range.
+      Optimal range for clone setups and teleport resets.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Backdash + Sidestep</strong></div>
+    <div class="left-column-minimal"><strong>Backdash + Sidestep Cycling</strong></div>
     <div class="right-column-minimal">
-      Cycle fast backdash ➔ micro sidestep ➔ re-center.  
-      Always be ready to deny commitment.
+      Maintain mobility at all times.  
+      Fast backdash ➔ sidestep ➔ backdash chain prevents getting trapped.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Clone Reset Usage</strong></div>
+    <div class="left-column-minimal"><strong>Clone Defensive Insertions</strong></div>
     <div class="right-column-minimal">
-      Insert clone after blocking mids or eating small pokes —  
-      **forces mental reset** and buys defensive frames.
+      Insert clone summons mid-pressure to create "mental freezes"  
+      ➔ Opponent loses offensive momentum trying to predict explosion.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Teleport Escape</strong></div>
+    <div class="left-column-minimal"><strong>Teleport Escape Rules</strong></div>
     <div class="right-column-minimal">
-      When minus, teleport up or back to crush retaliation strings.  
-      SZN.B and SZN.U should be second nature defensively.
+      When under threat:  
+      ➔ SZN.B (Back teleport) to punish overextensions  
+      ➔ SZN.U (Up teleport) to reset positioning
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Wall Defense</strong></div>
+    <div class="left-column-minimal"><strong>Wall Defense Priority</strong></div>
     <div class="right-column-minimal">
-      Defend with clone explosion or teleport escapes first.  
-      Never panic mash under wall pressure — **reset distance** first, punish later.
+      Prioritize clone summon ➔ teleport escape over mashing buttons.  
+      **Walls are won by patience and reset**, not panic.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Clone Explosion Bait</strong></div>
+    <div class="left-column-minimal"><strong>Clone Explosion Baiting</strong></div>
     <div class="right-column-minimal">
-      Summon clone, delay explosion manually if opponent expects instant —  
-      bait panic sidesteps or presses into blast.
+      Delay clone explosions slightly when opponent expects immediate —  
+      Catch sidestep attempts or late retaliation.
     </div>
   </div>
 
   <div class="pro-tip-minimal">
     <strong>Pro Tip:</strong>  
-    Great Raven defense doesn't rely on blocking —  
-    it relies on **constant re-centering and forcing opponent resets**.
+    **Defense isn’t passive** —  
+    Good Raven defense **manipulates the opponent’s flow**, forcing errors without taking risks.
   </div>
 
   <div class="back-to-top-wrapper">
@@ -657,56 +700,55 @@
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Instant Clone Summon</strong></div>
     <div class="right-column-minimal">
-      Immediate explosion.  
-      <br><strong>Use when:</strong> opponent heavily presses after pokes.
+      Immediate explosion to catch aggressive opponents.  
+      **Use when:** You sense button mash or panic retaliation.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Quarter Delay Clone</strong></div>
     <div class="right-column-minimal">
-      Brief delay before explosion.  
-      <br><strong>Use when:</strong> opponent tries to sidestep or counterattack.
+      Brief delay explosion.  
+      **Use when:** You expect sidestep attempts after clone summon.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Half Delay Clone</strong></div>
     <div class="right-column-minimal">
-      Longer delay clone.  
-      <br><strong>Use when:</strong> opponent expects fast explosion and freezes.
+      Extended delay explosion.  
+      **Use when:** You want opponent to freeze waiting for detonation.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>No Explosion Clone</strong></div>
     <div class="right-column-minimal">
-      Summon but do not detonate.  
-      <br><strong>Use when:</strong> you want opponent to respect and back off automatically.
+      Summon clone but never explode it.  
+      **Use when:** You want mental pressure without committing.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Clone Mind Trap Layers</strong></div>
+    <div class="left-column-minimal"><strong>Mind Trap Layering</strong></div>
     <div class="right-column-minimal">
-      Rotate between instant, delay, no explosion per round.  
-      Break mental stack by keeping reaction timing unstable.
+      Rotate between instant, delayed, and non-explosion clones throughout the match.  
+      **Goal:** Prevent opponent from mentally timing your patterns.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Clone vs Aggressive Opponent</strong></div>
+    <div class="left-column-minimal"><strong>Clone Reset Strategy</strong></div>
     <div class="right-column-minimal">
-      Summon clones defensively in neutral.  
-      Aggressive players will always overstep into explosions.
+      Even if clone doesn't hit, it **resets the opponent’s offense rhythm** —  
+      This is key to Raven’s true win condition.
     </div>
   </div>
 
   <div class="pro-tip-minimal">
     <strong>Pro Tip:</strong>  
-    If your opponent knows when the clone will explode —  
-    **you already lost the clone war**.  
-    **Rotate timings** to maintain clone threat pressure.
+    Clones are not just "bombs" —  
+    They are **mental delay grenades** designed to freeze and disrupt opponent momentum.
   </div>
 
   <div class="back-to-top-wrapper">
@@ -723,50 +765,49 @@
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>SZN.B (Soulzone Back Teleport)</strong></div>
     <div class="right-column-minimal">
-      Backward teleport during Soulzone stance.  
-      <br><strong>Use when:</strong> opponent overcommits on approach.  
-      <br><strong>Goal:</strong> Force whiffs and reset neutral spacing.
+      Backward teleport to dodge pressure.  
+      **Use when:** Opponent overextends or chases.  
+      **Goal:** Whiff punish after reset.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>SZN.U (Soulzone Up Teleport)</strong></div>
     <div class="right-column-minimal">
-      Upward teleport during Soulzone stance.  
-      <br><strong>Use when:</strong> opponent staggers pressure or delays strings.  
-      <br><strong>Goal:</strong> Crush mid-pressure attacks and land safely outside range.
+      Upward teleport crushes mids and repositions Raven high.  
+      **Use when:** Opponent pressures with strings.  
+      **Goal:** Escape bad wall situations cleanly.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>SZN.D (Soulzone Down Teleport)</strong></div>
     <div class="right-column-minimal">
-      Downward teleport (ground crush) during Soulzone stance.  
-      <br><strong>Use when:</strong> opponent throws or grabs frequently.  
-      <br><strong>Goal:</strong> Dodge command grabs and throw traps.
+      Ground teleport to dodge lows, throws, or timing traps.  
+      **Use when:** Opponent abuses low pokes or command grabs.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Teleport Trap Layers</strong></div>
     <div class="right-column-minimal">
-      Post-teleport clone summons or mixups.  
-      <br><strong>Strategy:</strong> After resetting distance, instantly re-approach or summon clone to continue pressure cycle.
+      After teleport, threaten clone summon immediately.  
+      Opponent will hesitate, giving Raven time to regain tempo.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Teleport Panic Escape</strong></div>
+    <div class="left-column-minimal"><strong>Wall Teleport Priority</strong></div>
     <div class="right-column-minimal">
-      If trapped at the wall, teleport instantly (SZN.B or SZN.U) to avoid block pressure collapse.
+      At the wall, teleport (prefer SZN.U or SZN.B) immediately —  
+      Wall pressure kills Raven if not reset.
     </div>
   </div>
 
   <div class="pro-tip-minimal">
     <strong>Pro Tip:</strong>  
-    **Teleport isn't just defense** —  
-    it's an **offensive reset button**.  
-    After teleport, re-center neutral and force opponents to act first.
+    Raven teleports aren’t just escapes —  
+    **They are neutral resets** that let Raven take control without risky commitments.
   </div>
 
   <div class="back-to-top-wrapper">
@@ -784,8 +825,8 @@
     <div class="left-column-minimal"><strong>Law</strong></div>
     <div class="right-column-minimal">
       Sidestep Left (SSL).  
-      <br>Clone after parry baits.  
-      Punish unsafe flip kicks on block.
+      Punish flip kicks.  
+      Clone reset after blocking pressure strings.
     </div>
   </div>
 
@@ -793,8 +834,8 @@
     <div class="left-column-minimal"><strong>Paul</strong></div>
     <div class="right-column-minimal">
       Sidestep Right (SSR).  
-      <br>Teleport out of Death Fist pressure.  
-      Clone delay bait vs Demolition Man setups.
+      Teleport after Death Fist attempts.  
+      Clone delay setups punish Demolition Man mixups.
     </div>
   </div>
 
@@ -802,8 +843,8 @@
     <div class="left-column-minimal"><strong>Kazuya</strong></div>
     <div class="right-column-minimal">
       Sidestep Left (SSL).  
-      <br>Low parry wave dash lows.  
-      Clone reset to bait Electric pressure.
+      Low parry wave dash lows.  
+      Clone fake explosions to catch Electric pressure.
     </div>
   </div>
 
@@ -811,8 +852,8 @@
     <div class="left-column-minimal"><strong>Asuka</strong></div>
     <div class="right-column-minimal">
       Sidestep Left (SSL).  
-      <br>Respect parry strings early.  
-      Punish whiffed reversals with clone explosion setups.
+      Bait parry attempts with clone threat.  
+      Punish whiffed reversals.
     </div>
   </div>
 
@@ -820,8 +861,8 @@
     <div class="left-column-minimal"><strong>Hwoarang</strong></div>
     <div class="right-column-minimal">
       Sidestep Right (SSR).  
-      <br>Disrupt stance pressure with clone threat.  
-      Teleport when overwhelmed at wall.
+      Disrupt flamingo stance pressure with clone mind traps.  
+      Teleport during strings to reset positioning.
     </div>
   </div>
 
@@ -829,8 +870,8 @@
     <div class="left-column-minimal"><strong>King</strong></div>
     <div class="right-column-minimal">
       Sidestep Right (SSR).  
-      <br>Teleport down (SZN.D) to dodge throws.  
-      Punish unsafe giant swings on block.
+      Teleport SZN.D to dodge throws.  
+      Clone traps beat giant swing setups.
     </div>
   </div>
 
@@ -838,8 +879,8 @@
     <div class="left-column-minimal"><strong>Dragunov</strong></div>
     <div class="right-column-minimal">
       Sidestep Right (SSR).  
-      <br>Back teleport out of Running 2 pressure.  
-      Clone instant trap after - frames.
+      Back teleport after Running 2 block.  
+      Clone fakeouts catch aggressive approach.
     </div>
   </div>
 
@@ -847,8 +888,8 @@
     <div class="left-column-minimal"><strong>Claudio</strong></div>
     <div class="right-column-minimal">
       Sidestep Left (SSL).  
-      <br>Punish hopkick attempts with sidestep clone trap.  
-      Heat teleport escape preferred when pressured.
+      Punish hopkick whiffs.  
+      Clone fake setups during starburst activation.
     </div>
   </div>
 
@@ -856,8 +897,8 @@
     <div class="left-column-minimal"><strong>Steve</strong></div>
     <div class="right-column-minimal">
       Sidestep Left (SSL).  
-      <br>Teleport out of flicker setups.  
-      Clone bait after dodge back sway.
+      Teleport escape out of Flicker stance pressure.  
+      Clone after back sway dodges.
     </div>
   </div>
 
@@ -865,15 +906,15 @@
     <div class="left-column-minimal"><strong>Lili</strong></div>
     <div class="right-column-minimal">
       Sidestep Right (SSR).  
-      <br>Use clone no-explosion to bait sidestep spam.  
-      Punish whiffed wall pressure attempts.
+      Clone mindgame to punish sidestep spam.  
+      Defensive teleport if trapped at wall.
     </div>
   </div>
 
   <div class="pro-tip-minimal">
     <strong>Pro Tip:</strong>  
-    Always adjust clone timing mid-set based on opponent sidestepping tendencies —  
-    **adapt clone delay to counter movement habits**.
+    Always adjust clone explosion timing depending on opponent sidestepping —  
+    **punish rhythm assumptions before they punish you**.
   </div>
 
   <div class="back-to-top-wrapper">
@@ -890,47 +931,48 @@
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Round Opening Strategy</strong></div>
     <div class="right-column-minimal">
-      Use safe pokes (1, D/F+1) and backdash into clone summon immediately if opponent overcommits early.
+      Start safe with <strong>1</strong> or <strong>D/F+1</strong>.  
+      If opponent overcommits, summon clone early to freeze momentum.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Heat Activation Plan</strong></div>
     <div class="right-column-minimal">
-      Heat Dash off F+2,3 to continue offense.  
-      Always try to end Heat activation with clone summon ➔ teleport trap for guaranteed mind advantage.
+      Always Heat Dash after <strong>F+2,3</strong> or <strong>clone summon traps</strong>.  
+      Focus on gaining wall pressure rather than fishing for giant combos.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Time Management</strong></div>
     <div class="right-column-minimal">
-      After gaining life lead, cycle clone summons and teleport resets to **burn the clock**.  
-      Raven excels at winning through passive resets without chasing.
+      Once ahead, **stall with clone summons and teleport escapes**.  
+      Winning rounds by timeout is a valid Raven tournament strategy.
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Wall Strategy</strong></div>
     <div class="right-column-minimal">
-      Secure fast wall splats with WR2 or Heat combos.  
-      At wall:  
-      ➔ Summon clone ➔ Threaten teleport ➔ Force hesitation ➔ Re-center if needed.
+      Build clone mindgames at wall.  
+      Threaten explosion to scare opponents into freezing.  
+      Reset pressure after gaining life lead.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Final Round Pressure</strong></div>
+    <div class="left-column-minimal"><strong>Final Round Mindset</strong></div>
     <div class="right-column-minimal">
-      Open with fake clone summon setups.  
-      Bait early sidesteps/mistakes to secure guaranteed wall carry combos.
+      Play slower than usual —  
+      Force opponent to approach.  
+      Raven thrives when opponents self-destruct trying to break the clone cycles.
     </div>
   </div>
 
   <div class="pro-tip-minimal">
     <strong>Pro Tip:</strong>  
-    **Real tournament wins** with Raven come not from massive combos,  
-    but from **resetting neutral 3–5 times per round** until the opponent self-destructs.
+    In tournaments, "winning ugly" with clone resets and time stalls is **more powerful** than flashy risky combos.
   </div>
 
   <div class="back-to-top-wrapper">
@@ -949,49 +991,50 @@
     <div class="right-column-minimal">
       (Start) ➔ Safe poke (1 / D/F+1)  
       ➔ If hit: WR2 pressure  
-      ➔ If blocked: backdash ➔ clone summon  
-      ➔ Reset ➔ Repeat.
+      ➔ If blocked: Backdash ➔ Clone Summon  
+      ➔ Reset ➔ Repeat
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Defense Reaction Poster</strong></div>
     <div class="right-column-minimal">
-      (Under pressure) ➔ Block 1-2 hits  
-      ➔ If tight pressure: teleport (SZN.B or SZN.U)  
-      ➔ If loose pressure: clone summon ➔ punish.
+      (Under pressure) ➔ Block 1–2 hits ➔  
+      If tight string: Teleport Escape ➔  
+      If loose string: Clone Summon ➔ Punish Hesitation
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Heat Attack Plan Poster</strong></div>
+    <div class="left-column-minimal"><strong>Heat Activation Poster</strong></div>
     <div class="right-column-minimal">
-      (Activate Heat) ➔ Heat Dash ➔ Force wall splat  
-      ➔ If blocked: teleport reset  
-      ➔ If hit: clone threat ➔ teleport fakeout.
+      (Heat On) ➔ Heat Dash ➔ Wall Pressure ➔  
+      Clone Layer ➔ Reset ➔ Rebuild Momentum
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Wall Escape Poster</strong></div>
     <div class="right-column-minimal">
-      (Trapped at wall) ➔ Clone summon immediately  
-      ➔ Fake explosion timing  
-      ➔ Teleport out when opponent hesitates.
+      (Cornered) ➔ Summon Clone ➔  
+      Delay Explosion ➔ Teleport ➔  
+      Reset to Midstage
     </div>
   </div>
 
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Mental Reset Poster</strong></div>
     <div class="right-column-minimal">
-      (Under stress) ➔ Teleport escape ➔ Sidestep ➔ Clone summon ➔ Deep breath ➔ Re-center.
+      (After taking damage) ➔  
+      Teleport ➔ Backdash ➔ Clone Summon ➔  
+      Recenter Mentally ➔ Rebuild Neutral
     </div>
   </div>
 
   <div class="pro-tip-minimal">
     <strong>Pro Tip:</strong>  
-    **Posters are your quick reminders** —  
-    Commit them to muscle memory during practice so Raven's flow becomes automatic under pressure.
+    Posters simplify tournament thinking —  
+    **When under stress, FOLLOW A POSTER FLOW** to avoid collapsing into panic habits.
   </div>
 
   <div class="back-to-top-wrapper">
@@ -1008,49 +1051,48 @@
   <div class="two-column-minimal">
     <div class="left-column-minimal"><strong>Tempo is Everything</strong></div>
     <div class="right-column-minimal">
-      Raven is not a brute-force character.  
-      You must control the rhythm of neutral and mental stack —  
-      never let your opponent "feel comfortable."
+      Raven controls rounds by disrupting pace —  
+      If opponent feels "comfortable," you already lost initiative.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Clones are Threat, Not Damage</strong></div>
+    <div class="left-column-minimal"><strong>Clones Are Threats, Not Damage</strong></div>
     <div class="right-column-minimal">
-      Think of clones as mental stack bombs —  
-      even without explosion damage, they freeze, delay, and manipulate opponents into worse decisions.
+      Think of clones as mental landmines.  
+      Freezing the opponent is stronger than landing direct explosions.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Teleport Reset Mindset</strong></div>
+    <div class="left-column-minimal"><strong>Teleport Resets > Risky Defense</strong></div>
     <div class="right-column-minimal">
-      Every teleport is a chance to reset positioning and tempo.  
-      It's not running away — it's rebooting the match on YOUR terms.
+      Always prioritize teleport escapes over fighting from bad positions.  
+      Raven wins through resets, not scrambling.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Patience Over Combos</strong></div>
+    <div class="left-column-minimal"><strong>Practice Reset Loops</strong></div>
     <div class="right-column-minimal">
-      Raven wins tournaments with resets, small pokes, clone pressure, and critical Heat Dash moments —  
-      not risky Hail Mary combos.
+      Drill sequences: teleport ➔ sidestep ➔ clone ➔ backdash ➔ fakeout.  
+      Build muscle memory for infinite resets under pressure.
     </div>
   </div>
 
   <div class="two-column-minimal">
-    <div class="left-column-minimal"><strong>Practice Reset Flow</strong></div>
+    <div class="left-column-minimal"><strong>Patience Beats Haste</strong></div>
     <div class="right-column-minimal">
-      In training mode, practice rounds where you teleport, sidestep, clone summon, and reset back to neutral  
-      **without attacking** —  
-      this develops your real Raven instincts.
+      Raven tournaments are won by survival resets, not rushdown kills.  
+      **Make the opponent break first.**
     </div>
   </div>
 
   <div class="pro-tip-minimal">
     <strong>Pro Tip:</strong>  
-    If Raven feels like "he needs to guess," something went wrong.  
-    Proper Raven play should always feel like the opponent is forced to guess first.
+    Your true opponent isn’t just the character across the screen —  
+    **it’s their emotional stability.  
+    Break that first.**
   </div>
 
   <div class="back-to-top-wrapper">
