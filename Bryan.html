@@ -3,58 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <title>Comprehensive Bryan Guide: Pressure, Precision, Punishment</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9fb;
+      color: #222;
+    }
+    .container {
+      display: flex;
+      max-width: 1400px;
+      margin: auto;
+    }
+    nav {
+      width: 300px;
+      background: #f0f4f8;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      border-right: 2px solid #ddd;
+    }
+    nav h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    nav a {
+      display: block;
+      margin: 8px 0;
+      color: #336699;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      flex: 1;
+      padding: 40px;
+    }
+    .section {
+      margin-bottom: 60px;
+    }
+    .section-title {
+      font-size: 28px;
+      color: #1a1a1a;
+      margin-bottom: 20px;
+    }
+    .content-box {
+      background: #fff;
+      border-left: 6px solid #aaccee;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    code {
+      background: #eef3f8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    strong {
+      color: #222;
+    }
+  </style>
 </head>
 <body>
+<div class="container">
+  <nav>
+    <h2>Table of Contents</h2>
+    <a href="#section-1">1. Introduction & Archetype Profile</a>
+    <a href="#section-2">2. Punishment Guide</a>
+    <a href="#section-3">3. Key Moves</a>
+    <a href="#section-4">4. Combos & Okizeme</a>
+    <a href="#section-5">5. Offensive Game</a>
+    <a href="#section-6">6. Defensive Game</a>
+    <a href="#section-7">7. Matchups & Meta Tools</a>
+    <a href="#section-8">8. Visual Overlays & Simulation Aids</a>
+    <a href="#section-9">9. Tournament Tools & Coaching Systems</a>
+  </nav>
 
-<div class="section" id="section-1">
-  <h1 class="section-title">1. Introduction & Archetype Profile</h1>
+  <main>
+    <div class="section" id="section-1">
+      <h1 class="section-title">1. Introduction & Archetype Profile</h1>
 
-  <div class="content-box">
-    <h2>Bryan Fury – Tekken 8 Season 2</h2>
-    <p>Bryan is a <strong>counter-hit monster</strong> and <strong>pressure-based brawler</strong> who thrives on tempo control, opponent panic, and whiff punishment. His toolkit rewards precision and brutal punishes while punishing predictable movement and unsafe decisions. A well-rounded Bryan dominates mid-screen, corners the opponent at the wall, and converts mistakes into high-damage Heat loops.</p>
-  </div>
+      <div class="content-box">
+        <h2>Bryan Fury – Tekken 8 Season 2</h2>
+        <p>Bryan is a <strong>counter-hit enforcer</strong> and <strong>pressure-intensive brawler</strong> who excels at mid-range control, tempo disruption, and maximizing damage off mistakes. His playstyle rewards tight execution and mental stack management, turning gaps into dominance at all ranges.</p>
+      </div>
 
-  <div class="content-box">
-    <h2>Archetype Tags</h2>
-    <ul>
-      <li><strong>Playstyle:</strong> [CH Pressure], [Tempo Disruptor], [Execution Reward]</li>
-      <li><strong>Strengths:</strong> Safe pokes, high reward CH tools, taunt pressure at wall, versatile whiff punishing</li>
-      <li><strong>Weaknesses:</strong> High execution ceiling, no evasive stance, relies on reads vs safe pressure</li>
-    </ul>
-  </div>
+      <div class="content-box">
+        <h2>Archetype Tags</h2>
+        <ul>
+          <li><strong>Playstyle:</strong> [CH Pressure], [Mid Control], [Execution Reward]</li>
+          <li><strong>Strengths:</strong> High reward CH tools, tight pressure, wall control, consistent punishes</li>
+          <li><strong>Weaknesses:</strong> No evasive stance, demands sharp reactions, punishable lows</li>
+        </ul>
+      </div>
 
-  <div class="content-box">
-    <h2>Execution Difficulty</h2>
-    <p>
-      <strong>Rating:</strong> ★★★★☆ (4.5/5)<br />
-      Bryan demands consistent execution under pressure, especially with Heat conversions, taunt setups, and Jet Upper confirms. His advanced tools like <code>Taunt → Jet Upper</code> and <code>CH 3+4 → Ender</code> require labbing.
-    </p>
-  </div>
+      <div class="content-box">
+        <h2>Execution Difficulty</h2>
+        <p>
+          <strong>Rating:</strong> ★★★★☆ (4.5/5)<br />
+          Bryan requires mastery of timing, confirm windows, taunt setups, and pressure layers. Combos like <code>F,B+2 → QCF+3,4 → 4,1~B</code> demand fluidity, and Heat trap conversions elevate his risk-reward loop.
+        </p>
+      </div>
 
-  <div class="content-box">
-    <h2>Season 2 Highlights</h2>
-    <ul>
-      <li>WS+2 confirmed as 19F launcher for crouch punishment</li>
-      <li>F,F+2 now confirmed Heat Engager with -9 on block</li>
-      <li>D/F+3 homing low (29F) used for anti-movement lockdown</li>
-      <li>QCB+1 safe CH pressure (+5 on block, +19 on hit)</li>
-    </ul>
-  </div>
+      <div class="content-box">
+        <h2>Season 2 Highlights</h2>
+        <ul>
+          <li>F,F+2 confirmed as Heat Engager, -9 on block</li>
+          <li>QCB+1 is now a CH-safe approach tool (+5)</li>
+          <li>CH 3+4 → full combo routes labbed</li>
+          <li>New optimized Heat combo confirmed for tournament use</li>
+        </ul>
+      </div>
 
-  <div class="content-box">
-    <h2>Tag Glossary</h2>
-    <ul>
-      <li><strong>[Heat Engager]</strong>: Triggers Heat activation on hit</li>
-      <li><strong>[CH Tool]</strong>: Leads to full combo on counter hit</li>
-      <li><strong>[Wall Carry]</strong>: Effective for pushing opponent toward wall</li>
-      <li><strong>[Oki Ender]</strong>: Leaves Bryan advantaged after combo for okizeme</li>
-      <li><strong>[Panic Check]</strong>: Fast tool to interrupt pressure or test opponent mashing</li>
-      <li><strong>[Tempo Tool]</strong>: Used to reset or steal momentum</li>
-    </ul>
-  </div>
+      <div class="content-box">
+        <h2>Tag Glossary</h2>
+        <ul>
+          <li><strong>[CH Tool]</strong> – Guaranteed combo on counter hit</li>
+          <li><strong>[Wall Carry]</strong> – Pushes opponent to wall for setups</li>
+          <li><strong>[Oki Ender]</strong> – Leaves Bryan in strong wake-up position</li>
+          <li><strong>[Heat Engager]</strong> – Activates Heat on hit</li>
+          <li><strong>[Tempo Tool]</strong> – Used to control match rhythm or momentum</li>
+        </ul>
+      </div>
+    </div>
+  </main>
 </div>
-
 </body>
 </html>
 
@@ -63,21 +149,14 @@
 
   <div class="content-box">
     <h2>Overview</h2>
-    <p>This section outlines Bryan’s standing and while-standing punishers from 10F to 19F. It includes frame-accurate data, tactical roles, and a <strong>Punish by Range Table</strong> for optimizing responses based on distance.</p>
+    <p>This section covers Bryan’s reliable punishment tools — both standing and while-standing — organized by startup frames and supported by the <strong>Punish by Range Table</strong> for tournament-level optimization.</p>
   </div>
 
   <div class="content-box">
     <h2>Standing Punishers</h2>
     <table>
       <thead>
-        <tr>
-          <th>Startup</th>
-          <th>Move</th>
-          <th>Hit Level</th>
-          <th>On Hit</th>
-          <th>On Block</th>
-          <th>Tags</th>
-        </tr>
+        <tr><th>Startup</th><th>Move</th><th>Hit Level</th><th>On Hit</th><th>On Block</th><th>Tags</th></tr>
       </thead>
       <tbody>
         <tr><td>10F</td><td>1</td><td>High</td><td>+1</td><td>-1</td><td>[Panic Check]</td></tr>
@@ -85,24 +164,17 @@
         <tr><td>13F</td><td>D/F+1,2</td><td>Mid, Mid</td><td>+1</td><td>-9</td><td>[Safe Confirm]</td></tr>
         <tr><td>14F</td><td>1+2</td><td>Mid</td><td>+3</td><td>-12</td><td>[CH Tool]</td></tr>
         <tr><td>15F</td><td>F+4</td><td>Mid</td><td>Launch</td><td>-14</td><td>[Launcher]</td></tr>
-        <tr><td>16F</td><td>QCB+2</td><td>Mid</td><td>Launch</td><td>-14</td><td>[Whiff Punisher], [Launcher]</td></tr>
+        <tr><td>15F</td><td>QCB+2</td><td>Mid</td><td>Launch</td><td>-14</td><td>[Launcher]</td></tr>
         <tr><td>19F</td><td>D/F+2</td><td>Mid</td><td>Launch</td><td>-10</td><td>[Launcher]</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="content-box">
-    <h2>While Standing (WS) Punishers</h2>
+    <h2>While Standing Punishers</h2>
     <table>
       <thead>
-        <tr>
-          <th>Startup</th>
-          <th>Move</th>
-          <th>Hit Level</th>
-          <th>On Hit</th>
-          <th>On Block</th>
-          <th>Tags</th>
-        </tr>
+        <tr><th>Startup</th><th>Move</th><th>Hit Level</th><th>On Hit</th><th>On Block</th><th>Tags</th></tr>
       </thead>
       <tbody>
         <tr><td>12F</td><td>WS+3,4</td><td>Mid, Mid</td><td>+4</td><td>-13</td><td>[WS Check]</td></tr>
@@ -116,16 +188,12 @@
     <h2>Punish by Range Table</h2>
     <table>
       <thead>
-        <tr>
-          <th>Range</th>
-          <th>Move</th>
-          <th>Reason</th>
-        </tr>
+        <tr><th>Range</th><th>Move</th><th>Why Use</th></tr>
       </thead>
       <tbody>
-        <tr><td>Close (0.5–1.0)</td><td>1, 4,1</td><td>Fastest recovery jabs</td></tr>
-        <tr><td>Mid (1.0–1.5)</td><td>D/F+1,2</td><td>Consistent punisher on delayable mids</td></tr>
-        <tr><td>Far (1.5–2.0+)</td><td>QCB+2</td><td>Launch range whiff punish</td></tr>
+        <tr><td>Close (0.5–1.0)</td><td>1, 4,1</td><td>Fastest hit checks</td></tr>
+        <tr><td>Mid (1.0–1.5)</td><td>D/F+1,2</td><td>Mid confirm with safe end</td></tr>
+        <tr><td>Far (1.5–2.0+)</td><td>QCB+2</td><td>Launches from distance, strong whiff punisher</td></tr>
       </tbody>
     </table>
   </div>
@@ -133,9 +201,9 @@
   <div class="content-box">
     <h2>Tips</h2>
     <ul>
-      <li>Use <strong>F+4</strong> over D/F+2 for guaranteed punish at 15F</li>
-      <li>Buffer <strong>WS+2</strong> for low parry or crouch block punishes</li>
-      <li>Use <strong>QCB+2</strong> for space control after sidestep or backdash</li>
+      <li>Use <strong>F+4</strong> for stable 15F punishes instead of D/F+2</li>
+      <li>Buffer <strong>WS+2</strong> after blocking lows or duckable strings</li>
+      <li><strong>QCB+2</strong> doubles as spacing trap and punisher</li>
     </ul>
   </div>
 </div>
@@ -145,61 +213,61 @@
 
   <div class="content-box">
     <h2>Overview</h2>
-    <p>This list contains Bryan’s most essential tools for approach, keep-out, and neutral control. Moves are categorized by function, sorted by startup, and annotated with Season 2–verified frame data. Punishment tools listed in Section 2 are excluded here.</p>
+    <p>This section highlights Bryan’s most essential non-punisher tools for neutral, approach, spacing, and pressure. Moves are ordered by startup and tagged by function. Only Season 2–valid data is shown — all punisher moves are listed in Section 2.</p>
   </div>
 
   <div class="content-box">
-    <h2>[Approach Tools]</h2>
+    <h2>Key Moves (Sorted by Startup)</h2>
     <table>
       <thead>
-        <tr><th>Move</th><th>Startup</th><th>Hit Level</th><th>On Hit</th><th>On Block</th><th>Tags</th></tr>
+        <tr>
+          <th>Move</th>
+          <th>Startup</th>
+          <th>Hit Level</th>
+          <th>On Hit</th>
+          <th>On Block</th>
+          <th>Purpose</th>
+        </tr>
       </thead>
       <tbody>
-        <tr><td>F,F+2</td><td>13F</td><td>High</td><td>Heat Engager</td><td>-9</td><td>[Approach], [Heat Engager]</td></tr>
-        <tr><td>QCB+1</td><td>13F</td><td>High</td><td>+19</td><td>+5</td><td>[Approach], [Frame Trap]</td></tr>
-        <tr><td>WR+3</td><td>22F</td><td>Mid</td><td>+13</td><td>+6</td><td>[Approach], [Plus on Block]</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="content-box">
-    <h2>[Keep-Out Tools]</h2>
-    <table>
-      <thead>
-        <tr><th>Move</th><th>Startup</th><th>Hit Level</th><th>On Hit</th><th>On Block</th><th>Tags</th></tr>
-      </thead>
-      <tbody>
+        <tr><td>1,2</td><td>10F</td><td>High, High</td><td>+6</td><td>-4</td><td>[Tempo Tool]</td></tr>
+        <tr><td>1,2,1</td><td>10F</td><td>High ×3</td><td>-1</td><td>-9</td><td>[Tempo Tool]</td></tr>
+        <tr><td>1,2,3</td><td>10F</td><td>High ×2, Low</td><td>-2</td><td>-12</td><td>[Low Ender]</td></tr>
+        <tr><td>1,2,4</td><td>10F</td><td>High ×2, Mid</td><td>+5</td><td>-9</td><td>[CH Pressure]</td></tr>
+        <tr><td>D/F+1</td><td>15F</td><td>Mid</td><td>+1</td><td>-5</td><td>[Neutral]</td></tr>
+        <tr><td>1+2</td><td>17F</td><td>Mid</td><td>+3</td><td>-12</td><td>[CH Tool]</td></tr>
+        <tr><td>1+2,1</td><td>17F</td><td>Mid, Mid</td><td>+1</td><td>-9</td><td>[Pressure Tool]</td></tr>
+        <tr><td>1+2,1~B</td><td>17F</td><td>Mid, Mid</td><td>+1</td><td>-9</td><td>[Taunt Cancel]</td></tr>
+        <tr><td>1+2,2</td><td>17F</td><td>Mid, High</td><td>+5</td><td>-9</td><td>[Mixup Ender]</td></tr>
+        <tr><td>F,F+2</td><td>13F</td><td>High</td><td>Heat</td><td>-9</td><td>[Heat Engager], [Approach]</td></tr>
+        <tr><td>QCB+1</td><td>13F</td><td>High</td><td>+19</td><td>+5</td><td>[Frame Trap], [Approach]</td></tr>
+        <tr><td>QCB+2</td><td>15F</td><td>Mid</td><td>Launch</td><td>-14</td><td>[Whiff Punish], [Keep-Out]</td></tr>
+        <tr><td>QCB+2,4</td><td>15F</td><td>Mid, High</td><td>+4</td><td>-8</td><td>[String Ender]</td></tr>
+        <tr><td>D/B+3</td><td>16F</td><td>Low</td><td>-1</td><td>-12</td><td>[Poke]</td></tr>
+        <tr><td>B+1</td><td>20F</td><td>Mid</td><td>Launch (CH)</td><td>-13</td><td>[CH Tool]</td></tr>
+        <tr><td>3+4</td><td>18F</td><td>Mid</td><td>+8</td><td>-13</td><td>[CH Tool]</td></tr>
+        <tr><td>F,F+4</td><td>20F</td><td>Mid</td><td>Launch (combo extender)</td><td>-13</td><td>[Combo Route]</td></tr>
+        <tr><td>U+4</td><td>21F</td><td>Mid</td><td>Launch</td><td>-13</td><td>[Launcher], [Side Step Catch]</td></tr>
+        <tr><td>QCB+3</td><td>24F</td><td>Mid</td><td>+2</td><td>-9</td><td>[Cancel Layer]</td></tr>
+        <tr><td>F+1+2</td><td>20F</td><td>Mid</td><td>Knockdown</td><td>-11</td><td>[Power Crush]</td></tr>
+        <tr><td>QCF+1+2</td><td>24F</td><td>Mid</td><td>+5</td><td>+5</td><td>[Armor Re-entry]</td></tr>
         <tr><td>D/F+3</td><td>29F</td><td>Low (Homing)</td><td>Knockdown</td><td>-26</td><td>[Keep-Out], [Homing]</td></tr>
-        <tr><td>QCB+2</td><td>15F</td><td>Mid</td><td>Launch</td><td>-14</td><td>[Whiff Punisher], [Keep-Out]</td></tr>
-        <tr><td>3+4</td><td>18F</td><td>Mid</td><td>+8</td><td>-13</td><td>[Keep-Out], [CH Tool]</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="content-box">
-    <h2>[Neutral Tools]</h2>
-    <table>
-      <thead>
-        <tr><th>Move</th><th>Startup</th><th>Hit Level</th><th>On Hit</th><th>On Block</th><th>Tags</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>10F</td><td>High</td><td>+1</td><td>-1</td><td>[Neutral], [Tempo Check]</td></tr>
-        <tr><td>4</td><td>12F</td><td>High</td><td>+6</td><td>-7</td><td>[Neutral]</td></tr>
-        <tr><td>D/F+1</td><td>15F</td><td>Mid</td><td>+1</td><td>-5</td><td>[Neutral], [Poke]</td></tr>
-        <tr><td>D/B+3</td><td>16F</td><td>Low</td><td>-1</td><td>-12</td><td>[Neutral], [Low Check]</td></tr>
-        <tr><td>F+1+2</td><td>20F</td><td>Mid (Power Crush)</td><td>Knockdown</td><td>-11</td><td>[Neutral], [Power Crush]</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="content-box">
-    <h2>🚫 “Never Use These” Tier List</h2>
-    <p>The following tools should be avoided in tournament play unless used sparingly or for baiting reactions:</p>
+    <h2>[Movement Tool] Tags</h2>
     <ul>
-      <li><strong>1,2,1</strong> – High string, unsafe, easily ducked</li>
-      <li><strong>Back+3</strong> – Not homing, poor reward on hit</li>
-      <li><strong>F+1</strong> – No real pressure value, outclassed by F+4 or D/F+1</li>
-      <li><strong>D/F+2,1</strong> – Delayable but unsafe, whiffs on crouch</li>
+      <li><strong>Slither Step</strong> – Used for evasive pressure chaining</li>
+      <li><strong>Sway</strong> – Distance cancel into whiff trap or CH 3+4</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>[Install]</h2>
+    <ul>
+      <li><strong>Snake Eyes</strong> – Boosts heat trap layering and blockstring conversion</li>
     </ul>
   </div>
 </div>
@@ -209,15 +277,13 @@
 
   <div class="content-box">
     <h2>Overview</h2>
-    <p>This section presents Bryan’s most consistent and damaging combos for open field, wall, counter hit, and Heat conversions. Combos are listed by launcher, execution level, and labeled with ender purpose ([Wall Carry], [Oki Ender], etc.). Season 2–legal only.</p>
+    <p>This section contains Bryan’s most consistent and tournament-ready combos — split into Openers, Counter Hit, Heat, and Wall variations. Confirmed for Season 2 only. Execution difficulty varies by combo; all routes are damage-optimal and oki-conscious.</p>
   </div>
 
   <div class="content-box">
     <h2>Open Field Combos</h2>
     <table>
-      <thead>
-        <tr><th>Starter</th><th>Combo</th><th>Damage</th><th>Tags</th></tr>
-      </thead>
+      <thead><tr><th>Starter</th><th>Combo</th><th>Damage</th><th>Tags</th></tr></thead>
       <tbody>
         <tr>
           <td>F,B+2</td>
@@ -229,7 +295,7 @@
           <td>U+4</td>
           <td>→ SSR → QCF+3,4 → 4,1~B → 1 → DASH → B+2,1~F → 2,2</td>
           <td>77</td>
-          <td>[Side Step Confirm]</td>
+          <td>[Side Step Catch], [Launcher]</td>
         </tr>
       </tbody>
     </table>
@@ -238,9 +304,7 @@
   <div class="content-box">
     <h2>Counter Hit Combos</h2>
     <table>
-      <thead>
-        <tr><th>Starter</th><th>Combo</th><th>Damage</th><th>Tags</th></tr>
-      </thead>
+      <thead><tr><th>Starter</th><th>Combo</th><th>Damage</th><th>Tags</th></tr></thead>
       <tbody>
         <tr>
           <td>CH 3+4</td>
@@ -250,37 +314,30 @@
         </tr>
         <tr>
           <td>CH QCF+1</td>
-          <td>→ QCF+3,4 → 4,1~B → Ender</td>
+          <td>→ QCF+3,4 → 4,1~B → 1 → B+2,4</td>
           <td>~79</td>
-          <td>[CH Starter], [Whiff Punish]</td>
+          <td>[Whiff Trap], [CH Punish]</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <div class="content-box">
-    <h2>Heat Combos</h2>
-    <table>
-      <thead>
-        <tr><th>Starter</th><th>Combo</th><th>Damage</th><th>Tags</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>WS+1 → F,F+3</td>
-          <td>→ F,F+4 → D/B+2 → BT 3+4 → F,F+3 → QCF+1,2 → DASH → SZN 1+2 → DASH → 2+3 → BT B+3 → BT B+4~F → B+1+2</td>
-          <td>90+</td>
-          <td>[Heat], [Wall Carry]</td>
-        </tr>
-      </tbody>
-    </table>
+    <h2>🔥 Heat Combo</h2>
+    <p><strong>Confirmed S2 Practical Heat Combo:</strong></p>
+    <p><code>
+      2+3 → WS+2:F+2 → B+2,1~F → 1+2~F → B+2,4 → 4,1~B → 1 → B+2,4 → F,F+2
+    </code></p>
+    <ul>
+      <li><strong>Tags:</strong> [Heat], [Wall Carry], [Combo Ender]</li>
+      <li><strong>Notes:</strong> Ender stabilizes Heat burnout flow or resets near wall</li>
+    </ul>
   </div>
 
   <div class="content-box">
     <h2>Wall Combos</h2>
     <table>
-      <thead>
-        <tr><th>Setup</th><th>Combo</th><th>Tags</th></tr>
-      </thead>
+      <thead><tr><th>Setup</th><th>Combo</th><th>Tags</th></tr></thead>
       <tbody>
         <tr>
           <td>Wall Splat</td>
@@ -289,44 +346,29 @@
         </tr>
         <tr>
           <td>Taunt Setup</td>
-          <td>Taunt → iWS+2 → QCF+3,4 → Ender</td>
-          <td>[High Execution], [Kill Option]</td>
+          <td>Taunt → iWS+2 → QCF+3,4 → B+2,1 → F,F+2</td>
+          <td>[High Execution]</td>
         </tr>
       </tbody>
     </table>
   </div>
 
   <div class="content-box">
-    <h2>🌀 Taunt Setups & Variants</h2>
+    <h2>Taunt Variants</h2>
     <ul>
-      <li><strong>Taunt → B+4</strong> – Easiest confirm, leads into F,F+2</li>
-      <li><strong>Taunt → F+2,1,4</strong> – Safer high-pressure combo</li>
-      <li><strong>Taunt → Jet Upper (F,N,B+2)</strong> – Requires frame-perfect timing for full juggle</li>
-      <li><strong>Double Taunt</strong> – Used to realign vs tech rolls at wall</li>
+      <li><strong>Taunt → Jet Upper</strong> – Perfect frame, advanced setup</li>
+      <li><strong>Taunt → iWS+2</strong> – Easier, safer follow-up into juggle</li>
+      <li><strong>Taunt → Delay → B+2,1</strong> – Used when opponent techs or stalls</li>
     </ul>
-  </div>
-
-  <div class="content-box">
-    <h2>🧱 Wall Tech Trap Table</h2>
-    <table>
-      <thead>
-        <tr><th>Trap</th><th>Opponent Tech</th><th>Response</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Taunt → Dash</td><td>Left Tech</td><td>Delay Jet Upper → Combo</td></tr>
-        <tr><td>4,1~B → B+2,1</td><td>Back Tech</td><td>Force mixup reset with D/B+2</td></tr>
-        <tr><td>Taunt → Delay</td><td>Quick Rise</td><td>Bait whiff into CH 3+4</td></tr>
-      </tbody>
-    </table>
   </div>
 
   <div class="content-box">
     <h2>Okizeme Tools</h2>
     <ul>
-      <li><strong>D/B+2</strong> – Resets pressure or forces tech check</li>
-      <li><strong>F+3</strong> – Mid follow-up that punishes tech mash</li>
-      <li><strong>Taunt → wait → iWS+2</strong> – Used at wall vs panic wake-up</li>
-      <li><strong>Enders like 2,2 / B+2,1</strong> – Used for oki or frame trap follow-ups</li>
+      <li><strong>D/B+2</strong> – Forces grounded reset or low crush bait</li>
+      <li><strong>F+3</strong> – Mid reset on wake-up kick</li>
+      <li><strong>Taunt → Wait → iWS+2</strong> – Punishes panic recovery</li>
+      <li><strong>B+2,1 → Delay</strong> – Covers tech and stay-down at wall</li>
     </ul>
   </div>
 </div>
@@ -336,36 +378,18 @@
 
   <div class="content-box">
     <h2>Overview</h2>
-    <p>Bryan’s offensive structure revolves around delay pressure, CH threat loops, and jailing frames. He uses frame traps, jab staggers, and Small Tekken to suffocate opponents. This section includes true + frame strings, Heat approach flow, and cancel rotations.</p>
+    <p>Bryan’s offense thrives on stagger pressure, counter-hit trapping, and framed setups. His strings force decisions from opponents while his CH tools punish hesitation. This section covers practical plus-frame moves, Heat pressure, and Small Tekken pokes.</p>
   </div>
 
   <div class="content-box">
     <h2>Frame Trap Tools</h2>
     <table>
-      <thead>
-        <tr><th>Sequence</th><th>Trap Purpose</th><th>Notes</th></tr>
-      </thead>
+      <thead><tr><th>Sequence</th><th>Trap Type</th><th>Notes</th></tr></thead>
       <tbody>
-        <tr>
-          <td>D/F+1 → D/F+1</td>
-          <td>Mid-mid frame lock</td>
-          <td>+1 on hit → interrupts 10F mash</td>
-        </tr>
-        <tr>
-          <td>1 → Delay → 4</td>
-          <td>CH trap vs panic jab</td>
-          <td>12F 4 launches CH stagger</td>
-        </tr>
-        <tr>
-          <td>QCB+1 → D/F+1</td>
-          <td>+5 trap flow</td>
-          <td>Force block into jab check or low</td>
-        </tr>
-        <tr>
-          <td>F,F+2 → B+1</td>
-          <td>Heat CH layer</td>
-          <td>20F launcher traps jab timing</td>
-        </tr>
+        <tr><td>D/F+1 → D/F+1</td><td>Mid-mid lock</td><td>+1 on hit → shuts down 10F retaliation</td></tr>
+        <tr><td>1 → Delay → 4</td><td>CH trap</td><td>Beats mash after jab check</td></tr>
+        <tr><td>QCB+1 → D/F+1</td><td>+5 trap</td><td>Forces mid guessing under pressure</td></tr>
+        <tr><td>F,F+2 → B+1</td><td>Heat CH bait</td><td>Beats jab after Heat entry</td></tr>
       </tbody>
     </table>
   </div>
@@ -373,38 +397,37 @@
   <div class="content-box">
     <h2>Heat Pressure Loops</h2>
     <ul>
-      <li><strong>F,F+2 → Heat Dash → 1+2</strong> – Frame trap on block → force check</li>
-      <li><strong>WS+2 → Heat Dash → F,F+3</strong> – + frames → reset via QCB Cancel</li>
-      <li><strong>Heat Dash → QCB+1</strong> – Safe re-entry with built-in trap</li>
+      <li><strong>F,F+2 → Heat Dash → 1+2</strong> — Forces check or CH</li>
+      <li><strong>WS+2 → Heat Dash → QCB Cancel → 4</strong> — Delayed threat chain</li>
+      <li><strong>Heat Dash → QCB+1</strong> — Safe CH trap entry</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>Small Tekken System</h2>
-    <p>Use low-damage but frame-positive pokes to test reactions and condition mashers.</p>
+    <h2>Small Tekken Tools</h2>
     <ul>
-      <li><strong>1</strong> – 10F jab, reset tempo, check range</li>
-      <li><strong>4</strong> – 12F high CH poke, +6 on hit</li>
-      <li><strong>D/F+1</strong> – 15F mid check, +1 on hit</li>
-      <li><strong>D/B+3</strong> – Low poke, -12 but good space reset</li>
+      <li><strong>1</strong> — Basic tempo jab</li>
+      <li><strong>4</strong> — 12F high CH trap</li>
+      <li><strong>D/F+1</strong> — 15F mid, +1 on hit</li>
+      <li><strong>D/B+3</strong> — Low poke, frames neutral</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>Rotation Mixups</h2>
+    <h2>Pressure Rotation Sequences</h2>
     <ul>
-      <li><strong>1 → 4</strong> – CH trap if opponent jabs back</li>
-      <li><strong>D/F+1 → D/B+3</strong> – Mid → low sequence</li>
-      <li><strong>QCB Cancel → Jab</strong> – Tempo breaker loop</li>
+      <li><strong>1 → 4</strong> — CH loop if they mash jab</li>
+      <li><strong>D/F+1 → D/B+3</strong> — Mid to low rotation</li>
+      <li><strong>QCB Cancel → jab</strong> — Frame test reset</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>Plus Frame Approach</h2>
+    <h2>Approach & Plus Frame Entries</h2>
     <ul>
-      <li><strong>WR+3</strong> – +6 on block → 1 or D/F+1 trap</li>
-      <li><strong>QCB+1</strong> – +5 → use 1+2 or D/B+2 to check</li>
-      <li><strong>CH 3+4</strong> – Use after pressure loop → full juggle on hit</li>
+      <li><strong>WR+3</strong> — +6 on block, into 1/4/1+2 mix</li>
+      <li><strong>QCB+1</strong> — +5 on block, free frame trap</li>
+      <li><strong>CH 3+4</strong> — Disrupts defensive mashing</li>
     </ul>
   </div>
 </div>
@@ -414,72 +437,53 @@
 
   <div class="content-box">
     <h2>Overview</h2>
-    <p>Bryan’s defense rewards patience, interruption, and strategic counter-hits. He lacks evasive stances but leverages fast pokes, full crouch checks, and strong anti-movement tools. This section includes panic checks, whiff punishment, WS defense, and movement reaction flow.</p>
+    <p>Bryan’s defense is built around patience, spacing, and explosive counter-punishment. His jabs and WS tools provide fast retaliation, while moves like CH 3+4 and QCB+2 give him space control and whiff trapping capability. This section also includes movement logic and WS check options.</p>
   </div>
 
   <div class="content-box">
-    <h2>Panic Checks & Defensive Tools</h2>
+    <h2>Panic Checks</h2>
     <ul>
-      <li><strong>1</strong> – 10F jab, stops linear offense</li>
-      <li><strong>4</strong> – 12F high CH trap to deter jab mashing</li>
-      <li><strong>B+1</strong> – 20F launcher on CH, long-range counter</li>
-      <li><strong>WS+4</strong> – Fast 11F mid to escape crouch</li>
-    </ul>
-  </div>
-
-  <div class="content-box">
-    <h2>Keep-Out & Space Control</h2>
-    <ul>
-      <li><strong>QCB+2</strong> – Long-range launcher vs whiffs</li>
-      <li><strong>CH 3+4</strong> – Baits mid/strings for CH confirm</li>
-      <li><strong>D/F+3</strong> – 29F homing low, punishes step-in</li>
-      <li><strong>D/B+3</strong> – Low poke for backdash spacing</li>
+      <li><strong>1</strong> – 10F jab to interrupt pressure</li>
+      <li><strong>4</strong> – 12F CH high for mashers</li>
+      <li><strong>WS+4</strong> – 11F crouch recovery check</li>
+      <li><strong>CH 3+4</strong> – Delayed trap to catch panic buttons</li>
     </ul>
   </div>
 
   <div class="content-box">
     <h2>While Standing Tools</h2>
     <ul>
-      <li><strong>WS+1</strong> – 15F mid, +3 on hit</li>
-      <li><strong>WS+3,4</strong> – 12F string, built-in trap</li>
-      <li><strong>WS+2</strong> – 19F launcher from crouch</li>
+      <li><strong>WS+1</strong> – 15F safe poke, +3 on hit</li>
+      <li><strong>WS+3,4</strong> – 12F string, interrupt and confirm</li>
+      <li><strong>WS+2</strong> – 19F launcher vs deep lows</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>Full Crouch Options</h2>
+    <h2>Anti-Whiff & Space Control</h2>
     <ul>
-      <li><strong>FC D/F+2</strong> – Mid launcher, risky but rewarding</li>
-      <li><strong>FC D+4</strong> – Low poke to harass or close rounds</li>
-      <li><strong>FC → WS+2</strong> – Buffer launcher vs low strings</li>
+      <li><strong>QCB+2</strong> – Whiff punish at distance</li>
+      <li><strong>D/B+3</strong> – Low spacing harasser</li>
+      <li><strong>D/F+2</strong> – Mid whiff launcher</li>
+      <li><strong>CH 3+4</strong> – Baits button-heavy players</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>Sidestep & Anti-Movement Overlay</h2>
+    <h2>Sidestep Defense & Movement Flow</h2>
     <ul>
-      <li><strong>CH 3+4</strong> – Delayed to catch sidestep jab attempts</li>
-      <li><strong>D/F+3</strong> – Tracks evasion, used to force block</li>
-      <li><strong>QCB+2</strong> – Punish sidestep into whiff recovery</li>
-      <li><strong>SS → WR+3</strong> – Realign into + frames</li>
+      <li><strong>SS → 1</strong> – Jab realign or tempo reset</li>
+      <li><strong>SS → QCB+2</strong> – Whiff bait into launcher</li>
+      <li><strong>Backdash → CH 3+4</strong> – Layered spacing defense</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>Whiff Punishment</h2>
+    <h2>Defensive Heat Logic</h2>
     <ul>
-      <li><strong>D/F+2</strong> – 13F launcher, key punisher</li>
-      <li><strong>QCB+2</strong> – Whiff from range 2</li>
-      <li><strong>CH 3+4</strong> – Step bait into combo</li>
-    </ul>
-  </div>
-
-  <div class="content-box">
-    <h2>Defensive Heat Flow</h2>
-    <ul>
-      <li><strong>Backdash → Heat Dash</strong> – Regain pressure vs mashers</li>
-      <li><strong>Heat Dash → QCB Cancel</strong> – Counter-heat layer</li>
-      <li><strong>Heat Recovery</strong> – Use taunt on Heat block for momentum reset</li>
+      <li><strong>Heat Dash → QCB Cancel</strong> – Frame-safe reset</li>
+      <li><strong>Heat Burst → Backdash → CH 3+4</strong> – Anti-retaliation trap</li>
+      <li><strong>Block Heat Move → WS+2</strong> – Use when opponent overcommits</li>
     </ul>
   </div>
 </div>
@@ -489,54 +493,54 @@
 
   <div class="content-box">
     <h2>Overview</h2>
-    <p>This section outlines counter-strategy for common characters, sidestep direction (weak side), and Bryan’s most effective tools to disrupt meta habits. Includes the printable <strong>Matchup Flip Card Deck</strong> for fast round-based adaptation.</p>
+    <p>This section provides matchup-specific tactics, including weak-side sidestep direction, counterplay strategies, and Bryan’s best tools to disrupt the opponent’s rhythm. Includes the printable <strong>Matchup Flip Card Deck</strong> for mid-set review.</p>
   </div>
 
   <div class="content-box">
-    <h2>Matchup Quick Table</h2>
+    <h2>Matchup Snapshot Table</h2>
     <table>
       <thead>
-        <tr><th>Character</th><th>Weak Side</th><th>Key Counterplay</th></tr>
+        <tr><th>Character</th><th>Weak Side</th><th>Counterplay Notes</th></tr>
       </thead>
       <tbody>
-        <tr><td>Paul</td><td>Left</td><td>Sidestep Deathfist, punish D/B+2 with WS+2</td></tr>
-        <tr><td>Law</td><td>Left</td><td>Interrupt DSS with jabs or 1+2</td></tr>
-        <tr><td>Asuka</td><td>Left</td><td>Don't commit to big mids; bait parry with 1 → delay</td></tr>
-        <tr><td>King</td><td>Right</td><td>Break throws, step Jaguar Step Left</td></tr>
-        <tr><td>Raven</td><td>Right</td><td>Interrupt clone setups, block low after SZN</td></tr>
-        <tr><td>Heihachi</td><td>Right</td><td>Sidestep EWGF Right, punish Twin Pistons</td></tr>
-        <tr><td>Anna</td><td>Left</td><td>Duck full crouch mix, step chaos cancel Left</td></tr>
-        <tr><td>Clive</td><td>Right</td><td>Break rhythm with D/F+1,2; punish stance swap</td></tr>
+        <tr><td>Paul</td><td>Left</td><td>Step Deathfist, punish D/B+2 with WS+2</td></tr>
+        <tr><td>Law</td><td>Left</td><td>Interrupt DSS, duck DSS 4</td></tr>
+        <tr><td>King</td><td>Right</td><td>Break throws, step Jaguar Step Right</td></tr>
+        <tr><td>Heihachi</td><td>Right</td><td>Step EWGF, punish Twin Pistons</td></tr>
+        <tr><td>Claudio</td><td>Left</td><td>Interrupt Starburst setups with jab</td></tr>
+        <tr><td>Clive</td><td>Right</td><td>Check stance transitions, CH bait mid</td></tr>
+        <tr><td>Anna</td><td>Left</td><td>Duck full crouch mixups, delay 4 after poke</td></tr>
+        <tr><td>Raven</td><td>Right</td><td>Interrupt clone delay, low guard post-Heat</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="content-box">
-    <h2>Bryan Meta Disruption Tools</h2>
+    <h2>Bryan Anti-Meta Tools</h2>
     <ul>
-      <li><strong>CH 3+4</strong> – Universal timing breaker</li>
-      <li><strong>QCB Cancel → Jab</strong> – Disrupts delay mashing</li>
-      <li><strong>WS+2</strong> – Punishes lazy lows and crouch strings</li>
-      <li><strong>4,1~B</strong> – Threatens wall trap or taunt loop</li>
+      <li><strong>CH 3+4</strong> – Stops delay strings and jab trap attempts</li>
+      <li><strong>QCB Cancel → Jab</strong> – Resets rhythm safely</li>
+      <li><strong>WS+2</strong> – Low crush into launcher</li>
+      <li><strong>D/F+1 → 1</strong> – Anti-sidestep close-range reset</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>Matchup Flip Card Deck (Quick View)</h2>
+    <h2>Matchup Flip Card Deck</h2>
     <ul>
-      <li><strong>Each card includes:</strong> Character name, weak side, top 3 punish strings, panic habits, and Heat flow notes.</li>
-      <li><strong>Usage:</strong> Review during set breaks or between rounds to re-center matchup plan.</li>
-      <li><strong>Example:</strong> <em>Paul → Step Left, punish Deathfist with D/F+2, bait F+1+2 with delay 4.</em></li>
+      <li><strong>Each card includes:</strong> Character, weak side, top 3 punishes, panic habit</li>
+      <li><strong>Usage:</strong> Review before rematch or at round break</li>
+      <li><strong>Example:</strong> <em>Raven → Step Right, duck clone cancel, WS+2 whiff punish</em></li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>Common Player Habits to Exploit</h2>
+    <h2>Common Opponent Habits</h2>
     <ul>
-      <li><strong>Sidestep → Jab</strong> – Use D/F+3 or CH 3+4 to catch</li>
-      <li><strong>Wake-up mashing</strong> – Use F+3 ender into D/B+2 or bait whiff</li>
-      <li><strong>Delay strings</strong> – Intercept with QCB Cancel → CH tool</li>
-      <li><strong>Clone setups</strong> – React with jab → step or WS+2</li>
+      <li><strong>Step → Jab:</strong> Use CH 3+4 or D/F+1 trap</li>
+      <li><strong>Wakeup Kick →:</strong> Delay F+3 or D/B+2</li>
+      <li><strong>Overuse of Heat:</strong> Backdash → CH 3+4 or QCB+2</li>
+      <li><strong>Clone setups:</strong> Jab → sidestep → punish</li>
     </ul>
   </div>
 </div>
@@ -546,70 +550,60 @@
 
   <div class="content-box">
     <h2>Overview</h2>
-    <p>These tools visualize Bryan’s pressure, defense, and momentum control. Use them in lab mode, tournament prep, or post-match review to understand frame traps, punish paths, and Heat logic. Includes React Flow, If Blocked trees, and cancel rhythm overlays.</p>
+    <p>This section contains flowcharts and rhythm maps to help lab Bryan’s pressure, confirms, and Heat sequences. Use these tools to sharpen reaction patterns, bait timing, and recover lost tempo during sets.</p>
   </div>
 
   <div class="content-box">
     <h2>Frame Trap Overlay Map</h2>
     <ul>
-      <li><strong>D/F+1 → D/F+1</strong> – +1 → interrupts 10F retaliation</li>
-      <li><strong>QCB+1 → 1</strong> – +5 into jab trap or mid rotation</li>
-      <li><strong>4 → Delay → D/F+1</strong> – Threat after CH threat window</li>
+      <li><strong>D/F+1 → D/F+1</strong> — +1 loop to lock 10F responses</li>
+      <li><strong>QCB+1 → D/F+1</strong> — Safe mid-mid frame trap</li>
+      <li><strong>1 → Delay → 4</strong> — Jab trap punish window</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>“If Blocked” Flow Trees</h2>
+    <h2>If Blocked Flow Trees</h2>
     <ul>
       <li><strong>F,F+2 (Blocked)</strong> → QCB Cancel → CH 3+4</li>
-      <li><strong>D/B+3 (Blocked)</strong> → SS → QCB+2 trap</li>
-      <li><strong>B+1 (Blocked)</strong> → Delay → D/F+2 for panic CH</li>
+      <li><strong>1+2,2 (Blocked)</strong> → Delay → 1+2</li>
+      <li><strong>D/B+3 (Blocked)</strong> → SS → QCB+2</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>Reactive Heat Map Flowchart</h2>
+    <h2>Reactive Heat Flowchart</h2>
     <ul>
-      <li><strong>Heat Engager (e.g., F,F+2) → Heat Dash → 1+2</strong> – Forces defense or CH</li>
-      <li><strong>Heat Dash Blocked → QCB Cancel</strong> – Re-entry to trap mashing</li>
-      <li><strong>Opponent Steps Heat → CH 3+4</strong> – Reactive trap layer</li>
-      <li><strong>Heat Burnout → Backdash → Recenter</strong></li>
-    </ul>
-  </div>
-
-  <div class="content-box">
-    <h2>Whiff Trap Timing Table</h2>
-    <ul>
-      <li><strong>CH 3+4 (Delayed)</strong> – Catches string delayers</li>
-      <li><strong>QCB+2</strong> – Used post-sidestep or SSR bait</li>
-      <li><strong>Taunt → iWS+2</strong> – Close-range panic bait</li>
-    </ul>
-  </div>
-
-  <div class="content-box">
-    <h2>Backdash Cancel Flow</h2>
-    <ul>
-      <li><strong>Backdash → CH 3+4</strong> – Baits string whiff</li>
-      <li><strong>Backdash → WR+3</strong> – Re-entry at +6</li>
-      <li><strong>Backdash → QCB Cancel</strong> – Tempo reset</li>
-    </ul>
-  </div>
-
-  <div class="content-box">
-    <h2>Clone Match Simulator Logic (vs Bryan Mirror)</h2>
-    <ul>
-      <li><strong>If opponent uses F,F+2 early →</strong> respond with SS → QCB+2</li>
-      <li><strong>If they stall with 1 →</strong> use CH 3+4 rotation</li>
-      <li><strong>If wall pressure starts →</strong> delay tech → bait taunt</li>
+      <li><strong>F,F+2 → Heat Dash → 1+2</strong> — Forces check or whiff bait</li>
+      <li><strong>Heat Dash → QCB+1</strong> — Safe trap setup</li>
+      <li><strong>Blocked Heat Dash → QCB Cancel → jab</strong> — Tempo reset</li>
     </ul>
   </div>
 
   <div class="content-box">
     <h2>Cancel Rhythm Map</h2>
     <ul>
-      <li><strong>QCB Cancel → Jab</strong> – Check rhythm reset</li>
-      <li><strong>Taunt → Wait → Jet Upper</strong> – Stagger cancel trap</li>
-      <li><strong>Backdash → SSR → F,F+3</strong> – Entry bait cancel</li>
+      <li><strong>QCB Cancel → jab</strong> — Loop reset + confirm bait</li>
+      <li><strong>Taunt → Delay → Jet Upper</strong> — Delay confirm punish</li>
+      <li><strong>Backdash → WR+3</strong> — +6 re-entry</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Whiff Trap Table</h2>
+    <ul>
+      <li><strong>CH 3+4</strong> — Punishes button release on sidestep</li>
+      <li><strong>QCB+2</strong> — Long-range punish vs SS delay</li>
+      <li><strong>WS+2</strong> — Punishes low whiff, duck string</li>
+    </ul>
+  </div>
+
+  <div class="content-box">
+    <h2>Clone Match Simulation (Mirror Match)</h2>
+    <ul>
+      <li><strong>Opponent Heat Dash → jab:</strong> QCB Cancel → delay 4</li>
+      <li><strong>Taunt loop overuse:</strong> Backdash → WR+3 punish</li>
+      <li><strong>Jet Upper spam:</strong> Delay D/F+2 or QCB+1 reset</li>
     </ul>
   </div>
 </div>
@@ -619,103 +613,88 @@
 
   <div class="content-box">
     <h2>Overview</h2>
-    <p>This module provides elite-level competitive prep systems, including execution drills, warm-up routines, mental stack planning, and progression tiers from Beginner to Tournament-level Bryan play. Includes all legacy-tier tools.</p>
+    <p>This section provides high-level tools to prepare for competitive play — including warm-up routines, decision-tree planning, flow disruption recovery, and mental stack drills. A full rank progression model helps guide players from Beginner to Pro.</p>
   </div>
 
   <div class="content-box">
-    <h2>🎯 Mental Stack Load Matrix</h2>
+    <h2>Mental Stack Load Chart</h2>
     <ul>
-      <li><strong>1 + D/F+1</strong> → Stagger pressure</li>
-      <li><strong>D/B+3 + QCB Cancel</strong> → Low/high tempo check</li>
-      <li><strong>4,1~B + Taunt</strong> → Corner overwhelm</li>
-      <li><strong>F,F+2 → Heat</strong> → Layered momentum trap</li>
-    </ul>
-  </div>
-
-  <div class="content-box">
-    <h2>🔥 Round Start Playbook</h2>
-    <ul>
-      <li>F,F+2 – Early engager with CH potential</li>
-      <li>3+4 – Mid CH test, safe read starter</li>
-      <li>Backdash → D/F+2 – Whiff trap logic</li>
-      <li>1 → Delay → 4 – Tempo disrupt trap</li>
+      <li>1 → 4 → 1+2 — Mid/high mindlock</li>
+      <li>D/F+1 → D/B+3 → QCB Cancel — Mid/low/whiff bait layer</li>
+      <li>F,F+2 → Heat Dash → 1+2 — Heat confirm tension</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>🧊 Tilt Recovery Checklist</h2>
+    <h2>Round Start Playbook</h2>
     <ul>
-      <li>Reset flow with jab spacing → no press</li>
-      <li>Delay strings to regain mental rhythm</li>
-      <li>Review Heat usage & key misses</li>
-      <li>Ask: Did I confirm or autopilot?</li>
+      <li><strong>F,F+2</strong> — Heat start threat</li>
+      <li><strong>Backdash → D/F+2</strong> — Whiff punish round open</li>
+      <li><strong>3+4</strong> — CH bait test</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>📋 Match Simulation Tracker</h2>
+    <h2>Tilt Recovery System</h2>
     <ul>
-      <li>✅ Note sidestep direction, CH habits</li>
-      <li>✅ Check Heat efficiency (did you land it?)</li>
-      <li>✅ Identify what round you lost flow</li>
+      <li><strong>Reset:</strong> Use 1 → Backdash to regain tempo</li>
+      <li><strong>Reassess:</strong> Ask: “Did I force the pace or autopilot?”</li>
+      <li><strong>Respond:</strong> Use slow confirm like D/F+1 → 4</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>🎽 Tournament Warm-Up Routine</h2>
+    <h2>Match Simulation Tracker</h2>
     <ul>
-      <li>10x: Jet Upper → full combo</li>
-      <li>10x: CH 3+4 → route confirm</li>
-      <li>Wall Taunt loop: 4,1~B → Taunt → iWS+2</li>
-      <li>Backdash → QCB+2 → spacing control</li>
+      <li><strong>Pre-match:</strong> List sidestep direction, Heat plan</li>
+      <li><strong>Mid-match:</strong> Adjust between rounds</li>
+      <li><strong>Post-match:</strong> Track key flow break or punish missed</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>🎛️ Playbook Flip Coaching Presets</h2>
+    <h2>Warm-Up Routine</h2>
     <ul>
-      <li><strong>“Disrupt the Pace”</strong> – 1 → delay → 4 loop</li>
-      <li><strong>“Crack the Shell”</strong> – Low → Heat → mid trap</li>
-      <li><strong>“Kill the Runner”</strong> – WR+3 and homing vs evasion</li>
-      <li><strong>“Close the Round”</strong> – D/B+3 poke → jab trap</li>
+      <li>10x Taunt → Jet Upper (consistency)</li>
+      <li>CH 3+4 → full combo → WR+3 pressure</li>
+      <li>Wall combo: F+3 → B+2,1 → 1 → F,F+2</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>📈 Rank-Up Progression Path</h2>
-    <h3>Beginner → Intermediate</h3>
+    <h2>Playbook Flip Coaching Presets</h2>
     <ul>
-      <li>Use 1, 4, D/F+1, 4,1; punish reliably</li>
-      <li>Practice single juggle route (e.g., F,B+2 → combo)</li>
-    </ul>
-
-    <h3>Intermediate → Advanced</h3>
-    <ul>
-      <li>Add CH traps, whiff punish with D/F+2</li>
-      <li>Start sidestep defense & match review</li>
-    </ul>
-
-    <h3>Advanced → Pro</h3>
-    <ul>
-      <li>Heat Dash traps, wall taunt, meta layers</li>
-      <li>Map 10 character-specific punishes</li>
-    </ul>
-
-    <h3>Pro → Tournament-Level</h3>
-    <ul>
-      <li>Adapt between rounds, track opponent rhythm</li>
-      <li>Train reaction Heat → QCB cancel trees</li>
-      <li>Master taunt resets and confirm logic</li>
+      <li><strong>“Crack Shell”</strong> — D/F+1 stagger → D/B+3 trap</li>
+      <li><strong>“Wall Killer”</strong> — 4,1~B → Taunt → iWS+2</li>
+      <li><strong>“Reset & Control”</strong> — 1 → backdash → QCB+1</li>
     </ul>
   </div>
 
   <div class="content-box">
-    <h2>🛑 Loss Recovery System</h2>
+    <h2>Rank-Up Progression Path</h2>
+
+    <h3>🟢 Beginner → Intermediate</h3>
     <ul>
-      <li>❓ Did I lose to tempo, panic, or flow?</li>
-      <li>🎯 What broke my Heat? Was it baited?</li>
-      <li>📉 Was I confirming or guessing?</li>
-      <li>✅ Solution: pick 1 safer line + add 1 punish</li>
+      <li>Focus: 1, 4, 4,1~B, D/F+1</li>
+      <li>Goal: Basic punishes + one full juggle</li>
+    </ul>
+
+    <h3>🔵 Intermediate → Advanced</h3>
+    <ul>
+      <li>Focus: QCB Cancels, CH 3+4 confirms, Heat routing</li>
+      <li>Goal: Recognize panic habits and apply whiff traps</li>
+    </ul>
+
+    <h3>🟣 Advanced → Pro</h3>
+    <ul>
+      <li>Focus: Frame trap layering, delay strings, Heat trap meta</li>
+      <li>Goal: Beat defensive OS and flow reset players</li>
+    </ul>
+
+    <h3>🟡 Pro → Tournament-Level</h3>
+    <ul>
+      <li>Focus: Adaptation, psychology, warm-up calibration</li>
+      <li>Goal: Win neutral consistently, control round rhythm, punish fatigue</li>
     </ul>
   </div>
 </div>
