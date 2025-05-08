@@ -1,537 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comprehensive Dragunov Guide</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 2rem;
-      max-width: 65ch;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #222;
-    }
-    h1, h2, h3 {
-      color: #111;
-    }
-    .badge {
-      display: inline-block;
-      padding: 2px 8px;
-      margin-right: 6px;
-      font-size: 0.75rem;
-      font-weight: bold;
-      border-radius: 12px;
-      color: #fff;
-    }
-    .badge.approach { background: #4285F4; }
-    .badge.keepout { background: #F4B400; }
-    .badge.rushdown { background: #DB4437; }
-    .badge.panic { background: #0F9D58; }
-    .badge.homing { background: #9C27B0; }
-    .section {
-      margin-bottom: 3rem;
-    }
-  </style>
-</head>
-<body>
+<!-- Part 1: Introduction -->
+<section class="section" id="introduction" style="font-family: Inter, sans-serif; max-width: 65ch; margin: auto;">
+  <h1 style="font-size: 2em;">Comprehensive Dragunov Guide</h1>
 
-  <section class="section" id="introduction">
-    <h1>Comprehensive Dragunov Guide</h1>
-    <h2>Part 1: Introduction</h2>
+  <h2>Character Archetype Overview</h2>
+  <p>Dragunov is a high-pressure, momentum-based character who excels at forcing reactions with frame traps, oppressive stance transitions, and linear mid-checks. He rewards disciplined aggression and sharp defensive reads, especially when Heat is active.</p>
 
-    <h2>Archetype Overview</h2>
-    <p>
-      Dragunov is a <strong>Pressure Grappler / Control Brawler</strong> who thrives at close range. He excels in forcing turn-based interactions through relentless frame traps, strong command throws, and tight mid-check pressure. While his approach tools are linear, once in, he can condition opponents into high-risk guessing games using SNK transitions and Heat-enhanced pressure.
-    </p>
+  <h3>Strengths</h3>
+  <ul>
+    <li>Outstanding rushdown and oki setups</li>
+    <li>Multiple plus-on-block Heat engagers</li>
+    <li>Safe mid pokes with strong pressure resets</li>
+    <li>Flexible stance routing from key strings</li>
+    <li>Excellent range control tools (F,F+2, WR+2)</li>
+  </ul>
 
-    <h2>Execution Tier</h2>
-    <p>
-      <strong>Moderate Difficulty.</strong> Dragunov requires clean buffering (especially for WR/F+2,1), SNK cancel usage, fast reaction to counter-hits, and advanced movement to maintain pressure while denying opponent retaliation. His ceiling scales dramatically with Heat optimization and matchup-specific timing traps.
-    </p>
+  <h3>Weaknesses</h3>
+  <ul>
+    <li>Linear approach — weak to sidestep left</li>
+    <li>Few tracking lows or safe low pokes</li>
+    <li>Struggles against backdash-heavy defense</li>
+    <li>Requires matchup-specific pressure routing</li>
+  </ul>
 
-    <h2>Strengths</h2>
-    <ul>
-      <li>+ Frames on key strings (e.g., F+2,1, 1,2~SNK)</li>
-      <li>Outstanding CH reward from mids (e.g., CH B+1)</li>
-      <li>Wall carry with reliable enders into spike oki</li>
-      <li>Strong throw mix with Oki pressure on break</li>
-      <li>SNK stance creates a layered offense system</li>
-      <li>Heat routing adds pressure resets and damage</li>
-    </ul>
+  <h2>Offensive Game Plan</h2>
+  <p>Dragunov excels at cycling plus frames into stance pressure or frame traps. His goal is to lock the opponent down with jabs and mids like 1,2 and D/F+1, then rotate into Heat activation (F+2,4 or WR+2) to open up low/throw mix or chase backdash with F,F+2 or WR+2 chip. At close range, SNK 1 and SNK 2 are his key loop starters.</p>
 
-    <h2>Weaknesses</h2>
-    <ul>
-      <li>Linear approach tools — weak tracking mids</li>
-      <li>Can be sidestepped Right post-SNK or F+2,1</li>
-      <li>Has no real 50/50 launcher threat</li>
-      <li>Struggles against life-lead turtles</li>
-      <li>Relies on frame traps, not mix, to open up</li>
-    </ul>
+  <h2>Defensive Game Plan</h2>
+  <p>Defensively, Dragunov favors spacing and baiting with B+1, sidestep right, and U+4. Use WS+1,2 and D/F+2 for punishes. Outside Heat, his panic options are limited, so defense should rely on movement and matchup-specific checks.</p>
 
-    <h2>Offensive Game Plan</h2>
-    <p>
-      Dragunov thrives on pressure cycles — abusing frame advantage to set up stance transitions or reset with throws. Heat Dash after F+2,1 or 1,2~SNK lets him force mix layers. Use delay timing on SNK 2 to catch fuzzy defense, or threaten tick throws to collapse opponent guard. At the wall, SNK 1 → throw becomes a deadly loop.
-    </p>
+  <h2>Playstyle Profiles</h2>
+  <ul>
+    <li><strong>Aggro-Heat:</strong> Maximize chip/frame traps via WR+2 and F+2,4~Heat. Emphasizes cancel pressure and force loops.</li>
+    <li><strong>Poke-Control:</strong> Use 1,2, D/F+1, and B+3 to hold range and frustrate whiff punish attempts. Use Heat for conversions, not pressure.</li>
+    <li><strong>Life-Lead Turtle:</strong> Abuse movement, SS+2,3, and WR+2 spacing tools to force time-outs or mistakes. Keep Heat in reserve defensively.</li>
+  </ul>
 
-    <h2>Defensive Game Plan</h2>
-    <p>
-      On defense, Dragunov favors spacing traps and counter-hit punishes. B+1 and D/F+2 are key for interrupting pressure. Use backdash into SNK cancel for baiting jabs or mids, and WS+4 to safely interrupt risky lows. In Heat, leverage armor trades to reverse momentum when behind.
-    </p>
-
-    <h2>Playstyle Profiles</h2>
-    <h3>🔥 Aggressive Enforcer</h3>
-    <p>
-      Prioritize +frames into SNK pressure. Loop 1,2~SNK and F+2,1 to maintain turn. Mix in throws or Heat Dash to stay unpredictable.<br>
-      <span class="badge rushdown">Rushdown</span> <span class="badge approach">Approach</span>
-    </p>
-
-    <h3>🧊 Poke Control Specialist</h3>
-    <p>
-      Play compact. Use D/F+1, 1,2, D+2 to frustrate the opponent into taking risks. Punish with B+1 or D/F+2.<br>
-      <span class="badge keepout">Keep-Out</span> <span class="badge panic">Panic</span>
-    </p>
-
-    <h3>🛡️ Defensive Grappler</h3>
-    <p>
-      Hold life leads, punish mistakes, and shut down aggression with counter-hit tools and throw interrupts. Strong vs aggressive players.<br>
-      <span class="badge panic">Panic</span> <span class="badge keepout">Keep-Out</span>
-    </p>
-
-    <h2>Tournament Viability</h2>
-    <p>
-      Dragunov is a <strong>high-ceiling, high-control character</strong> with flexible tools for neutral, pressure, and defensive play. He thrives in bracket play due to his consistent punish damage, throw game, and ability to maintain control with +frames and SNK pressure. Mastery of stance flow, Heat optimization, and matchup reads elevates Dragunov from strong to dominating.
-    </p>
-  </section>
-
-</body>
-</html>
+  <h2>Execution Tier</h2>
+  <p>Dragunov is considered <strong>Mid-to-High Execution</strong> due to his stance cancel loops, Heat routing confirms, and the precision needed for movement punishes and spike okizeme traps.</p>
+</section>
 
 <!-- Part 2: Punishment Suite -->
-<section class="section" id="punishment-suite">
+<section class="section" id="punishment-suite" style="font-family: Inter, sans-serif; max-width: 65ch; margin: auto;">
   <h1>Part 2: Punishment Suite</h1>
 
-  <h2>Standing Punishes (i10–i20)</h2>
-  <table>
+  <table style="width:100%; border-collapse:collapse; font-size:15px;">
     <thead>
-      <tr>
-        <th>Startup</th>
+      <tr style="background-color:#e0f0ff;">
+        <th>Type</th>
         <th>Input</th>
-        <th>Damage</th>
-        <th>On Block</th>
-        <th>On Hit</th>
-        <th>CH</th>
-        <th>Tags</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>10F</td><td>1,2</td><td>17</td><td>-1</td><td>+5</td><td>+5</td><td>i10</td><td>Standard jab punish</td></tr>
-      <tr><td>12F</td><td>D/F+1,3</td><td>21</td><td>-9</td><td>+4</td><td>+4</td><td>i12</td><td>Low follow-up possible, confirmable</td></tr>
-      <tr><td>13F</td><td>F+2,1</td><td>25</td><td>-7</td><td>+5</td><td>+8</td><td>i13</td><td>High reward, pressure on hit</td></tr>
-      <tr><td>14F</td><td>2,1</td><td>20</td><td>-2</td><td>+6</td><td>+9</td><td>i14</td><td>Safe, reliable damage</td></tr>
-      <tr><td>15F</td><td>D/F+2</td><td>27</td><td>-10</td><td>Launch</td><td>Launch</td><td>i15, Launcher</td><td>Staple launcher punish</td></tr>
-      <tr><td>17F</td><td>B+1</td><td>23</td><td>-9</td><td>+3</td><td>Launch</td><td>i17, CH Launcher</td><td>Used for whiff punishes and CH</td></tr>
-    </tbody>
-  </table>
-
-  <h2>While Standing Punishes (i10–i20)</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Startup</th>
-        <th>Input</th>
-        <th>Damage</th>
-        <th>On Block</th>
-        <th>On Hit</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>11F</td><td>WS+4</td><td>20</td><td>-6</td><td>+5</td><td>Quick poke punish</td></tr>
-      <tr><td>13F</td><td>WS+1</td><td>25</td><td>-7</td><td>+7</td><td>Excellent on hit, mid check</td></tr>
-      <tr><td>15F</td><td>WS+2</td><td>27</td><td>-12</td><td>Launch</td><td>Main launcher from crouch</td></tr>
-      <tr><td>17F</td><td>WS+3,1</td><td>30</td><td>-10</td><td>+4</td><td>Reliable follow-up combo starter</td></tr>
-    </tbody>
-  </table>
-
-  <h2>Heat, Chip, & Armor Punishes</h2>
-  <ul>
-    <li><strong>F+2,1~Heat Dash:</strong> Converts mid hit to + frames → launch or throw</li>
-    <li><strong>D/F+1~Heat:</strong> Safe conversion when not at launch range</li>
-    <li><strong>Heat Chip Route:</strong> WR+2 (chip: 6%) → +6 on block</li>
-    <li><strong>Armor Punish:</strong> Use Heat activation → absorb low, return mid pressure</li>
-  </ul>
-
-  <h2>Command Throw Table</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Input</th>
-        <th>Name</th>
-        <th>Break</th>
-        <th>Damage</th>
-        <th>Oki</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>F+1+2</td><td>Volchok Slam</td><td>1+2</td><td>35</td><td>+5</td><td>Wall carry, frames on break</td></tr>
-      <tr><td>D/B+1+2</td><td>Backbreaker</td><td>1+2</td><td>38</td><td>Spike</td><td>Oki guaranteed on hit</td></tr>
-      <tr><td>F,F+1+2</td><td>Tilt Suplex</td><td>1+2</td><td>42</td><td>Knockdown</td><td>Best reward at wall</td></tr>
-    </tbody>
-  </table>
-
-  <h2>Option Select & OS Glossary</h2>
-  <ul>
-    <li><strong>1~Throw OS:</strong> Covers jab or break window against mashers</li>
-    <li><strong>WS block punish OS:</strong> Crouch block then WS+4/F+2 confirms depending on frame gap</li>
-    <li><strong>Backdash+CH OS:</strong> Forces whiff then B+1 launcher</li>
-  </ul>
-
-  <h2>Whiff Punish Toolkit</h2>
-  <ul>
-    <li><strong>B+1:</strong> 17F CH launcher, ideal for jab whiff</li>
-    <li><strong>D/F+2:</strong> Launch on larger whiffs (sidewalks, lows)</li>
-    <li><strong>WR+2:</strong> Long-range punish with chip and + frames</li>
-    <li><strong>F+2,1:</strong> Step guard into mid punish on whiffed high</li>
-  </ul>
-
-  <h2>Punish by Range Table</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Range</th>
-        <th>Tool</th>
-        <th>Damage</th>
-        <th>CH?</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Close</td><td>1,2</td><td>17</td><td>No</td><td>Safe jab punish</td></tr>
-      <tr><td>Mid</td><td>F+2,1</td><td>25</td><td>Yes</td><td>Good whiff catch mid</td></tr>
-      <tr><td>Far</td><td>B+1</td><td>23</td><td>Yes</td><td>Primary launcher tool</td></tr>
-    </tbody>
-  </table>
-
-  <h2>Clutch Defense Flowchart</h2>
-  <ul>
-    <li><strong>If low:</strong> Fuzzy guard → WS+4 punish → confirm WR+2 if +</li>
-    <li><strong>If delayed mid:</strong> SS right → B+1 or WS+1 confirm</li>
-    <li><strong>If throw reset:</strong> Break 1+2 → backdash + F+2,1 to reset flow</li>
-    <li><strong>In Heat:</strong> Use Heat Armor to trade → activate SNK cancel for reset</li>
-  </ul>
-</section>
-
-<!-- Part 3: Key Moves -->
-<section class="section" id="key-moves">
-  <h1>Part 3: Key Moves</h1>
-  <p>This section lists Dragunov's 25+ core tools in ascending order of startup frames, with full frame data, tags, and guaranteed follow-ups.</p>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Move</th>
         <th>Startup</th>
         <th>On Block</th>
         <th>On Hit</th>
         <th>CH</th>
-        <th>Tags</th>
-        <th>Follow-Up / Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>10F</td>
-        <td>-1</td>
-        <td>+7</td>
-        <td>+7</td>
-        <td><span class="badge approach">Approach</span></td>
-        <td>Jab check, jails, sets up 1,2~SNK</td>
-      </tr>
-      <tr>
-        <td>1,2</td>
-        <td>10F</td>
-        <td>-1</td>
-        <td>+5</td>
-        <td>+5</td>
-        <td><span class="badge approach">Approach</span> <span class="badge rushdown">Rushdown</span></td>
-        <td>SNK cancel on hit (+frames), jab confirm</td>
-      </tr>
-      <tr>
-        <td>D/F+1</td>
-        <td>13F</td>
-        <td>-2</td>
-        <td>+6</td>
-        <td>+6</td>
-        <td><span class="badge approach">Approach</span></td>
-        <td>Mid poke, reliable pressure reset</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>13F</td>
-        <td>-3</td>
-        <td>+4</td>
-        <td>+4</td>
-        <td><span class="badge approach">Approach</span></td>
-        <td>Used in 2,1 and 2,1~SNK pressure strings</td>
-      </tr>
-      <tr>
-        <td>2,1</td>
-        <td>13F</td>
-        <td>-2</td>
-        <td>+6</td>
-        <td>+8</td>
-        <td><span class="badge rushdown">Rushdown</span></td>
-        <td>Confirms into SNK, high follow-up</td>
-      </tr>
-      <tr>
-        <td>2,1~SNK</td>
-        <td>—</td>
-        <td>Varies</td>
-        <td>Transition</td>
-        <td>—</td>
-        <td><span class="badge rushdown">Rushdown</span></td>
-        <td>Key stance entry point with + frame access</td>
-      </tr>
-      <tr>
-        <td>F+2,1</td>
-        <td>13F</td>
-        <td>-7</td>
-        <td>+5</td>
-        <td>+8</td>
-        <td><span class="badge approach">Approach</span> <span class="badge heat">Heat Engager</span></td>
-        <td>Heat Dash on hit → throw/low/HD confirm</td>
-      </tr>
-      <tr>
-        <td>D+2</td>
-        <td>15F</td>
-        <td>-13</td>
-        <td>-1</td>
-        <td>+1</td>
-        <td><span class="badge panic">Panic</span></td>
-        <td>Low poke, used to test crouch defense</td>
-      </tr>
-      <tr>
-        <td>D/F+2</td>
-        <td>15F</td>
-        <td>-10</td>
-        <td>Launch</td>
-        <td>Launch</td>
-        <td><span class="badge panic">Panic</span></td>
-        <td>Main launcher, punish and whiff tool</td>
-      </tr>
-      <tr>
-        <td>WR+2</td>
-        <td>16F</td>
-        <td>+6</td>
-        <td>+12</td>
-        <td>+12</td>
-        <td><span class="badge approach">Approach</span> <span class="badge rushdown">Rushdown</span></td>
-        <td>Frame trap enabler, Heat chip option</td>
-      </tr>
-      <tr>
-        <td>F,F+2</td>
-        <td>17F</td>
-        <td>-9</td>
-        <td>+5</td>
-        <td>+8</td>
-        <td><span class="badge approach">Approach</span></td>
-        <td>Quick advancing poke</td>
-      </tr>
-      <tr>
-        <td>B+1</td>
-        <td>17F</td>
-        <td>-9</td>
-        <td>+3</td>
-        <td>Launch</td>
-        <td><span class="badge panic">Panic</span></td>
-        <td>Best whiff punisher, CH launcher</td>
-      </tr>
-      <tr>
-        <td>D+3</td>
-        <td>18F</td>
-        <td>-13</td>
-        <td>-2</td>
-        <td>+2</td>
-        <td><span class="badge panic">Panic</span></td>
-        <td>Used to poke and test crouch defense</td>
-      </tr>
-      <tr>
-        <td>SNK 1</td>
-        <td>18F</td>
-        <td>-3</td>
-        <td>+4</td>
-        <td>+6</td>
-        <td><span class="badge rushdown">Rushdown</span></td>
-        <td>Plus on hit, loops into pressure</td>
-      </tr>
-      <tr>
-        <td>SNK 2</td>
-        <td>19F</td>
-        <td>-12</td>
-        <td>Spike</td>
-        <td>Knockdown</td>
-        <td><span class="badge panic">Panic</span></td>
-        <td>Low ender from stance, unsafe but strong</td>
-      </tr>
-      <tr>
-        <td>WS+1</td>
-        <td>13F</td>
-        <td>-7</td>
-        <td>+7</td>
-        <td>+10</td>
-        <td><span class="badge approach">Approach</span></td>
-        <td>Mid WS punisher with frame advantage</td>
-      </tr>
-      <tr>
-        <td>WS+2</td>
-        <td>15F</td>
-        <td>-12</td>
-        <td>Launch</td>
-        <td>Launch</td>
-        <td><span class="badge panic">Panic</span></td>
-        <td>While standing launcher, unsafe</td>
-      </tr>
-      <tr>
-        <td>U+4</td>
-        <td>22F</td>
-        <td>-10</td>
-        <td>Launch</td>
-        <td>Launch</td>
-        <td><span class="badge keepout">Keep-Out</span></td>
-        <td>Hopkick for airborne CH conversion</td>
-      </tr>
-      <tr>
-        <td>SNK 3</td>
-        <td>22F</td>
-        <td>-13</td>
-        <td>+1</td>
-        <td>+4</td>
-        <td><span class="badge keepout">Keep-Out</span></td>
-        <td>Long low stance kick, spacing reset</td>
-      </tr>
-      <tr>
-        <td>D/B+2</td>
-        <td>26F</td>
-        <td>-13</td>
-        <td>Spike</td>
-        <td>Knockdown</td>
-        <td><span class="badge panic">Panic</span></td>
-        <td>High-damage low, punishable</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<!-- Part 4: Stances & Pressure -->
-<section class="section" id="stances-pressure">
-  <h1>Part 4: Stances & Pressure</h1>
-
-  <h2>SNK Stance System Overview</h2>
-  <ul>
-    <li><strong>SNK (Sneak):</strong> A crouch-based stance entered from select moves (1,2~SNK, 2,1~SNK, F+2,1~SNK).</li>
-    <li>SNK attacks include SNK 1 (mid), SNK 2 (low spike), and SNK 3 (low sweep).</li>
-    <li>Can cancel into SNK from strings to maintain pressure or create mixups.</li>
-    <li>SNK stance transitions maintain Dragunov’s ability to apply <strong>+ frames into layered offense</strong>.</li>
-  </ul>
-
-  <h2>SNK Entry Transitions</h2>
-  <ul>
-    <li><strong>1,2~SNK</strong> – Dragunov’s fastest transition; safe, plus on hit.</li>
-    <li><strong>2,1~SNK</strong> – Mixup-enabled on hit, risky on block.</li>
-    <li><strong>F+2,1~SNK</strong> – Converts into Heat Dash or SNK for massive pressure reset.</li>
-  </ul>
-
-  <h2>Stance Cancel Logic</h2>
-  <p>Stance transitions are cancelable into movement or attack depending on recovery window:</p>
-  <ul>
-    <li>1,2~SNK → can cancel into backdash or SNK 1 mid.</li>
-    <li>SNK 1~Cancel → repeat SNK entry for pressure loop (fatigue builds over time).</li>
-    <li>F+2,1~SNK → SNK 2 low → block → + oki if delayed.</li>
-  </ul>
-
-  <h2>Key SNK Attacks</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Move</th>
-        <th>Startup</th>
-        <th>Block</th>
-        <th>Hit</th>
-        <th>CH</th>
         <th>Notes</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>SNK 1</td>
-        <td>18F</td>
-        <td>-3</td>
-        <td>+4</td>
-        <td>+6</td>
-        <td>Mid poke, repeatable loop</td>
+      <tr style="background-color:#ffffff;">
+        <td>Standing</td><td>2,1</td><td>14F</td><td>-2</td><td>+6</td><td>+9</td><td>Standard punish string</td>
       </tr>
-      <tr>
-        <td>SNK 2</td>
-        <td>19F</td>
-        <td>-12</td>
-        <td>Spike</td>
-        <td>Knockdown</td>
-        <td>Unsafe low, strong reward</td>
+      <tr style="background-color:#e0f0ff;">
+        <td>Standing</td><td>2,1~D/F</td><td>14F</td><td>Varies</td><td>Varies</td><td>Varies</td><td>SNK transition</td>
       </tr>
-      <tr>
-        <td>SNK 3</td>
-        <td>22F</td>
-        <td>-13</td>
-        <td>+1</td>
-        <td>+4</td>
-        <td>Low sweep, reset spacing</td>
+      <tr style="background-color:#ffffff;">
+        <td>Standing</td><td>2,1,4</td><td>14F</td><td>-9</td><td>KD</td><td>KD</td><td>Knockdown ender</td>
+      </tr>
+      <tr style="background-color:#e0f0ff;">
+        <td>Standing</td><td>4,1</td><td>13F</td><td>-6</td><td>+4</td><td>+6</td><td>Fast high/mid string</td>
+      </tr>
+      <tr style="background-color:#ffffff;">
+        <td>Standing</td><td>B+4,3</td><td>14F</td><td>-12</td><td>KD</td><td>KD</td><td>Homing knockdown</td>
+      </tr>
+      <tr style="background-color:#e0f0ff;">
+        <td>Standing</td><td>U/F+1</td><td>15F</td><td>-10</td><td>+6</td><td>+8</td><td>Mid launcher</td>
+      </tr>
+      <tr style="background-color:#ffffff;">
+        <td>Standing</td><td>D/F+2</td><td>15F</td><td>-10</td><td>Launch</td><td>Launch</td><td>Main launcher</td>
+      </tr>
+      <tr style="background-color:#e0f0ff;">
+        <td>WS</td><td>WS+4</td><td>11F</td><td>-6</td><td>+5</td><td>+5</td><td>Fast crouch punish</td>
+      </tr>
+      <tr style="background-color:#ffffff;">
+        <td>WS</td><td>WS+1,2</td><td>13F</td><td>-8</td><td>+6</td><td>+9</td><td>Natural hit string</td>
+      </tr>
+      <tr style="background-color:#e0f0ff;">
+        <td>WS</td><td>WS+1,3</td><td>14F</td><td>-10</td><td>Spike</td><td>Spike</td><td>Spike ender</td>
+      </tr>
+      <tr style="background-color:#ffffff;">
+        <td>WS</td><td>WS+1+2</td><td>16F</td><td>-9</td><td>+3</td><td>KD</td><td>Power crush</td>
+      </tr>
+      <tr style="background-color:#e0f0ff;">
+        <td>WS</td><td>WS+2</td><td>15F</td><td>-12</td><td>Launch</td><td>Launch</td><td>Reliable launcher</td>
       </tr>
     </tbody>
   </table>
-
-  <h2>Hit-Confirm Trees</h2>
-  <ul>
-    <li><strong>1,2 → SNK → SNK 1</strong> (Confirm on hit for pressure, backdash on block)</li>
-    <li><strong>2,1 → SNK → SNK 2</strong> (Low follow-up or stance cancel)</li>
-    <li><strong>F+2,1 → SNK → SNK 1~HD</strong> (Heat confirm into low/throw loop)</li>
-  </ul>
-
-  <h2>Uncounterable Pressure Sequences</h2>
-  <ul>
-    <li><strong>SNK 1 → Throw</strong> – Beats jab, duck, sidestep.</li>
-    <li><strong>1,2~SNK → SNK 2~Cancel → Backdash → B+1</strong> – Evades retaliation, resets turn.</li>
-    <li><strong>F+2,1~SNK → delay SNK 1</strong> – Catches fuzzy/block attempts.</li>
-  </ul>
-
-  <h2>Cancel Fatigue Pressure Loops</h2>
-  <ul>
-    <li>Overuse of SNK 1 → SNK 2 → cancel leads to lower reaction threshold from opponents.</li>
-    <li>To reset pressure: SNK 1 → throw, or break rhythm with WR+2 → jab trap.</li>
-    <li>Watch for players who step SNK → use D+2/WR+2 to reset guard.</li>
-  </ul>
-
-  <h2>SVG-Style Pressure Flow Wheel</h2>
-  <ul>
-    <li><strong>+ Frames (e.g., 1,2~SNK)</strong> →</li>
-    <li><strong>Mid/Low/Throw Layer (SNK 1 / SNK 2 / Grab)</strong> →</li>
-    <li><strong>Opponent Panic Response</strong> →</li>
-    <li><strong>CH Setup (B+1 / WR+2)</strong> →</li>
-    <li><strong>Heat Dash / Wall Loop Reset</strong> →</li>
-    <li>Repeat with new cancel route.</li>
-  </ul>
-
-  <h2>Stance Counter Advice</h2>
-  <ul>
-    <li><strong>Vs High Step Players:</strong> use WR+2 or F+2,1 more, delay SNK follow-up.</li>
-    <li><strong>Vs Duckers:</strong> SNK 1 → throw or delay SNK 3 to catch timing.</li>
-    <li><strong>Vs Backdashers:</strong> SNK 1~Forward → F+2,1~HD to chase retreat.</li>
-  </ul>
 </section>
 
